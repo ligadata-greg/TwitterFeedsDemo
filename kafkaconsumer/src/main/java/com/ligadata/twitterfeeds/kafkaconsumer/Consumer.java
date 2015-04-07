@@ -25,7 +25,7 @@ public class Consumer {
 		try {
 			System.out.println("calling Consumer.run()");
 			ConsumerIterator<byte[], byte[]> it = m_stream.iterator();
-			Client c = new Client("localhost:2181");
+			Client c = new Client();
 			System.out.println("connect to zookeeper");
 			long globalStartTime = System.nanoTime();
 		    float currentTime = 0;
@@ -56,7 +56,7 @@ public class Consumer {
 					obj.put("latest", "" + counter);
 					obj.put("tags", "All Data");
 
-					c.setData(obj.toString());
+					c.setHashTagData("#Obama",obj.toString());
 					
 				}
 			}

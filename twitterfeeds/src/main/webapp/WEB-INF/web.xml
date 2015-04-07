@@ -5,13 +5,23 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>TestServlet</servlet-name>
-  	<display-name>TestServlet</display-name>
+  	<servlet-name>ServiceServlet</servlet-name>
+  	<display-name>ServiceServlet</display-name>
   	<description></description>
-  	<servlet-class>com.ligadata.twitterfeeds.servlet.TestServlet</servlet-class>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.ServiceServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddNewHashTag</servlet-name>
+  	<display-name>AddNewHashTag</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.AddNewHashTag</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>TestServlet</servlet-name>
-  	<url-pattern>/TestServlet</url-pattern>
+  	<servlet-name>ServiceServlet</servlet-name>
+  	<url-pattern>/ServiceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddNewHashTag</servlet-name>
+  	<url-pattern>/AddNewHashTag</url-pattern>
   </servlet-mapping>
 </web-app>

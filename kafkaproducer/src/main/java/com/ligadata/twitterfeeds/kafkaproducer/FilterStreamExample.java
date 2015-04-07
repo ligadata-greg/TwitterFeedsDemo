@@ -44,8 +44,8 @@ public class FilterStreamExample {
 
 	private static final String COMMA_DELIMITER = ",";
 
-	public static void run(String consumerKey, String consumerSecret,
-			String token, String secret, String hashtag)
+	public void run(String consumerKey, String consumerSecret,
+			String token, String secret, final String hashtag)
 			throws InterruptedException {
 		final BlockingQueue<String> queue = new LinkedBlockingQueue<String>(
 				10000);
@@ -69,48 +69,66 @@ public class FilterStreamExample {
 		// Establish a connection
 		client.connect();
 
-		ExecutorService exec = Executors.newFixedThreadPool(1);
+		ExecutorService exec = Executors.newFixedThreadPool(40);
 		final KafkaProducer producer = new KafkaProducer();
 
-		exec.execute(new Runnable() {
+//		exec.execute(new Runnable() {
 			@SuppressWarnings("static-access")
-			public void run() {
-				// try {
-				while (true) {
-					// synchronized (msg) {
-					JSONObject json;
-					try {
-						String msg = queue.take();
-
-						StringBuffer str = new StringBuffer();
-						json = new JSONObject(msg);
-						str.append("System.PlusStringStringTestMsg");
-						str.append(COMMA_DELIMITER);
-						str.append(json.get("id"));
-						str.append(COMMA_DELIMITER);
-						str.append(json.get("text"));
-						// str.append(COMMA_DELIMITER);
-						// str.append(""+count(json.get("text").toString()));
-						if (msg != null) {
-							// producer.send(str.toString());
-						}
-						System.out.println(str.toString());
-					} catch (Exception e) {
-						continue;
-						// e.printStackTrace();
-						// client.stop();
+//			public void run() {
+				com.ligadata.twitterfeeds.zookeeperclient.Client c = new com.ligadata.twitterfeeds.zookeeperclient.Client();
+				try {
+					
+					if(!c.hashTagExists(hashtag)){
+						c.createHashTag(hashtag, "true");
+					}else{
+						c.setHashTag(hashtag, "true");
 					}
+					
+					while (c.getHashTag(hashtag).equals("true")) {
+						JSONObject json;
+					    String msg = null;
+						msg = queue.take();
 
+						if (msg == null) {
+							System.out.println("Did not receive a message in 5 seconds");
+						} else {
+							StringBuffer str = new StringBuffer();
+							try {
+
+								json = new JSONObject(msg);
+								str.append("System.PlusStringStringTestMsg");
+								str.append(COMMA_DELIMITER);
+								if (json.has("id")) {
+									str.append(json.get("id"));
+								} else {
+									str.append("0");
+								}
+								str.append(COMMA_DELIMITER);
+								if (json.has("text")) {
+									str.append(json.get("text"));
+								} else {
+									str.append("empty");
+								}
+
+								//producer.send(str.toString());
+
+							} catch (JSONException e) {
+								e.printStackTrace();
+								continue;
+							}
+
+							System.out.println(str.toString());
+						}
+
+					}
+					c.close();
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-				// }
-				// } catch (InterruptedException e) {
-				// e.printStackTrace();
-				// }
-				//
-			}
-		});
+//			}
+//		});
 
-		// client.stop();
+//		client.stop();
 
 	}
 

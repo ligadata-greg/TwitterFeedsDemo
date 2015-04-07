@@ -4,6 +4,7 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.log4j.Logger;
+import org.apache.zookeeper.data.Stat;
 
 public class ServicesUtil
 {
@@ -46,4 +47,38 @@ public class ServicesUtil
       throw e;
     }
   }
+  
+  public static synchronized void createZNode(CuratorFramework client, String path, String value)
+		  throws Exception
+   {
+	 try
+	 {
+		 client.create().forPath(path,value.getBytes());
+	 }
+	 catch (Exception e)
+	 {
+		 logger.error("Error while writing to ZooKeeper", e);
+		 throw e;
+	 }
+  }
+  
+  public static synchronized boolean zNodeExists(CuratorFramework client, String path)
+		  throws Exception
+   {
+	 try
+	 {
+		 Stat s = client.checkExists().forPath(path);
+		 
+		 if(s == null){
+			return false; 
+		 }else{
+		    return true;
+		 }
+	 }
+	 catch (Exception e)
+	 {
+		 logger.error("Error while writing to ZooKeeper", e);
+		 throw e;
+	 }
+  }  
 }
