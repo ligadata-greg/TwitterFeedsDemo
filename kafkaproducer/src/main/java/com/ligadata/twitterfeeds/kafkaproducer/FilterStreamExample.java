@@ -40,13 +40,26 @@ import org.apache.commons.lang3.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FilterStreamExample {
+public class FilterStreamExample implements Runnable {
 
 	private static final String COMMA_DELIMITER = ",";
-
-	public void run(String consumerKey, String consumerSecret,
-			String token, String secret, final String hashtag)
-			throws InterruptedException {
+	private String consumerSecret;
+	private String consumerKey; 
+	private String token; 
+	private String secret; 
+	private String hashtag;
+	
+	public FilterStreamExample(String consumerKey, String consumerSecret,
+			String token, String secret, String hashtag)
+	{
+		this.consumerSecret=consumerSecret;
+		this.consumerKey=consumerKey;
+		this.token=token;
+		this.secret=secret;
+		this.hashtag=hashtag;
+	}
+	
+	public void run(){
 		final BlockingQueue<String> queue = new LinkedBlockingQueue<String>(
 				10000);
 		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
@@ -69,12 +82,9 @@ public class FilterStreamExample {
 		// Establish a connection
 		client.connect();
 
-		ExecutorService exec = Executors.newFixedThreadPool(40);
 		final KafkaProducer producer = new KafkaProducer();
 
-//		exec.execute(new Runnable() {
 			@SuppressWarnings("static-access")
-//			public void run() {
 				com.ligadata.twitterfeeds.zookeeperclient.Client c = new com.ligadata.twitterfeeds.zookeeperclient.Client();
 				try {
 					
@@ -110,7 +120,7 @@ public class FilterStreamExample {
 									str.append("empty");
 								}
 
-								//producer.send(str.toString());
+								producer.send(str.toString());
 
 							} catch (JSONException e) {
 								e.printStackTrace();
@@ -122,21 +132,10 @@ public class FilterStreamExample {
 
 					}
 					c.close();
+					client.stop();
+					producer.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-//			}
-//		});
-
-//		client.stop();
-
-	}
-
-	public static int count(String text) {
-
-		String[] wordArray = text.split("\\s+");
-		int wordCount = wordArray.length;
-
-		return wordCount;
 	}
 }

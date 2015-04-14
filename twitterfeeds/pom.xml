@@ -47,13 +47,13 @@
 			<artifactId>kafkaproducer</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.ligadata.twitterfeeds</groupId>
 			<artifactId>zookeeperclient</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.twitter</groupId>
 			<artifactId>hbc-twitter4j</artifactId>
@@ -65,13 +65,13 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.3.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka_2.10</artifactId>
@@ -92,14 +92,26 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- JSON -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20090211</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>stringtemplate</artifactId>
+			<version>4.0.2</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>twitterfeeds</finalName>

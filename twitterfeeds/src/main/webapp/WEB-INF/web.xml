@@ -11,17 +11,17 @@
   	<servlet-class>com.ligadata.twitterfeeds.servlet.ServiceServlet</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>AddNewHashTag</servlet-name>
-  	<display-name>AddNewHashTag</display-name>
+  	<servlet-name>AddNewModel</servlet-name>
+  	<display-name>AddNewModel</display-name>
   	<description></description>
-  	<servlet-class>com.ligadata.twitterfeeds.servlet.AddNewHashTag</servlet-class>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.AddNewModel</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>ServiceServlet</servlet-name>
   	<url-pattern>/ServiceServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>AddNewHashTag</servlet-name>
-  	<url-pattern>/AddNewHashTag</url-pattern>
+  	<servlet-name>AddNewModel</servlet-name>
+  	<url-pattern>/AddNewModel</url-pattern>
   </servlet-mapping>
 </web-app>
