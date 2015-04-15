@@ -16,12 +16,52 @@
   	<description></description>
   	<servlet-class>com.ligadata.twitterfeeds.servlet.AddNewModel</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DeleteModel</servlet-name>
+  	<display-name>DeleteModel</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.DeleteModel</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ActivateModel</servlet-name>
+  	<display-name>ActivateModel</display-name>
+  	<description>ActivateModel</description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.ActivateModel</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeactivateModel</servlet-name>
+  	<display-name>DeactivateModel</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.DeactivateModel</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>KeysGetter</servlet-name>
+  	<display-name>KeysGetter</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.KeysGetter</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServiceServlet</servlet-name>
   	<url-pattern>/ServiceServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+  	<servlet-name>DeleteModel</servlet-name>
+  	<url-pattern>/DeleteModel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
   	<servlet-name>AddNewModel</servlet-name>
   	<url-pattern>/AddNewModel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ActivateModel</servlet-name>
+  	<url-pattern>/ActivateModel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeactivateModel</servlet-name>
+  	<url-pattern>/DeactivateModel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>KeysGetter</servlet-name>
+  	<url-pattern>/KeysGetter</url-pattern>
   </servlet-mapping>
 </web-app>
