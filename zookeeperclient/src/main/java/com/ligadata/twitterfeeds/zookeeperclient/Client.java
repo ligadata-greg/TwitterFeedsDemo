@@ -25,6 +25,14 @@ public class Client {
 		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
 	}
 	
+	public String getAction() throws Exception {
+		return ServicesUtil.getValue(client, ServicesFields.ACTION);
+	}
+	
+	public void setAction(String value) throws Exception {
+		ServicesUtil.setValue(client, ServicesFields.ACTION, value);
+	}
+	
 	public void setHashTag(String znode, String value) throws Exception {
 		ServicesUtil.setValue(client, ServicesFields.HASHTAGS+"/"+znode, value);
 	}
