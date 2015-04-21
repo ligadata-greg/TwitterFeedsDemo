@@ -30,7 +30,8 @@ public class ServiceServlet extends HttpServlet {
 
 			Client c = new Client();
 			try {
-				out.println(c.getHashTagData("#Obama"));
+//				out.println(c.getHashTagData("#Obama"));
+				out.println(c.getData());
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

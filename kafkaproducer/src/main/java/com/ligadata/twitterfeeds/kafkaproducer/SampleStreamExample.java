@@ -80,7 +80,7 @@ public class SampleStreamExample {
 				try {
 
 					json = new JSONObject(msg);
-					str.append("System.PlusStringStringTestMsg");
+					str.append("System.twittermsg");
 					str.append(COMMA_DELIMITER);
 					if (json.has("id")) {
 						str.append(json.get("id"));

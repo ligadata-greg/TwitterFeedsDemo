@@ -56,7 +56,8 @@ public class Consumer {
 					obj.put("latest", "" + counter);
 					obj.put("tags", "All Data");
 
-					c.setHashTagData("#Obama",obj.toString());
+//					c.setHashTagData("#Obama",obj.toString());
+					c.setData(obj.toString());
 					
 				}
 			}
