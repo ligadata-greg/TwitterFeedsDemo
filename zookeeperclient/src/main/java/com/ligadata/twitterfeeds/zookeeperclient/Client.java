@@ -26,11 +26,11 @@ public class Client {
 	}
 	
 	public String getAction(String znode) throws Exception {
-		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
+		return ServicesUtil.getValue(client, ServicesFields.ACTION);
 	}
 	
-	public String setAction(String znode) throws Exception {
-		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
+	public void setAction(String znode, String value) throws Exception {
+		 ServicesUtil.setValue(client, ServicesFields.ACTION, value);
 	}
 	
 	public String getData() throws Exception {
