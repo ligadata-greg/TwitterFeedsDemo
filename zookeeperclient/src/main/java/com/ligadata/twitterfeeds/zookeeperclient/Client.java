@@ -25,11 +25,11 @@ public class Client {
 		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
 	}
 	
-	public String getAction(String znode) throws Exception {
+	public String getAction() throws Exception {
 		return ServicesUtil.getValue(client, ServicesFields.ACTION);
 	}
 	
-	public void setAction(String znode, String value) throws Exception {
+	public void setAction(String value) throws Exception {
 		 ServicesUtil.setValue(client, ServicesFields.ACTION, value);
 	}
 	
@@ -40,7 +40,7 @@ public class Client {
 	public void setData(String value) throws Exception {
 		ServicesUtil.setValue(client, ServicesFields.DATA, value);
 	}
-	
+
 	public void setHashTag(String znode, String value) throws Exception {
 		ServicesUtil.setValue(client, ServicesFields.HASHTAGS+"/"+znode, value);
 	}
