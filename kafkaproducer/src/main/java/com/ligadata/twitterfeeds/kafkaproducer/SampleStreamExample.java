@@ -36,6 +36,8 @@ public class SampleStreamExample {
 		BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10000);
 
 		final String COMMA_DELIMITER = ",";
+		String originalTweet = null;
+		String filteredTweet = null;
 		//int counter = 0;
 
 		// Define our endpoint: By default, delimited=length is set (we need
@@ -87,7 +89,9 @@ public class SampleStreamExample {
 					}
 					str.append(COMMA_DELIMITER);
 					if (json.has("text")) {
-						str.append(json.get("text"));
+						filteredTweet = json.get("text").toString().replace(",", " ");
+						originalTweet = json.get("text").toString();
+						str.append(filteredTweet);
 					} else {
 						str.append("empty");
 					}
@@ -99,6 +103,7 @@ public class SampleStreamExample {
 					continue;
 				}
 
+//				System.out.println(filteredTweet+"***" + originalTweet);
 				System.out.println(str.toString());
 //				System.out.println(counter++);
 			}

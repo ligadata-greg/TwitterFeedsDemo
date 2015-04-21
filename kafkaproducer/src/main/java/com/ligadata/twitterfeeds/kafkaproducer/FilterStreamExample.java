@@ -115,7 +115,7 @@ public class FilterStreamExample implements Runnable {
 								}
 								str.append(COMMA_DELIMITER);
 								if (json.has("text")) {
-									str.append(json.get("text"));
+									str.append(json.get("text").toString().replace(",", " "));
 								} else {
 									str.append("empty");
 								}
