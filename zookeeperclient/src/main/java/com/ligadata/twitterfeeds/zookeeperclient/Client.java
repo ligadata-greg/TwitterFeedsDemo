@@ -33,6 +33,14 @@ public class Client {
 		 ServicesUtil.setValue(client, ServicesFields.ACTION, value);
 	}
 	
+	public String getParam() throws Exception {
+		return ServicesUtil.getValue(client, ServicesFields.UIParam);
+	}
+	
+	public void setParam(String value) throws Exception {
+		 ServicesUtil.setValue(client, ServicesFields.UIParam, value);
+	}
+	
 	public String getData() throws Exception {
 		return ServicesUtil.getValue(client, ServicesFields.DATA);
 	}
