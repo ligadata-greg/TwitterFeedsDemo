@@ -25,12 +25,20 @@ public class Client {
 		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
 	}
 	
-	public String getAction() throws Exception {
-		return ServicesUtil.getValue(client, ServicesFields.ACTION);
+	public String getAction(String znode) throws Exception {
+		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
 	}
 	
-	public void setAction(String value) throws Exception {
-		ServicesUtil.setValue(client, ServicesFields.ACTION, value);
+	public String setAction(String znode) throws Exception {
+		return ServicesUtil.getValue(client, ServicesFields.HASHTAGS+"/"+znode+"/data");
+	}
+	
+	public String getData() throws Exception {
+		return ServicesUtil.getValue(client, ServicesFields.DATA);
+	}
+	
+	public void setData(String value) throws Exception {
+		ServicesUtil.setValue(client, ServicesFields.DATA, value);
 	}
 	
 	public void setHashTag(String znode, String value) throws Exception {
