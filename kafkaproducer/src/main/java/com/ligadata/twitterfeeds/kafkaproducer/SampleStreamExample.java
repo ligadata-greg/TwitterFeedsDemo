@@ -27,6 +27,7 @@ import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.BasicClient;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
+import com.ligadata.twitterfeeds.zookeeperclient.Client;
 
 public class SampleStreamExample {
 
@@ -38,7 +39,8 @@ public class SampleStreamExample {
 		final String COMMA_DELIMITER = ",";
 		String originalTweet = null;
 		String filteredTweet = null;
-		//int counter = 0;
+		Client zooKeeperClient = new Client();
+		// int counter = 0;
 
 		// Define our endpoint: By default, delimited=length is set (we need
 		// this for our processor)
@@ -63,6 +65,7 @@ public class SampleStreamExample {
 		// Do whatever needs to be done with messages
 		// for (int msgRead = 0; msgRead < 1000; msgRead++) {
 		JSONObject json;
+		JSONObject paramsJSON;
 		KafkaProducer producer = new KafkaProducer();
 
 		while (true) {
@@ -73,14 +76,18 @@ public class SampleStreamExample {
 			}
 
 			String msg = queue.poll(5, TimeUnit.SECONDS);
+			String param = null;
 			if (msg == null) {
 				System.out.println("Did not receive a message in 5 seconds");
 			} else {
 				StringBuffer str = new StringBuffer();
 				try {
-
+					param = zooKeeperClient.getParam().toString();
+//					paramsJSON = new JSONObject(param);
+					System.out.println(">>> zooKeeperData: :" + param + " <<<");
 					json = new JSONObject(msg);
 					str.append("System.twittermsg");
+//					str.append("System.PlusStringStringTestMsg");
 					str.append(COMMA_DELIMITER);
 					if (json.has("id")) {
 						str.append(json.get("id"));
@@ -89,7 +96,8 @@ public class SampleStreamExample {
 					}
 					str.append(COMMA_DELIMITER);
 					if (json.has("text")) {
-						filteredTweet = json.get("text").toString().replace(",", " ");
+						filteredTweet = json.get("text").toString()
+								.replace(",", " ");
 						originalTweet = json.get("text").toString();
 						str.append(filteredTweet);
 					} else {
@@ -101,11 +109,14 @@ public class SampleStreamExample {
 				} catch (JSONException e) {
 					e.printStackTrace();
 					continue;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 
-//				System.out.println(filteredTweet+"***" + originalTweet);
+				// System.out.println(filteredTweet+"***" + originalTweet);
 				System.out.println(str.toString());
-//				System.out.println(counter++);
+				// System.out.println(counter++);
 			}
 		}
 
