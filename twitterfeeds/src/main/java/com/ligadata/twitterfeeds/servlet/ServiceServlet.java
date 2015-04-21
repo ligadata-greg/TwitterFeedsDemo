@@ -17,6 +17,11 @@ public class ServiceServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
 
+		String param = request.getParameter("param");
+		if(param == null)
+			new Exception("parameter is empty");
+		
+		Client c = new Client();
 		response.setContentType("text/html; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setHeader("Cache-Control", "no-cache");
@@ -27,10 +32,10 @@ public class ServiceServlet extends HttpServlet {
 		synchronized (session) {
 
 			java.io.PrintWriter out = response.getWriter();
-
-			Client c = new Client();
 			try {
 //				out.println(c.getHashTagData("#Obama"));
+				c.setParam(param);
+				System.out.println("parameters stored in zooKeeper: " + param);
 				out.println(c.getData());
 			} catch (Exception e) {
 				e.printStackTrace();
