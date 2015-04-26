@@ -41,23 +41,24 @@ public class Consumer {
 						globalStartTime = System.nanoTime();
 					}
 
-					System.out.println("Thread " + m_threadNumber + ": "
-							+ new String(it.next().message()));
+//					System.out.println("Thread " + m_threadNumber + ": "
+//							+ new String(it.next().message()));
+//
+//					counter_processed++;
+//					counter++;
+//					System.out.println("counter_processed  >>>>>>>>>>> "
+//							+ counter_processed);
+//					System.out.println("counter  >>>>>>>>>>> "
+//							+ counter);
 
-					counter_processed++;
-					counter++;
-					System.out.println("counter_processed  >>>>>>>>>>> "
-							+ counter_processed);
-					System.out.println("counter  >>>>>>>>>>> "
-							+ counter);
-
-					org.json.simple.JSONObject obj = new org.json.simple.JSONObject();
-					obj.put("total", "" + Consumer.counter_processed);
-					obj.put("latest", "" + counter);
-					obj.put("tags", "All Data");
+//					org.json.simple.JSONObject obj = new org.json.simple.JSONObject();
+//					obj.put("total", "" + Consumer.counter_processed);
+//					obj.put("latest", "" + counter);
+//					obj.put("tags", "All Data");
 
 //					c.setHashTagData("#Obama",obj.toString());
-					c.setData(obj.toString());
+//					c.setData(obj.toString());
+					c.setData(new String(it.next().message()));
 					
 				}
 			}
