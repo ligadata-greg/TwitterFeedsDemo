@@ -1,0 +1,19 @@
+{
+   	"Container": { 
+   		"NameSpace":"System",
+   		"Name":"retirement",
+   		"Version":"00.01.00",
+   		"Description":"Container for retirement",
+   		"Fixed":"true",
+   		"Fields" : [
+		{
+                "Name":"id",
+                "Type":"System.String"
+   		},
+   		{
+                "Name":"terms",
+                "Type":"System.String"
+   	        }
+   		]
+   	}
+}
