@@ -1,0 +1,426 @@
+<PMML xmlns="http://www.dmg.org/PMML-4_1" version="4.1">
+
+        <Header copyright="LigaDATA. Copyright 2015" description="Demo">
+                <Application name="Demo" version="00.01.00"/>
+        </Header>
+	
+        <DataDictionary numberOfFields="3">
+                <DataField name="msg" displayName="msg" optype="categorical" dataType="twittermsg"/>
+                <DataField name="gCtx" displayName="globalContext" optype="categorical" dataType="EnvContext"/>
+                <DataField name="parameters" displayName="parameters" dataType="container">
+                        <Value value="gCtx" property="valid"/>
+                        <Value value="msg" property="valid"/>
+                </DataField>
+				<DataField name="TWM_RECORD_CNT"       displayName="TWM_RECORD_CNT"       optype="continuous"  dataType="string"/>
+				<DataField name="TWM_WORDSET_CNT_1"    displayName="TWM_WORDSET_CNT_1"    optype="continuous"  dataType="string"/>
+				<DataField name="TWM_WORDSET_CNT_2"    displayName="TWM_WORDSET_CNT_2"    optype="continuous"  dataType="string"/>
+				<DataField name="TWM_WORDSET_CNT_3"    displayName="TWM_WORDSET_CNT_3"    optype="continuous"  dataType="string"/>
+				<DataField name="TWM_WORDSET_CNT_4"    displayName="TWM_WORDSET_CNT_4"    optype="continuous"  dataType="string"/>
+				<DataField name="predictedField" displayName="predictedField" optype="categorical" dataType="integer"/>
+                <DataField name="UDFSearchPath" displayName="UDFSearchPath" dataType="container">
+                    <Value value="com.ligadata.pmml.udfs.CustomUdfs" property="valid"/>
+                </DataField>
+				<DataField name="tweet" displayName="tweet" optype="categorical" dataType="string"/>	
+                </DataDictionary>
+        <TransformationDictionary>
+		
+		
+		<!--        get array of security  -->
+			<DerivedField name="securityContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.security</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="security" dataType="ArrayOfSecurity" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="securityContainer"/>
+					<Constant dataType="mbrTypename">security</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="securityTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="security"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField>
+
+				<!--check count of matche -->
+			<DerivedField name="securityCounts" dataType="ArrayOfInt" optype="categorical">
+				<Apply function="getTokenizedCounts">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="securityTermsArray"/>
+				</Apply>
+			</DerivedField>
+			
+			<!-- check if tweet has security-->
+			<DerivedField name="CheckIfSecurityMatch" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="securityTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField>
+			
+			
+			<!--        get array of banking  -->
+			
+            <DerivedField name="banksContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.banks</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="banks" dataType="ArrayOfBanks" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="banksContainer"/>
+					<Constant dataType="mbrTypename">banks</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="banksTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="banks"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField>
+								<!--check count of matche -->
+			<DerivedField name="banksCounts" dataType="ArrayOfInt" optype="categorical">
+				<Apply function="getTokenizedCounts">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="banksTermsArray"/>
+				</Apply>
+			</DerivedField>
+			
+								<!-- check if tweet has banking-->
+			<DerivedField name="CheckIfBanks" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="banksTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField>
+			
+			<!--        get array of fraud  -->
+			
+			<DerivedField name="fraudContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.fraud</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="fraud" dataType="ArrayOfFraud" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="fraudContainer"/>
+					<Constant dataType="mbrTypename">fraud</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="fraudTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="fraud"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField> 
+
+				<!--check count of matche -->
+			<DerivedField name="fraudCounts" dataType="ArrayOfInt" optype="categorical">
+				<Apply function="getTokenizedCounts">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="fraudTermsArray"/>
+				</Apply>
+			</DerivedField> 
+			
+			<!-- check if tweet has fraud -->
+			<DerivedField name="CheckIfFraudMatch" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="fraudTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField> 
+			
+			<!--        get array of investment  	-->
+			
+			<DerivedField name="investmentContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.investment</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="investment" dataType="ArrayOfInvestment" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="investmentContainer"/>
+					<Constant dataType="mbrTypename">investment</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="investmentTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="investment"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField> 
+
+				<!--check count of matche -->
+			<DerivedField name="investmentCounts" dataType="ArrayOfInt" optype="categorical">
+				<Apply function="getTokenizedCounts">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="investmentTermsArray"/>
+				</Apply>
+			</DerivedField>
+			
+			<!-- check if tweet has Investment  -->
+			<DerivedField name="CheckIfInvestmentMatch" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="investmentTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField> 
+			
+			
+			<!--        get array of retirement  -->
+			
+			<DerivedField name="retirementContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.retirement</Constant>
+				</Apply>
+			</DerivedField> 
+
+			<DerivedField name="retirement" dataType="ArrayOfRetirement" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="retirementContainer"/>
+					<Constant dataType="mbrTypename">retirement</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="retirementTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="retirement"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField> 
+
+				<!--check count of matche -->
+			<DerivedField name="retirementCounts" dataType="ArrayOfInt" optype="categorical">
+				<Apply function="getTokenizedCounts">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="retirementTermsArray"/>
+				</Apply>
+			</DerivedField> 
+			
+			<!-- check if tweet has Retirement  -->
+			<DerivedField name="CheckIfRetirementMatch" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="retirementTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField> 
+			
+			
+			
+			<!-- Get Summary Counters cosniders all companies under one group -->
+            <DerivedField name="SumCounters" dataType="Counters" optype="categorical">
+                <Apply function="GetMsgContainerElseNew">
+                    <FieldRef field="gCtx"/>
+                    <Constant dataType="typename">SumCounters</Constant>
+					<Constant dataType="string">System.Counters</Constant>
+                    <Constant dataType="string">0</Constant>
+                </Apply>
+            </DerivedField>
+            
+
+            <!-- Increments the Fraud Counter -->
+            <DerivedField name="IncFraudCounter" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.fraudcounter"/>
+                    <Constant dataType="integer">1</Constant>
+                </Apply>
+            </DerivedField>
+
+            <!-- Increments the Security Counter -->
+            <DerivedField name="IncSecurityCounter" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.securitycounter"/>
+                    <Constant dataType="integer">1</Constant>
+                </Apply>
+            </DerivedField>
+            
+            <!-- Increments the Investment Counter -->
+            <DerivedField name="IncInvestmentCounter" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.investmentcounter"/>
+                    <Constant dataType="integer">1</Constant>
+                </Apply>
+            </DerivedField>
+
+
+            <!-- Increments the Retirement Counter -->
+            <DerivedField name="IncRetirementCounter" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.retirementcounter"/>
+                    <Constant dataType="integer">1</Constant>
+                </Apply>
+            </DerivedField>
+			
+			<!-- Increment the Banks Counter -->
+			<DerivedField name="IncBanksCounter" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.bankscounter"/>
+                    <Constant dataType="integer">1</Constant>
+                </Apply>
+            </DerivedField>
+			
+			
+			
+			<DerivedField name="IncrSetSumCounters" dataType="boolean" optype="categorical">
+                <Apply function="and">
+					<Apply function="setField">
+                        <FieldRef field="SumCounters.key"/>
+                        <Constant dataType="string">0</Constant>
+                    </Apply>
+					<Apply function="setField">
+						<FieldRef field="SumCounters.bankscounter"/>
+					<FieldRef field="IncBanksCounter"/>
+					</Apply>
+					<Apply function="if">
+						<FieldRef field="CheckIfSecurityMatch"/>
+						<Apply function="setField">
+							<FieldRef field="SumCounters.securitycounter"/>
+							<FieldRef field="IncSecurityCounter"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					
+					 <Apply function="if">
+						<FieldRef field="CheckIfFraudMatch"/>
+						<Apply function="setField">
+							<FieldRef field="SumCounters.fraudcounter"/>
+							<FieldRef field="IncFraudCounter"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					<Apply function="if">
+						<FieldRef field="CheckIfInvestmentMatch"/>
+						<Apply function="setField">
+							<FieldRef field="SumCounters.investmentcounter"/>
+							<FieldRef field="IncInvestmentCounter"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					<Apply function="if">
+						<FieldRef field="CheckIfRetirementMatch"/>
+						<Apply function="setField">
+							<FieldRef field="SumCounters.retirementcounter"/>
+							<FieldRef field="IncRetirementCounter"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+				</Apply>
+            </DerivedField>
+			
+			
+			<!-- Save the Incremented conters to db -->
+            <DerivedField name="SaveIncrSetSumCounters" dataType="boolean" optype="categorical">
+                <Apply function="Put">
+                    <FieldRef field="gCtx"/>
+                    <Constant dataType="string">System.Counters</Constant>
+                    <FieldRef field="SumCounters.key"/>
+                    <FieldRef field="SumCounters"/>
+                </Apply>
+            </DerivedField>
+
+            
+                
+            <!-- Sets value to the return variable -->
+            <DerivedField name="SetAndPrepareReturnString" dataType="boolean" optype="categorical">
+                <Apply function="and">
+					<Apply function="Put">
+						<Constant dataType="string">TWM_RECORD_CNT</Constant>
+						<FieldRef field="SumCounters.bankscounter"/>
+					</Apply>
+					<Apply function="Put">
+						<Constant dataType="string">TWM_WORDSET_CNT_1</Constant>
+						<FieldRef field="SumCounters.fraudcounter"/>
+					</Apply>
+					<Apply function="Put">
+						<Constant dataType="string">TWM_WORDSET_CNT_2</Constant>
+						<FieldRef field="SumCounters.securitycounter"/>
+					</Apply>
+					<Apply function="Put">
+						<Constant dataType="string">TWM_WORDSET_CNT_3</Constant>
+						<FieldRef field="SumCounters.investmentcounter"/>
+					</Apply>
+					<Apply function="Put">
+						<Constant dataType="string">TWM_WORDSET_CNT_4</Constant>
+						<FieldRef field="SumCounters.retirementcounter"/>
+					</Apply>
+				</Apply>
+            </DerivedField>
+		
+			
+			<!-- Steps to take when the 'if' return a "true" -->
+            <DerivedField name="SuccessPath" dataType="boolean" optype="categorical">
+				<Apply function="and">
+						<FieldRef field="IncrSetSumCounters"/>
+						<FieldRef field="SaveIncrSetSumCounters"/>
+						<FieldRef field="SetAndPrepareReturnString"/>
+                </Apply>
+            </DerivedField>
+			
+			
+			<!-- Banking Rule -->
+			<DerivedField name="ScoreCheckBanks" dataType="boolean" optype="categorical">
+                <Apply function="if">
+                    <FieldRef field="CheckIfBanks"/>
+                    <FieldRef field="SuccessPath"/> 
+					<Constant dataType="boolean">false</Constant>
+				</Apply>
+            </DerivedField>			
+			
+			
+			
+			
+
+        </TransformationDictionary>
+
+        <RuleSetModel modelName="DemoModel" functionName="classification" algorithmName="RuleSet">
+
+            <MiningSchema>
+				<MiningField name="TWM_RECORD_CNT" usageType="supplementary"/>
+			    <MiningField name="TWM_WORDSET_CNT_1" usageType="supplementary"/>
+				<MiningField name="TWM_WORDSET_CNT_2" usageType="supplementary"/>
+				 <MiningField name="TWM_WORDSET_CNT_3" usageType="supplementary"/> 
+				<MiningField name="TWM_WORDSET_CNT_4" usageType="supplementary"/> 
+
+				<MiningField name="predictedField" usageType="predicted"/>
+            </MiningSchema>
+			
+            <RuleSet defaultScore="0">
+                <RuleSelectionMethod criterion="firstHit"/>
+                    <SimpleRule id="ScoreCheckRule" score="1b">
+                        <SimplePredicate field="ScoreCheckBanks" operator="equal" value="true"/>
+                    </SimpleRule>
+            </RuleSet>
+        </RuleSetModel>
+</PMML>
+
+

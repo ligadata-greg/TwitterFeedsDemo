@@ -1,0 +1,19 @@
+{
+   	"Container": { 
+   		"NameSpace":"System",
+   		"Name":"security",
+   		"Version":"00.01.00",
+   		"Description":"Container for security",
+   		"Fixed":"true",
+   		"Fields" : [
+		{
+                "Name":"id",
+                "Type":"System.String"
+   		},
+   		{
+                "Name":"terms",
+                "Type":"System.String"
+   	        }
+   		]
+   	}
+}
