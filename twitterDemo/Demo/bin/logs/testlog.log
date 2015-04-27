@@ -1,0 +1,12 @@
+2015-04-26 14:15:10,000 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-26 14:15:10,000 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-26 14:15:10,000 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-26 14:15:10,000 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-26 14:15:10,004 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-26 14:15:10,015 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-26 14:15:10,024 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-26 14:15:10,025 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-26 14:15:10,040 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-26 14:15:10,042 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-26 14:15:10,045 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-26 14:15:10,050 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
