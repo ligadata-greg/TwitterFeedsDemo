@@ -17,7 +17,14 @@
           "Name": "tweet",
           "Type": "System.String"
         }
+      },
+	{
+       	"Field": {
+          "Name": "tweet_date_time",
+          "Type": "System.String"
+        }
       }
-	  ]
+
+  ]
   }
 }

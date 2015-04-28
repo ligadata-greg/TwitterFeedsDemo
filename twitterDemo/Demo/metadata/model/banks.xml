@@ -11,11 +11,15 @@
                         <Value value="gCtx" property="valid"/>
                         <Value value="msg" property="valid"/>
                 </DataField>
-				<DataField name="TWM_RECORD_CNT"       displayName="TWM_RECORD_CNT"       optype="continuous"  dataType="string"/>
-				<DataField name="TWM_WORDSET_CNT_1"    displayName="TWM_WORDSET_CNT_1"    optype="continuous"  dataType="string"/>
-				<DataField name="TWM_WORDSET_CNT_2"    displayName="TWM_WORDSET_CNT_2"    optype="continuous"  dataType="string"/>
-				<DataField name="TWM_WORDSET_CNT_3"    displayName="TWM_WORDSET_CNT_3"    optype="continuous"  dataType="string"/>
-				<DataField name="TWM_WORDSET_CNT_4"    displayName="TWM_WORDSET_CNT_4"    optype="continuous"  dataType="string"/>
+				<DataField name="TWM_RECORD_CNT"       displayName="TWM_RECORD_CNT"       optype="continuous"  dataType="int"/>
+				<DataField name="TWM_WORDSET_CNT_1"    displayName="TWM_WORDSET_CNT_1"    optype="continuous"  dataType="int"/>
+				<DataField name="TWM_WORDSET_CNT_2"    displayName="TWM_WORDSET_CNT_2"    optype="continuous"  dataType="int"/>
+				<DataField name="TWM_WORDSET_CNT_3"    displayName="TWM_WORDSET_CNT_3"    optype="continuous"  dataType="int"/>
+				<DataField name="TWM_WORDSET_CNT_4"    displayName="TWM_WORDSET_CNT_4"    optype="continuous"  dataType="int"/>
+				<DataField name="alert_text1"    displayName="alert_text1"    optype="categorical"  dataType="string"/>
+				<DataField name="alert_text2"    displayName="alert_text2"    optype="categorical"  dataType="string"/>
+				<DataField name="alert_text3"    displayName="alert_text3"    optype="categorical"  dataType="string"/>
+				<DataField name="alert_text4"    displayName="alert_text4"    optype="categorical"  dataType="string"/>
 				<DataField name="predictedField" displayName="predictedField" optype="categorical" dataType="integer"/>
                 <DataField name="UDFSearchPath" displayName="UDFSearchPath" dataType="container">
                     <Value value="com.ligadata.pmml.udfs.CustomUdfs" property="valid"/>
@@ -375,6 +379,95 @@
 					</Apply>
 				</Apply>
             </DerivedField>
+			
+			<!-- Check if threshold is passed for each Object and prepare returning string for GUI -->
+						<DerivedField name="CheckThreshold" dataType="boolean" optype="categorical">
+               		<Apply function="and"> 
+					<Apply function="if">
+						<Apply function="GreaterOrEqual">
+							<FieldRef field="TWM_WORDSET_CNT_1"/> 
+							<Constant dataType="integer">1</Constant>
+						</Apply>
+						<Apply function="Put">
+							<Constant dataType="string">alert_text1</Constant>
+							<FieldRef field="PrepareFraudAlertMsg"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					<Apply function="if">
+						<Apply function="GreaterOrEqual">
+							<FieldRef field="TWM_WORDSET_CNT_2"/> 
+							<Constant dataType="integer">1</Constant>
+						</Apply>
+						<Apply function="Put">
+							<Constant dataType="string">alert_text2</Constant>
+							<FieldRef field="PrepareSecurityAlertMsg"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					<Apply function="if">
+						<Apply function="GreaterOrEqual">
+							<FieldRef field="TWM_WORDSET_CNT_3"/> 
+							<Constant dataType="integer">1</Constant>
+						</Apply>
+						<Apply function="Put">
+							<Constant dataType="string">alert_text3</Constant>
+							<FieldRef field="PrepareInvestmentAlertMsg"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply>
+					<Apply function="if">
+						<Apply function="GreaterOrEqual">
+							<FieldRef field="TWM_WORDSET_CNT_4"/> 
+							<Constant dataType="integer">1</Constant>
+						</Apply>
+						<Apply function="Put">
+							<Constant dataType="string">alert_text4</Constant>
+							<FieldRef field="PrepareRetirementAlertMsg"/>
+						</Apply>
+						<Constant dataType="boolean">true</Constant>
+					</Apply> 
+				</Apply> 
+            </DerivedField>
+			
+			
+			<DerivedField name="PrepareFraudAlertMsg" dateType="string" optype="categorical">
+					<Apply function="Concat">
+						<Constant dataType="string">fraud alerts at </Constant>
+						<FieldRef field="msg.tweet_date_time"/>
+						<Constant dataType="string">min with </Constant>
+						<FieldRef field="TWM_WORDSET_CNT_1"/> 
+						<Constant dataType="string"> tweets </Constant>
+					</Apply>
+			</DerivedField>
+			<DerivedField name="PrepareSecurityAlertMsg" dateType="string" optype="categorical">
+			<Apply function="Concat">
+						<Constant dataType="string">security alerts at </Constant>
+						<FieldRef field="msg.tweet_date_time"/>
+						<Constant dataType="string"> min with</Constant>
+						<FieldRef field="TWM_WORDSET_CNT_2"/> 
+						<Constant dataType="string"> tweets</Constant>
+					</Apply>
+			</DerivedField>
+			<DerivedField name="PrepareInvestmentAlertMsg" dateType="string" optype="categorical">
+			<Apply function="Concat">
+						<Constant dataType="string">investment alerts at </Constant>
+						<FieldRef field="msg.tweet_date_time"/>
+						<Constant dataType="string"> min with </Constant>
+						<FieldRef field="TWM_WORDSET_CNT_3"/>
+						<Constant dataType="string"> tweets</Constant>
+					</Apply>
+			</DerivedField>
+			<DerivedField name="PrepareRetirementAlertMsg" dateType="string" optype="categorical">
+			<Apply function="Concat">
+						<Constant dataType="string">retirement alerts at </Constant>
+						<FieldRef field="msg.tweet_date_time"/>
+						<Constant dataType="string"> min with</Constant>
+						<FieldRef field="TWM_WORDSET_CNT_4"/>
+						<Constant dataType="string"> tweets</Constant>
+						 
+					</Apply>
+			</DerivedField> 
 		
 			
 			<!-- Steps to take when the 'if' return a "true" -->
@@ -383,6 +476,7 @@
 						<FieldRef field="IncrSetSumCounters"/>
 						<FieldRef field="SaveIncrSetSumCounters"/>
 						<FieldRef field="SetAndPrepareReturnString"/>
+						<FieldRef field="CheckThreshold"/>
                 </Apply>
             </DerivedField>
 			
@@ -409,7 +503,12 @@
 			    <MiningField name="TWM_WORDSET_CNT_1" usageType="supplementary"/>
 				<MiningField name="TWM_WORDSET_CNT_2" usageType="supplementary"/>
 				 <MiningField name="TWM_WORDSET_CNT_3" usageType="supplementary"/> 
-				<MiningField name="TWM_WORDSET_CNT_4" usageType="supplementary"/> 
+				<MiningField name="TWM_WORDSET_CNT_4" usageType="supplementary"/>
+				
+				<MiningField name="alert_text1" usageType="supplementary"/> 
+				<MiningField name="alert_text2" usageType="supplementary"/> 
+				<MiningField name="alert_text3" usageType="supplementary"/> 
+				<MiningField name="alert_text4" usageType="supplementary"/> 
 
 				<MiningField name="predictedField" usageType="predicted"/>
             </MiningSchema>
@@ -422,5 +521,3 @@
             </RuleSet>
         </RuleSetModel>
 </PMML>
-
-
