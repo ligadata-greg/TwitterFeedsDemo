@@ -52,7 +52,7 @@ public class FilterStreamExample implements Runnable {
 		final BlockingQueue<String> queue = new LinkedBlockingQueue<String>(
 				10000);
 		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
-		Date date = new Date();
+		Date date = null;
 		String DateToStr;
 		// add some track terms
 		// endpoint.trackTerms(Lists.newArrayList("twitterapi", hashtag));
@@ -115,6 +115,7 @@ public class FilterStreamExample implements Runnable {
 						} else {
 							str.append("empty");
 						}
+						date = new Date();
 						DateToStr = DateFormat.getTimeInstance(DateFormat.MEDIUM).format(date);
 						str.append(COMMA_DELIMITER);
 						str.append(DateToStr);
