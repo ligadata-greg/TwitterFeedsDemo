@@ -1,12 +1,1463 @@
-2015-04-26 14:15:10,000 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
-2015-04-26 14:15:10,000 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
-2015-04-26 14:15:10,000 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
-2015-04-26 14:15:10,000 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
-2015-04-26 14:15:10,004 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
-2015-04-26 14:15:10,015 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
-2015-04-26 14:15:10,024 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
-2015-04-26 14:15:10,025 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
-2015-04-26 14:15:10,040 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
-2015-04-26 14:15:10,042 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
-2015-04-26 14:15:10,045 - kafka.producer.ProducerPool - INFO - Closing all sync producers
-2015-04-26 14:15:10,050 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
+2015-04-27 22:12:30,478 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (68748)  matches with the size of the existing Jar (json4s-native_2.10-3.2.9.jar,68748) of the object(pmml.matches.100), no need to download.
+2015-04-27 22:12:30,478 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => pmmlruntime_2.10-1.0.jar
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (201924)  matches with the size of the existing Jar (pmmlruntime_2.10-1.0.jar,201924) of the object(pmml.matches.100), no need to download.
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The jar scala-compiler-2.10.0.jar is not available, download from database. 
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => scala-compiler-2.10.0.jar
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - KeyNotFound Exception: Error => Key Not found
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.matches.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:12:30,479 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => treesettypedef.system.treesetofinvestment.1000000
+2015-04-27 22:12:30,483 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.TreeSetTypeDef
+2015-04-27 22:12:30,483 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.treesetofinvestment.1000000
+2015-04-27 22:12:30,483 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.treesetofinvestment.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,483 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => treesettypedef.system.treesetoftwittermsg.1000000
+2015-04-27 22:12:30,490 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.TreeSetTypeDef
+2015-04-27 22:12:30,490 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.treesetoftwittermsg.1000000
+2015-04-27 22:12:30,490 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.treesetoftwittermsg.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,490 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => arraytypedef.system.arrayofarrayofretirement.1000000
+2015-04-27 22:12:30,493 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ArrayTypeDef
+2015-04-27 22:12:30,493 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.arrayofarrayofretirement.1000000
+2015-04-27 22:12:30,494 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.arrayofarrayofretirement.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,494 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => immutablemaptypedef.system.immutablemapofintarrayofretirement.1000000
+2015-04-27 22:12:30,500 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ImmutableMapTypeDef
+2015-04-27 22:12:30,500 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.immutablemapofintarrayofretirement.1000000
+2015-04-27 22:12:30,500 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.immutablemapofintarrayofretirement.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,501 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => containerdef.system.retirement.1000000
+2015-04-27 22:12:30,506 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ContainerDef
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the container to the cache: name of the object =>  system.retirement.1000000
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Found 3 dependant jars 
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => system_retirement_1000000_1430197834669.jar
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (13265)  matches with the size of the existing Jar (system_retirement_1000000_1430197834669.jar,13265) of the object(system.retirement.1000000), no need to download.
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => basetypes_2.10-0.1.0.jar
+2015-04-27 22:12:30,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (20206)  matches with the size of the existing Jar (basetypes_2.10-0.1.0.jar,20206) of the object(system.retirement.1000000), no need to download.
+2015-04-27 22:12:30,511 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => metadata_2.10-1.0.jar
+2015-04-27 22:12:30,512 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (233264)  matches with the size of the existing Jar (metadata_2.10-1.0.jar,233264) of the object(system.retirement.1000000), no need to download.
+2015-04-27 22:12:30,512 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => treesettypedef.system.treesetoffraud.1000000
+2015-04-27 22:12:30,524 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.TreeSetTypeDef
+2015-04-27 22:12:30,524 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.treesetoffraud.1000000
+2015-04-27 22:12:30,524 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.treesetoffraud.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,524 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => arraytypedef.system.arrayoftwittermsg.1000000
+2015-04-27 22:12:30,541 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ArrayTypeDef
+2015-04-27 22:12:30,542 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.arrayoftwittermsg.1000000
+2015-04-27 22:12:30,542 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.arrayoftwittermsg.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,542 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => immutablemaptypedef.system.immutablemapofintarrayofsecurity.1000000
+2015-04-27 22:12:30,546 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ImmutableMapTypeDef
+2015-04-27 22:12:30,546 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.immutablemapofintarrayofsecurity.1000000
+2015-04-27 22:12:30,546 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.immutablemapofintarrayofsecurity.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,547 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => functiondef.pmml.id_gen()
+2015-04-27 22:12:30,550 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.FunctionDef
+2015-04-27 22:12:30,550 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the function to the cache: name of the object =>  pmml.id_gen()
+2015-04-27 22:12:30,550 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Found 20 dependant jars 
+2015-04-27 22:12:30,550 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => pmmludfs_2.10-1.0.jar
+2015-04-27 22:12:30,552 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (346633)  matches with the size of the existing Jar (pmmludfs_2.10-1.0.jar,346633) of the object(pmml.id_gen.100), no need to download.
+2015-04-27 22:12:30,552 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => json4s-native_2.10-3.2.9.jar
+2015-04-27 22:12:30,552 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (68748)  matches with the size of the existing Jar (json4s-native_2.10-3.2.9.jar,68748) of the object(pmml.id_gen.100), no need to download.
+2015-04-27 22:12:30,552 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => pmmlruntime_2.10-1.0.jar
+2015-04-27 22:12:30,553 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - A jar file already exists, and it's size (201924)  matches with the size of the existing Jar (pmmlruntime_2.10-1.0.jar,201924) of the object(pmml.id_gen.100), no need to download.
+2015-04-27 22:12:30,553 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The jar scala-compiler-2.10.0.jar is not available, download from database. 
+2015-04-27 22:12:30,553 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => scala-compiler-2.10.0.jar
+2015-04-27 22:12:30,553 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - KeyNotFound Exception: Error => Key Not found
+2015-04-27 22:12:30,554 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.id_gen.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:12:30,554 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => immutablemaptypedef.system.immutablemapofstringarrayofretirement.1000000
+2015-04-27 22:12:30,566 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ImmutableMapTypeDef
+2015-04-27 22:12:30,566 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.immutablemapofstringarrayofretirement.1000000
+2015-04-27 22:12:30,566 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.immutablemapofstringarrayofretirement.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,566 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => arraybuftypedef.system.arraybufferoftwittermsg.1000000
+2015-04-27 22:12:30,576 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.ArrayBufTypeDef
+2015-04-27 22:12:30,576 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.arraybufferoftwittermsg.1000000
+2015-04-27 22:12:30,576 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.arraybufferoftwittermsg.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,576 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Get the object from store, key => treesettypedef.system.treesetofcounters.1000000
+2015-04-27 22:12:30,585 - com.ligadata.Serialize.KryoSerializer - DEBUG - DeSerialized object => com.ligadata.fatafat.metadata.TreeSetTypeDef
+2015-04-27 22:12:30,585 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Adding the Type to the cache: name of the object =>  system.treesetofcounters.1000000
+2015-04-27 22:12:30,590 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - The object system.treesetofcounters.1000000 has no jar associated with it. Nothing to download..
+2015-04-27 22:12:30,590 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Establishing connection to domain security server..
+2015-04-27 22:12:30,591 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - INFO - Metadata synching is now available.
+2015-04-27 22:12:30,600 - com.ligadata.tools.kvinit.KVInit - DEBUG - Processing Jar /home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar
+2015-04-27 22:12:30,601 - com.ligadata.tools.kvinit.KVInit - DEBUG - Jar /home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar added to class path.
+2015-04-27 22:12:30,602 - com.ligadata.tools.kvinit.KVInit - DEBUG - Processing Jar /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar
+2015-04-27 22:12:30,602 - com.ligadata.tools.kvinit.KVInit - DEBUG - Jar /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar added to class path.
+2015-04-27 22:12:30,602 - com.ligadata.tools.kvinit.KVInit - DEBUG - Processing Jar /home/cloudera/Desktop/Demo-twitter/lib/application/system_banks_1000000_1430197816426.jar
+2015-04-27 22:12:30,603 - com.ligadata.tools.kvinit.KVInit - DEBUG - Jar /home/cloudera/Desktop/Demo-twitter/lib/application/system_banks_1000000_1430197816426.jar added to class path.
+2015-04-27 22:12:30,606 - com.ligadata.tools.kvinit.KVInit - DEBUG - Interfaces => 1,isDerivedFrom: Class=>com.ligadata.FatafatBase.BaseContainerObj
+2015-04-27 22:12:30,608 - com.ligadata.tools.kvinit.KVInit - DEBUG - Interface:com.ligadata.FatafatBase.BaseContainerObj
+2015-04-27 22:12:30,650 - com.ligadata.tools.kvinit.KVInit - DEBUG - Created Container Object
+2015-04-27 22:12:30,651 - com.ligadata.tools.kvinit.KVInit - DEBUG - Getting DB Connection: connectiontype -> hashmap,withtransaction -> false,inmemory -> false,schema -> AllData,table -> AllData,path -> /home/cloudera/Desktop/Demo-twitter/storage
+2015-04-27 22:12:30,689 - com.ligadata.tools.kvinit.KVInit - DEBUG - Inserted 18 values in KVName system.banks
+2015-04-27 22:12:30,689 - com.ligadata.keyvaluestore.mapdb.KeyValueHashMap - DEBUG - Trying to shutdown hashmap db
+2015-04-27 22:12:30,701 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - Closing datastore
+2015-04-27 22:12:30,701 - com.ligadata.keyvaluestore.mapdb.KeyValueHashMap - DEBUG - Trying to shutdown hashmap db
+2015-04-27 22:12:30,704 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - metdatastore closed
+2015-04-27 22:12:30,704 - com.ligadata.keyvaluestore.mapdb.KeyValueHashMap - DEBUG - Trying to shutdown hashmap db
+2015-04-27 22:12:30,705 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - transStore closed
+2015-04-27 22:12:30,705 - com.ligadata.keyvaluestore.mapdb.KeyValueHashMap - DEBUG - Trying to shutdown hashmap db
+2015-04-27 22:12:30,714 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - jarStore closed
+2015-04-27 22:12:30,714 - com.ligadata.keyvaluestore.mapdb.KeyValueHashMap - DEBUG - Trying to shutdown hashmap db
+2015-04-27 22:12:30,715 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - DEBUG - configStore closed
+2015-04-27 22:12:54,791 - kafka.utils.VerifiableProperties - INFO - Verifying properties
+2015-04-27 22:12:54,811 - kafka.utils.VerifiableProperties - INFO - Property batch.num.messages is overridden to 1024
+2015-04-27 22:12:54,811 - kafka.utils.VerifiableProperties - WARN - Property batch.size is not valid
+2015-04-27 22:12:54,811 - kafka.utils.VerifiableProperties - WARN - Property buffer.memory is not valid
+2015-04-27 22:12:54,812 - kafka.utils.VerifiableProperties - WARN - Property buffer.size is not valid
+2015-04-27 22:12:54,812 - kafka.utils.VerifiableProperties - INFO - Property client.id is overridden to Client1
+2015-04-27 22:12:54,812 - kafka.utils.VerifiableProperties - INFO - Property compression.codec is overridden to 0
+2015-04-27 22:12:54,812 - kafka.utils.VerifiableProperties - INFO - Property message.send.max.retries is overridden to 3
+2015-04-27 22:12:54,812 - kafka.utils.VerifiableProperties - INFO - Property metadata.broker.list is overridden to localhost:9092
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - INFO - Property partitioner.class is overridden to CustPartitioner
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - INFO - Property producer.type is overridden to async
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - WARN - Property queue.size is not valid
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - WARN - Property queue.time is not valid
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - INFO - Property request.required.acks is overridden to 1
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - WARN - Property socket.receive.buffer is not valid
+2015-04-27 22:12:54,813 - kafka.utils.VerifiableProperties - WARN - Property socket.send.buffer is not valid
+2015-04-27 22:12:54,954 - kafka.producer.Producer - INFO - Shutting down producer
+2015-04-27 22:12:54,954 - kafka.producer.async.ProducerSendThread - INFO - Begin shutting down ProducerSendThread
+2015-04-27 22:12:54,955 - kafka.producer.async.ProducerSendThread - DEBUG - Handling 30 events
+2015-04-27 22:12:54,964 - kafka.producer.async.DefaultEventHandler - DEBUG - Handling 30 events
+2015-04-27 22:12:55,006 - kafka.client.ClientUtils$ - INFO - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(testin_1)
+2015-04-27 22:12:55,029 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:12:55,030 - kafka.producer.SyncProducer - INFO - Connected to localhost:9092 for producing
+2015-04-27 22:12:55,065 - kafka.producer.SyncProducer - INFO - Disconnecting from localhost:9092
+2015-04-27 22:12:55,072 - kafka.client.ClientUtils$ - DEBUG - Successfully fetched metadata for 1 topic(s) Set(testin_1)
+2015-04-27 22:12:55,085 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,087 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,089 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,095 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,095 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,095 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,095 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,095 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,096 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,096 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,096 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,096 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,096 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,096 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,096 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,097 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,097 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,097 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,098 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,098 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,098 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,098 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,098 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,099 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,103 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,103 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,103 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,103 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,106 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,106 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,106 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,107 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,107 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,108 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,108 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,108 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,109 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,109 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,111 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,111 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,111 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,113 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,113 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,114 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,114 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,114 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,114 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,114 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,116 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,116 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,116 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,116 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,116 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,116 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,116 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,117 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,117 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,117 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,118 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,118 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,118 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,118 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,119 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,119 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,119 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,119 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,119 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,119 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,119 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,124 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,124 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,124 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,125 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,132 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,133 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,133 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,133 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,134 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:12:55,134 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:12:55,134 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:12:55,156 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-27 22:12:55,174 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:12:55,193 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:12:55,193 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-27 22:12:55,206 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:12:55,207 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-27 22:12:55,208 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-27 22:12:55,215 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
+2015-04-27 22:18:59,507 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - SERVICE_HOST remains unset
+2015-04-27 22:19:02,161 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Node Undefined not found in metadata
+2015-04-27 22:19:02,221 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.dateblock.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,473 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.random.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,590 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.logmsg.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,710 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.replace.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,723 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.concat.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,882 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.formatnumber.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,923 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedcounts.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,936 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedboolean.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,945 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.matches.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:02,990 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.id_gen.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:19:10,463 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - PmmlCompiler ctor ... begins
+2015-04-27 22:19:10,505 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile begins
+2015-04-27 22:19:11,322 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'securityContainer'...
+2015-04-27 22:19:11,322 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:19:11,373 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'security'...
+2015-04-27 22:19:11,373 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:19:11,558 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'banksContainer'...
+2015-04-27 22:19:11,558 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:19:11,563 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'banks'...
+2015-04-27 22:19:11,563 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:19:11,683 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'fraudContainer'...
+2015-04-27 22:19:11,683 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:19:11,697 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'fraud'...
+2015-04-27 22:19:11,698 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:19:11,841 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'investmentContainer'...
+2015-04-27 22:19:11,846 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:19:11,852 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'investment'...
+2015-04-27 22:19:11,852 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:19:11,942 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'retirementContainer'...
+2015-04-27 22:19:11,942 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:19:11,949 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'retirement'...
+2015-04-27 22:19:11,949 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:19:12,050 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetMsgContainerElseNew' found in DerivedField 'SumCounters'...
+2015-04-27 22:19:12,050 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetMsgContainerElseNew...see if it is a macro. 
+2015-04-27 22:19:12,060 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,060 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,063 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,063 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,067 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,067 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,069 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,069 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,071 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,071 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,073 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,073 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,075 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,075 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,085 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,085 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,090 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,090 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,092 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,092 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,095 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,095 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,098 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,098 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,104 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,104 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,141 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,141 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,166 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,166 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,200 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,200 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,222 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,223 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,255 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,255 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,300 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:19:12,301 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:19:12,349 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in DerivedField 'SaveIncrSetSumCounters'...
+2015-04-27 22:19:12,349 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,419 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,419 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,421 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,421 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,425 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,425 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,427 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,427 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,432 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,432 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,436 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,436 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,470 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,470 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,514 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,514 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,555 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,555 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,589 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:19:12,589 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,624 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,624 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,627 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,627 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,629 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,629 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,638 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,638 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,643 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,643 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,648 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,649 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,653 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,653 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,655 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,655 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,678 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,678 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,685 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,685 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,696 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,696 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,728 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:19:12,728 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,778 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'ScoreCheckBanks'...
+2015-04-27 22:19:12,778 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,792 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'ScoreCheckBanks'...
+2015-04-27 22:19:12,792 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:19:12,820 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'ScoreCheckBanks'...
+2015-04-27 22:19:12,820 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:19:12,850 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile ends
+2015-04-27 22:19:12,850 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create model definition...1) find the input variables 2) find output variables, 3) construct model def
+2015-04-27 22:19:12,855 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the inputVars for the model metadata construction:
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraudContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.investmentcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investmentContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraud", "com.ligadata.messagescontainers.System_fraud_1000000_1430197776279", "system", "fraud", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("securityContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.retirementcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,859 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.timewindow", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("msg.tweet", "com.ligadata.messagescontainers.System_twittermsg_1000000_1430197839497", "system", "twittermsg", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banks", "com.ligadata.messagescontainers.System_banks_1000000_1430197807740", "system", "banks", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.key", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banksContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("gCtx", "com.ligadata.FatafatBase.EnvContext", "system", "envcontext", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirementContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.fraudcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,860 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.securitycounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,861 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.bankscounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430197787936", "system", "counters", false, null)
+2015-04-27 22:19:12,861 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investment", "com.ligadata.messagescontainers.System_investment_1000000_1430197798258", "system", "investment", false, null)
+2015-04-27 22:19:12,861 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirement", "com.ligadata.messagescontainers.System_retirement_1000000_1430197825713", "system", "retirement", false, null)
+2015-04-27 22:19:12,861 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("security", "com.ligadata.messagescontainers.System_security_1000000_1430197816762", "system", "security", false, null)
+2015-04-27 22:19:12,861 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the outputVars for the model metadata construction:
+2015-04-27 22:19:12,862 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_2", "system", "int")
+2015-04-27 22:19:12,862 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("predictedField", "system", "integer")
+2015-04-27 22:19:12,862 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text3", "system", "string")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_4", "system", "int")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_RECORD_CNT", "system", "int")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_1", "system", "int")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text2", "system", "string")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_3", "system", "int")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text1", "system", "string")
+2015-04-27 22:19:12,866 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text4", "system", "string")
+2015-04-27 22:19:12,884 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar begins
+2015-04-27 22:19:12,884 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - write a copy of the generated source to /home/cloudera/Desktop/Demo-twitter/lib/application/demo.pmml
+2015-04-27 22:19:12,959 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile Demo
+2015-04-27 22:19:12,959 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - scalac cmd used: ArrayBuffer(sh, -c, /usr/scala/scala-2.10.4/bin/scalac -cp /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basefunctions_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/messagedef_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/methodextractor_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlcompiler_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/fatafatbase_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/bootstrap_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-time-2.3.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-convert-1.6.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmludfs_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlruntime_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-native_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-core_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-ast_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-databind-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-annotations-2.3.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-jackson_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-core-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/log4j-1.2.17.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_twittermsg_1000000_1430197848423.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_security_1000000_1430197825402.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_banks_1000000_1430197816426.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_retirement_1000000_1430197834669.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_fraud_1000000_1430197785377.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_counters_1000000_1430197797819.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_investment_1000000_1430197807350.jar /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/Demo.scala)
+2015-04-27 22:19:40,278 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile or Demo ends...rc = 0
+2015-04-27 22:19:40,279 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430198380279.jar
+2015-04-27 22:19:40,280 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar cmd used: /usr/java/jdk1.7.0_67-cloudera/bin/jar cvf /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430198380279.jar -C /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/ .
+2015-04-27 22:19:40,280 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar system_demo_100_1430198380279.jar produced.  Its contents:
+2015-04-27 22:19:40,584 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar of system_demo_100_1430198380279.jar complete ... 0
+2015-04-27 22:19:40,584 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430198380279.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application
+2015-04-27 22:19:40,597 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move of jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430198380279.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application ends... rc = 0
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Dump model variables for diagnostic purposes:
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelClassName=com.ligadata.System_Demo_100.pmml.Demo
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelVersion=100
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmmlFilePath=/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmml=`cat "/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml"`
+2015-04-27 22:19:40,598 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jarPath=system_demo_100_1430198380279.jar
+2015-04-27 22:19:40,599 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - clientName=ligadata
+2015-04-27 22:19:40,599 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar ends
+2015-04-27 22:20:32,817 - kafka.utils.VerifiableProperties - INFO - Verifying properties
+2015-04-27 22:20:32,839 - kafka.utils.VerifiableProperties - INFO - Property batch.num.messages is overridden to 1024
+2015-04-27 22:20:32,839 - kafka.utils.VerifiableProperties - WARN - Property batch.size is not valid
+2015-04-27 22:20:32,839 - kafka.utils.VerifiableProperties - WARN - Property buffer.memory is not valid
+2015-04-27 22:20:32,839 - kafka.utils.VerifiableProperties - WARN - Property buffer.size is not valid
+2015-04-27 22:20:32,839 - kafka.utils.VerifiableProperties - INFO - Property client.id is overridden to Client1
+2015-04-27 22:20:32,840 - kafka.utils.VerifiableProperties - INFO - Property compression.codec is overridden to 0
+2015-04-27 22:20:32,840 - kafka.utils.VerifiableProperties - INFO - Property message.send.max.retries is overridden to 3
+2015-04-27 22:20:32,840 - kafka.utils.VerifiableProperties - INFO - Property metadata.broker.list is overridden to localhost:9092
+2015-04-27 22:20:32,840 - kafka.utils.VerifiableProperties - INFO - Property partitioner.class is overridden to CustPartitioner
+2015-04-27 22:20:32,841 - kafka.utils.VerifiableProperties - INFO - Property producer.type is overridden to async
+2015-04-27 22:20:32,841 - kafka.utils.VerifiableProperties - WARN - Property queue.size is not valid
+2015-04-27 22:20:32,841 - kafka.utils.VerifiableProperties - WARN - Property queue.time is not valid
+2015-04-27 22:20:32,841 - kafka.utils.VerifiableProperties - INFO - Property request.required.acks is overridden to 1
+2015-04-27 22:20:32,842 - kafka.utils.VerifiableProperties - WARN - Property socket.receive.buffer is not valid
+2015-04-27 22:20:32,842 - kafka.utils.VerifiableProperties - WARN - Property socket.send.buffer is not valid
+2015-04-27 22:20:32,971 - kafka.producer.Producer - INFO - Shutting down producer
+2015-04-27 22:20:32,971 - kafka.producer.async.ProducerSendThread - INFO - Begin shutting down ProducerSendThread
+2015-04-27 22:20:32,972 - kafka.producer.async.ProducerSendThread - DEBUG - Handling 30 events
+2015-04-27 22:20:32,979 - kafka.producer.async.DefaultEventHandler - DEBUG - Handling 30 events
+2015-04-27 22:20:33,019 - kafka.client.ClientUtils$ - INFO - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(testin_1)
+2015-04-27 22:20:33,043 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:20:33,044 - kafka.producer.SyncProducer - INFO - Connected to localhost:9092 for producing
+2015-04-27 22:20:33,140 - kafka.producer.SyncProducer - INFO - Disconnecting from localhost:9092
+2015-04-27 22:20:33,146 - kafka.client.ClientUtils$ - DEBUG - Successfully fetched metadata for 1 topic(s) Set(testin_1)
+2015-04-27 22:20:33,160 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,161 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,164 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,170 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,170 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,170 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,170 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,170 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,171 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,171 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,172 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,172 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,172 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,172 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,172 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,172 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,172 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,172 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,173 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,173 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,173 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,174 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,174 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,174 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,179 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,179 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,179 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,179 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,180 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,180 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,180 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,183 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,183 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,183 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,184 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,184 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,184 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,184 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,184 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,184 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,185 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,185 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,185 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,185 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,188 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,188 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,188 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,188 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,188 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,188 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,188 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,188 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,189 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,189 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,189 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,190 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,190 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,190 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,190 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,191 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,191 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,191 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,191 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,191 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,191 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,192 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,192 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,192 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,192 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,192 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,193 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,193 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,193 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,193 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,193 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,193 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,193 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,193 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,201 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,203 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,203 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,204 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,204 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,205 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,205 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,205 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,205 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,206 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:20:33,206 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:20:33,206 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:20:33,211 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-27 22:20:33,221 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:20:33,239 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:20:33,239 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-27 22:20:33,247 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:20:33,249 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-27 22:20:33,249 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-27 22:20:33,250 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
+2015-04-27 22:35:12,290 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - SERVICE_HOST remains unset
+2015-04-27 22:35:14,961 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Node Undefined not found in metadata
+2015-04-27 22:35:15,026 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.dateblock.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,281 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.random.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,389 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.logmsg.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,508 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.replace.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,521 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.concat.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,695 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.formatnumber.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,725 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedcounts.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,733 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedboolean.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,741 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.matches.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:15,787 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.id_gen.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:35:36,941 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Call Message Compiler ....
+2015-04-27 22:35:36,994 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Message Compilation done ....{
+  "Container" : {
+    "NameSpace" : "system",
+    "Name" : "counters",
+    "FullName" : "system.counters",
+    "Version" : 1000000,
+    "JarName" : null,
+    "PhysicalName" : "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947",
+    "ObjectDefinition" : null,
+    "ObjectFormat" : "JSON",
+    "DependencyJars" : [ "basetypes_2.10-0.1.0.jar", "metadata_2.10-1.0.jar" ],
+    "TransactionId" : 0,
+  "Attributes": [ 
+{
+  "NameSpace" : "system",
+  "Name" : "key",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "string",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "string",
+  "PhysicalName" : "String",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.StringImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "fraudcounter",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "securitycounter",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "investmentcounter",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "retirementcounter",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "bankscounter",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
+  "TransactionId" : 0
+}} ]
+}
+}
+2015-04-27 22:35:37,045 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - scalac cmd used: ArrayBuffer(sh, -c, /usr/scala/scala-2.10.4/bin/scalac -cp /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basefunctions_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/messagedef_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/methodextractor_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlcompiler_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/fatafatbase_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/bootstrap_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-time-2.3.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-convert-1.6.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmludfs_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlruntime_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-native_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-core_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-ast_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-databind-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-annotations-2.3.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-jackson_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-core-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/log4j-1.2.17.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar /home/cloudera/Desktop/Demo-twitter/workingdir/counters/counters.scala)
+2015-04-27 22:35:46,780 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar cmd used: /usr/java/jdk1.7.0_67-cloudera/bin/jar cvf /home/cloudera/Desktop/Demo-twitter/workingdir/system_counters_1000000_1430199346780.jar -C /home/cloudera/Desktop/Demo-twitter/workingdir/counters/ .
+2015-04-27 22:35:46,780 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar system_counters_1000000_1430199346780.jar produced.  Its contents:
+2015-04-27 22:35:46,955 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - mv cmd used: mv /home/cloudera/Desktop/Demo-twitter/workingdir/system_counters_1000000_1430199346780.jar /home/cloudera/Desktop/Demo-twitter/lib/application/
+2015-04-27 22:35:46,959 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Status => 0
+2015-04-27 22:35:46,959 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar File => system_counters_1000000_1430199346780.jar
+2015-04-27 22:36:00,776 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - PmmlCompiler ctor ... begins
+2015-04-27 22:36:00,806 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile begins
+2015-04-27 22:36:01,690 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'securityContainer'...
+2015-04-27 22:36:01,690 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:36:01,749 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'security'...
+2015-04-27 22:36:01,749 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:36:01,914 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'banksContainer'...
+2015-04-27 22:36:01,914 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:36:01,918 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'banks'...
+2015-04-27 22:36:01,918 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:36:02,075 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'fraudContainer'...
+2015-04-27 22:36:02,075 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:36:02,088 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'fraud'...
+2015-04-27 22:36:02,088 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:36:02,179 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'investmentContainer'...
+2015-04-27 22:36:02,179 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:36:02,183 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'investment'...
+2015-04-27 22:36:02,183 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:36:02,279 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'retirementContainer'...
+2015-04-27 22:36:02,279 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 22:36:02,283 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'retirement'...
+2015-04-27 22:36:02,283 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 22:36:02,381 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetMsgContainerElseNew' found in DerivedField 'SumCounters'...
+2015-04-27 22:36:02,381 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetMsgContainerElseNew...see if it is a macro. 
+2015-04-27 22:36:02,388 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,388 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,390 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,390 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,396 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,396 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,399 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,399 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,401 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,401 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,403 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,403 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,405 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,405 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,415 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,415 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,419 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,419 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,422 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,422 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,428 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,428 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,465 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,465 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,499 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,499 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,523 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,523 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,553 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,553 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,587 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 22:36:02,587 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 22:36:02,650 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in DerivedField 'SaveIncrSetSumCounters'...
+2015-04-27 22:36:02,650 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,715 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,715 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,716 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,716 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,719 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,719 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,721 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,721 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,724 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,724 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,729 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,729 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,769 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,770 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,795 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,795 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,835 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,835 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,873 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 22:36:02,873 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,910 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,910 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,912 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,912 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,919 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,919 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,933 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,933 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,939 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,940 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,943 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,943 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,946 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,946 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,947 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,947 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 22:36:02,960 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,960 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,970 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,970 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,975 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,975 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:02,987 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 22:36:02,987 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 22:36:03,070 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile ends
+2015-04-27 22:36:03,075 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create model definition...1) find the input variables 2) find output variables, 3) construct model def
+2015-04-27 22:36:03,075 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the inputVars for the model metadata construction:
+2015-04-27 22:36:03,076 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraudContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:36:03,076 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investmentContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:36:03,076 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraud", "com.ligadata.messagescontainers.System_fraud_1000000_1430197776279", "system", "fraud", false, null)
+2015-04-27 22:36:03,076 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.investmentcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,079 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("securityContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:36:03,079 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("msg.tweet", "com.ligadata.messagescontainers.System_twittermsg_1000000_1430197839497", "system", "twittermsg", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banks", "com.ligadata.messagescontainers.System_banks_1000000_1430197807740", "system", "banks", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banksContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("gCtx", "com.ligadata.FatafatBase.EnvContext", "system", "envcontext", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirementContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.key", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.retirementcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investment", "com.ligadata.messagescontainers.System_investment_1000000_1430197798258", "system", "investment", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.fraudcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirement", "com.ligadata.messagescontainers.System_retirement_1000000_1430197825713", "system", "retirement", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("security", "com.ligadata.messagescontainers.System_security_1000000_1430197816762", "system", "security", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,080 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.bankscounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.securitycounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the outputVars for the model metadata construction:
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_2", "system", "int")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("predictedField", "system", "integer")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text3", "system", "string")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_4", "system", "int")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_RECORD_CNT", "system", "int")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_1", "system", "int")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text2", "system", "string")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_3", "system", "int")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text1", "system", "string")
+2015-04-27 22:36:03,081 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text4", "system", "string")
+2015-04-27 22:36:03,104 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar begins
+2015-04-27 22:36:03,104 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - write a copy of the generated source to /home/cloudera/Desktop/Demo-twitter/lib/application/demo.pmml
+2015-04-27 22:36:03,148 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile Demo
+2015-04-27 22:36:03,149 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - scalac cmd used: ArrayBuffer(sh, -c, /usr/scala/scala-2.10.4/bin/scalac -cp /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basefunctions_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/messagedef_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/methodextractor_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlcompiler_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/fatafatbase_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/bootstrap_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-time-2.3.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-convert-1.6.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmludfs_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlruntime_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-native_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-core_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-ast_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-databind-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-annotations-2.3.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-jackson_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-core-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/log4j-1.2.17.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_twittermsg_1000000_1430197848423.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_counters_1000000_1430199346780.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_security_1000000_1430197825402.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_banks_1000000_1430197816426.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_retirement_1000000_1430197834669.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_fraud_1000000_1430197785377.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_investment_1000000_1430197807350.jar /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/Demo.scala)
+2015-04-27 22:36:31,369 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile or Demo ends...rc = 0
+2015-04-27 22:36:31,369 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430199391369.jar
+2015-04-27 22:36:31,369 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar cmd used: /usr/java/jdk1.7.0_67-cloudera/bin/jar cvf /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430199391369.jar -C /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/ .
+2015-04-27 22:36:31,369 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar system_demo_100_1430199391369.jar produced.  Its contents:
+2015-04-27 22:36:31,694 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar of system_demo_100_1430199391369.jar complete ... 0
+2015-04-27 22:36:31,694 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430199391369.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application
+2015-04-27 22:36:31,700 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move of jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430199391369.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application ends... rc = 0
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Dump model variables for diagnostic purposes:
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelClassName=com.ligadata.System_Demo_100.pmml.Demo
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelVersion=100
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmmlFilePath=/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmml=`cat "/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml"`
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jarPath=system_demo_100_1430199391369.jar
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - clientName=ligadata
+2015-04-27 22:36:31,702 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar ends
+2015-04-27 22:37:07,822 - kafka.utils.VerifiableProperties - INFO - Verifying properties
+2015-04-27 22:37:07,842 - kafka.utils.VerifiableProperties - INFO - Property batch.num.messages is overridden to 1024
+2015-04-27 22:37:07,843 - kafka.utils.VerifiableProperties - WARN - Property batch.size is not valid
+2015-04-27 22:37:07,843 - kafka.utils.VerifiableProperties - WARN - Property buffer.memory is not valid
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - WARN - Property buffer.size is not valid
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property client.id is overridden to Client1
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property compression.codec is overridden to 0
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property message.send.max.retries is overridden to 3
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property metadata.broker.list is overridden to localhost:9092
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property partitioner.class is overridden to CustPartitioner
+2015-04-27 22:37:07,844 - kafka.utils.VerifiableProperties - INFO - Property producer.type is overridden to async
+2015-04-27 22:37:07,845 - kafka.utils.VerifiableProperties - WARN - Property queue.size is not valid
+2015-04-27 22:37:07,845 - kafka.utils.VerifiableProperties - WARN - Property queue.time is not valid
+2015-04-27 22:37:07,845 - kafka.utils.VerifiableProperties - INFO - Property request.required.acks is overridden to 1
+2015-04-27 22:37:07,845 - kafka.utils.VerifiableProperties - WARN - Property socket.receive.buffer is not valid
+2015-04-27 22:37:07,845 - kafka.utils.VerifiableProperties - WARN - Property socket.send.buffer is not valid
+2015-04-27 22:37:07,976 - kafka.producer.Producer - INFO - Shutting down producer
+2015-04-27 22:37:07,976 - kafka.producer.async.ProducerSendThread - INFO - Begin shutting down ProducerSendThread
+2015-04-27 22:37:07,978 - kafka.producer.async.ProducerSendThread - DEBUG - Handling 30 events
+2015-04-27 22:37:07,985 - kafka.producer.async.DefaultEventHandler - DEBUG - Handling 30 events
+2015-04-27 22:37:08,051 - kafka.client.ClientUtils$ - INFO - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(testin_1)
+2015-04-27 22:37:08,071 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:37:08,074 - kafka.producer.SyncProducer - INFO - Connected to localhost:9092 for producing
+2015-04-27 22:37:08,104 - kafka.producer.SyncProducer - INFO - Disconnecting from localhost:9092
+2015-04-27 22:37:08,112 - kafka.client.ClientUtils$ - DEBUG - Successfully fetched metadata for 1 topic(s) Set(testin_1)
+2015-04-27 22:37:08,124 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,124 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,127 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,130 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,130 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,131 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,131 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,131 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,131 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,131 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,131 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,132 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,132 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,132 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,132 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,132 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,133 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,133 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,133 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,134 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,134 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,146 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,147 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,147 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,147 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,147 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,147 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,147 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,147 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,147 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,148 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,148 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,148 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,149 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,149 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,150 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,154 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,155 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,155 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,155 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,155 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,155 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,155 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,156 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,156 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,156 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,157 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,157 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,157 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,158 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,158 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,158 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,158 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,158 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,158 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,159 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,159 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,159 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,159 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,160 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,160 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,160 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,161 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,161 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,161 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,161 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,162 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,162 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,162 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,162 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,164 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,164 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,164 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,164 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,164 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,164 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,164 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,165 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,165 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,165 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 22:37:08,171 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 22:37:08,172 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 22:37:08,180 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-27 22:37:08,192 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:37:08,213 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 22:37:08,213 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-27 22:37:08,221 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 22:37:08,222 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-27 22:37:08,222 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-27 22:37:08,224 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
+2015-04-27 22:49:35,146 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - SERVICE_HOST remains unset
+2015-04-27 22:49:37,861 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Node Undefined not found in metadata
+2015-04-27 22:49:37,926 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.dateblock.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,186 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.random.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,294 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.logmsg.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,415 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.replace.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,430 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.concat.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,578 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.formatnumber.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,620 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedcounts.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,628 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.gettokenizedboolean.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,645 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.matches.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 22:49:38,696 - com.ligadata.MetadataAPI.MetadataAPIImpl$ - ERROR - Failed to download the Jar of the object(pmml.id_gen.100's dep jar scala-compiler-2.10.0.jar): Key Not found
+2015-04-27 23:04:03,956 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Call Message Compiler ....
+2015-04-27 23:04:04,014 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Message Compilation done ....{
+  "Message" : {
+    "NameSpace" : "system",
+    "Name" : "twittermsg",
+    "FullName" : "system.twittermsg",
+    "Version" : 1000000,
+    "JarName" : null,
+    "PhysicalName" : "com.ligadata.messagescontainers.System_twittermsg_1000000_1430201043963",
+    "ObjectDefinition" : null,
+    "ObjectFormat" : "JSON",
+    "DependencyJars" : [ "basetypes_2.10-0.1.0.jar", "metadata_2.10-1.0.jar" ],
+    "TransactionId" : 0,
+  "Attributes": [ 
+{
+  "NameSpace" : "system",
+  "Name" : "id",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "string",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "string",
+  "PhysicalName" : "String",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.StringImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "tweet",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "string",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "string",
+  "PhysicalName" : "String",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.StringImpl",
+  "TransactionId" : 0
+}},
+{
+  "NameSpace" : "system",
+  "Name" : "tweet_date_time",
+  "Version" : 1000000,
+  "CollectionType" : "None",
+  "TransactionId" : 0,
+  "Type": {
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "string",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "string",
+  "PhysicalName" : "String",
+  "Version" : 1000000,
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.StringImpl",
+  "TransactionId" : 0
+}} ]
+}
+}
+2015-04-27 23:04:04,084 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - scalac cmd used: ArrayBuffer(sh, -c, /usr/scala/scala-2.10.4/bin/scalac -cp /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basefunctions_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/messagedef_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/methodextractor_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlcompiler_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/fatafatbase_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/bootstrap_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-time-2.3.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-convert-1.6.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmludfs_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlruntime_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-native_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-core_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-ast_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-databind-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-annotations-2.3.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-jackson_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-core-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/log4j-1.2.17.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar /home/cloudera/Desktop/Demo-twitter/workingdir/twittermsg/twittermsg.scala)
+2015-04-27 23:04:14,151 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar cmd used: /usr/java/jdk1.7.0_67-cloudera/bin/jar cvf /home/cloudera/Desktop/Demo-twitter/workingdir/system_twittermsg_1000000_1430201054151.jar -C /home/cloudera/Desktop/Demo-twitter/workingdir/twittermsg/ .
+2015-04-27 23:04:14,151 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar system_twittermsg_1000000_1430201054151.jar produced.  Its contents:
+2015-04-27 23:04:14,270 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - mv cmd used: mv /home/cloudera/Desktop/Demo-twitter/workingdir/system_twittermsg_1000000_1430201054151.jar /home/cloudera/Desktop/Demo-twitter/lib/application/
+2015-04-27 23:04:14,274 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Status => 0
+2015-04-27 23:04:14,274 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar File => system_twittermsg_1000000_1430201054151.jar
+2015-04-27 23:05:04,783 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - PmmlCompiler ctor ... begins
+2015-04-27 23:05:04,838 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile begins
+2015-04-27 23:05:05,755 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'securityContainer'...
+2015-04-27 23:05:05,755 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 23:05:05,793 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'security'...
+2015-04-27 23:05:05,793 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 23:05:05,991 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'banksContainer'...
+2015-04-27 23:05:05,991 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 23:05:05,996 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'banks'...
+2015-04-27 23:05:05,996 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 23:05:06,171 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'fraudContainer'...
+2015-04-27 23:05:06,174 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 23:05:06,178 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'fraud'...
+2015-04-27 23:05:06,178 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 23:05:06,286 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'investmentContainer'...
+2015-04-27 23:05:06,286 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 23:05:06,291 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'investment'...
+2015-04-27 23:05:06,291 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 23:05:06,392 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetArray' found in DerivedField 'retirementContainer'...
+2015-04-27 23:05:06,392 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetArray...see if it is a macro. 
+2015-04-27 23:05:06,403 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'DownCastArrayMembers' found in DerivedField 'retirement'...
+2015-04-27 23:05:06,403 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO DownCastArrayMembers...see if it is a macro. 
+2015-04-27 23:05:06,497 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'GetMsgContainerElseNew' found in DerivedField 'SumCounters'...
+2015-04-27 23:05:06,501 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO GetMsgContainerElseNew...see if it is a macro. 
+2015-04-27 23:05:06,510 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,510 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,512 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,512 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,516 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,516 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,518 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,518 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:06,521 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,521 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,528 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,529 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:06,533 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,533 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,541 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,541 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:06,543 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,543 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,546 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,546 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:06,552 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,552 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,586 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,586 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,609 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,609 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,640 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,640 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,683 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,683 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,707 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'setField' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'IncrSetSumCounters'...
+2015-04-27 23:05:06,708 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO setField...see if it is a macro. 
+2015-04-27 23:05:06,775 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in DerivedField 'SaveIncrSetSumCounters'...
+2015-04-27 23:05:06,775 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,836 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,836 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,839 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,839 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,841 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,841 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,843 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,844 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,847 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,849 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,853 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,854 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,946 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,946 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:06,995 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:06,995 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,040 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:07,040 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,087 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'and' found in DerivedField 'SetAndPrepareReturnString'...
+2015-04-27 23:05:07,087 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,140 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,140 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,143 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,143 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:07,145 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,145 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,148 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,149 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:07,156 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,156 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,158 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,158 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:07,161 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,161 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,163 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,163 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO if...see if it is a macro. 
+2015-04-27 23:05:07,180 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,180 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,193 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,193 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,196 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,197 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,215 - com.ligadata.Compiler.PmmlError$ - WARN - While processing Apply function 'Put' found in Apply function 'if' found in Apply function 'and' found in DerivedField 'CheckThreshold'...
+2015-04-27 23:05:07,215 - com.ligadata.Compiler.PmmlError$ - WARN - selectSimpleFcn ...funcDef produced? NO Put...see if it is a macro. 
+2015-04-27 23:05:07,302 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile ends
+2015-04-27 23:05:07,302 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create model definition...1) find the input variables 2) find output variables, 3) construct model def
+2015-04-27 23:05:07,303 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the inputVars for the model metadata construction:
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraudContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investmentContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("fraud", "com.ligadata.messagescontainers.System_fraud_1000000_1430197776279", "system", "fraud", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.investmentcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("securityContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banks", "com.ligadata.messagescontainers.System_banks_1000000_1430197807740", "system", "banks", false, null)
+2015-04-27 23:05:07,304 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("msg.tweet", "com.ligadata.messagescontainers.System_twittermsg_1000000_1430201043963", "system", "twittermsg", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("banksContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("gCtx", "com.ligadata.FatafatBase.EnvContext", "system", "envcontext", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirementContainer", "com.ligadata.FatafatBase.MessageContainerBase", "system", "messagecontainerbase", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.key", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.retirementcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("msg.tweet_date_time", "com.ligadata.messagescontainers.System_twittermsg_1000000_1430201043963", "system", "twittermsg", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("investment", "com.ligadata.messagescontainers.System_investment_1000000_1430197798258", "system", "investment", false, null)
+2015-04-27 23:05:07,309 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.fraudcounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("retirement", "com.ligadata.messagescontainers.System_retirement_1000000_1430197825713", "system", "retirement", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("security", "com.ligadata.messagescontainers.System_security_1000000_1430197816762", "system", "security", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.bankscounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("SumCounters.securitycounter", "com.ligadata.messagescontainers.System_Counters_1000000_1430199336947", "system", "counters", false, null)
+2015-04-27 23:05:07,310 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - 
+
+dump of the outputVars for the model metadata construction:
+2015-04-27 23:05:07,314 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_2", "system", "int")
+2015-04-27 23:05:07,314 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("predictedField", "system", "integer")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text3", "system", "string")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_4", "system", "int")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_RECORD_CNT", "system", "int")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_1", "system", "int")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text2", "system", "string")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("TWM_WORDSET_CNT_3", "system", "int")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text1", "system", "string")
+2015-04-27 23:05:07,315 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - ("alert_text4", "system", "string")
+2015-04-27 23:05:07,325 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar begins
+2015-04-27 23:05:07,325 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - write a copy of the generated source to /home/cloudera/Desktop/Demo-twitter/lib/application/demo.pmml
+2015-04-27 23:05:07,368 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile Demo
+2015-04-27 23:05:07,368 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - scalac cmd used: ArrayBuffer(sh, -c, /usr/scala/scala-2.10.4/bin/scalac -cp /home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basefunctions_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/messagedef_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/methodextractor_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlcompiler_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/fatafatbase_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/bootstrap_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-time-2.3.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/joda-convert-1.6.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmludfs_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/pmmlruntime_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-native_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-core_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-ast_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-databind-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-annotations-2.3.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/json4s-jackson_2.10-3.2.9.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/jackson-core-2.3.1.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/log4j-1.2.17.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_twittermsg_1000000_1430201054151.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_counters_1000000_1430199346780.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_security_1000000_1430197825402.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/basetypes_2.10-0.1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_banks_1000000_1430197816426.jar:/home/cloudera/Desktop/Demo-twitter/lib/system/metadata_2.10-1.0.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_retirement_1000000_1430197834669.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_fraud_1000000_1430197785377.jar:/home/cloudera/Desktop/Demo-twitter/lib/application/system_investment_1000000_1430197807350.jar /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/Demo.scala)
+2015-04-27 23:05:31,631 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - compile or Demo ends...rc = 0
+2015-04-27 23:05:31,631 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - create the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430201131631.jar
+2015-04-27 23:05:31,631 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar cmd used: /usr/java/jdk1.7.0_67-cloudera/bin/jar cvf /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430201131631.jar -C /home/cloudera/Desktop/Demo-twitter/workingdir/Demo/ .
+2015-04-27 23:05:31,631 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Jar system_demo_100_1430201131631.jar produced.  Its contents:
+2015-04-27 23:05:31,817 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jar of system_demo_100_1430201131631.jar complete ... 0
+2015-04-27 23:05:31,817 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move the jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430201131631.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application
+2015-04-27 23:05:31,821 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - move of jar /home/cloudera/Desktop/Demo-twitter/workingdir/system_demo_100_1430201131631.jar to the target /home/cloudera/Desktop/Demo-twitter/lib/application ends... rc = 0
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - Dump model variables for diagnostic purposes:
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - #########################################################
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelClassName=com.ligadata.System_Demo_100.pmml.Demo
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - modelVersion=100
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmmlFilePath=/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - pmml=`cat "/home/cloudera/Desktop/Demo-twitter/workingdir/Demo.xml"`
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - jarPath=system_demo_100_1430201131631.jar
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - clientName=ligadata
+2015-04-27 23:05:31,822 - com.ligadata.MetadataAPI.CompilerProxy - DEBUG - createJar ends
+2015-04-27 23:06:04,380 - kafka.utils.VerifiableProperties - INFO - Verifying properties
+2015-04-27 23:06:04,415 - kafka.utils.VerifiableProperties - INFO - Property batch.num.messages is overridden to 1024
+2015-04-27 23:06:04,415 - kafka.utils.VerifiableProperties - WARN - Property batch.size is not valid
+2015-04-27 23:06:04,415 - kafka.utils.VerifiableProperties - WARN - Property buffer.memory is not valid
+2015-04-27 23:06:04,415 - kafka.utils.VerifiableProperties - WARN - Property buffer.size is not valid
+2015-04-27 23:06:04,415 - kafka.utils.VerifiableProperties - INFO - Property client.id is overridden to Client1
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property compression.codec is overridden to 0
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property message.send.max.retries is overridden to 3
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property metadata.broker.list is overridden to localhost:9092
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property partitioner.class is overridden to CustPartitioner
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property producer.type is overridden to async
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - WARN - Property queue.size is not valid
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - WARN - Property queue.time is not valid
+2015-04-27 23:06:04,416 - kafka.utils.VerifiableProperties - INFO - Property request.required.acks is overridden to 1
+2015-04-27 23:06:04,417 - kafka.utils.VerifiableProperties - WARN - Property socket.receive.buffer is not valid
+2015-04-27 23:06:04,417 - kafka.utils.VerifiableProperties - WARN - Property socket.send.buffer is not valid
+2015-04-27 23:06:04,550 - kafka.producer.Producer - INFO - Shutting down producer
+2015-04-27 23:06:04,550 - kafka.producer.async.ProducerSendThread - INFO - Begin shutting down ProducerSendThread
+2015-04-27 23:06:04,551 - kafka.producer.async.ProducerSendThread - DEBUG - Handling 30 events
+2015-04-27 23:06:04,559 - kafka.producer.async.DefaultEventHandler - DEBUG - Handling 30 events
+2015-04-27 23:06:04,598 - kafka.client.ClientUtils$ - INFO - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(testin_1)
+2015-04-27 23:06:04,620 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 23:06:04,623 - kafka.producer.SyncProducer - INFO - Connected to localhost:9092 for producing
+2015-04-27 23:06:04,652 - kafka.producer.SyncProducer - INFO - Disconnecting from localhost:9092
+2015-04-27 23:06:04,659 - kafka.client.ClientUtils$ - DEBUG - Successfully fetched metadata for 1 topic(s) Set(testin_1)
+2015-04-27 23:06:04,675 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,676 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,678 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,681 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,682 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,682 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,682 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,682 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,683 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,683 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,683 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,683 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,683 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,684 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,684 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,684 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,684 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,685 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,685 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,685 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,688 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,695 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,695 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,696 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,696 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,696 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,696 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,700 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,700 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,701 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,701 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,701 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,703 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,703 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,703 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,703 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,704 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,704 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,704 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,705 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,706 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,706 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,706 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,707 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,707 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,707 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,707 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,707 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,708 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,708 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,708 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,709 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,709 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,709 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,709 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,710 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,710 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,710 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,710 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,710 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,710 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,711 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,711 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,711 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,711 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,711 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,712 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,712 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,712 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,712 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,712 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,713 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,713 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,713 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,715 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,715 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,716 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,716 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,716 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,716 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,716 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,717 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,717 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,717 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:06:04,717 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:06:04,718 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:06:04,728 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-27 23:06:04,741 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 23:06:04,758 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 23:06:04,759 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-27 23:06:04,768 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 23:06:04,772 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-27 23:06:04,772 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-27 23:06:04,773 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092
+2015-04-27 23:09:24,300 - kafka.utils.VerifiableProperties - INFO - Verifying properties
+2015-04-27 23:09:24,320 - kafka.utils.VerifiableProperties - INFO - Property batch.num.messages is overridden to 1024
+2015-04-27 23:09:24,320 - kafka.utils.VerifiableProperties - WARN - Property batch.size is not valid
+2015-04-27 23:09:24,320 - kafka.utils.VerifiableProperties - WARN - Property buffer.memory is not valid
+2015-04-27 23:09:24,320 - kafka.utils.VerifiableProperties - WARN - Property buffer.size is not valid
+2015-04-27 23:09:24,321 - kafka.utils.VerifiableProperties - INFO - Property client.id is overridden to Client1
+2015-04-27 23:09:24,321 - kafka.utils.VerifiableProperties - INFO - Property compression.codec is overridden to 0
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - INFO - Property message.send.max.retries is overridden to 3
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - INFO - Property metadata.broker.list is overridden to localhost:9092
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - INFO - Property partitioner.class is overridden to CustPartitioner
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - INFO - Property producer.type is overridden to async
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - WARN - Property queue.size is not valid
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - WARN - Property queue.time is not valid
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - INFO - Property request.required.acks is overridden to 1
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - WARN - Property socket.receive.buffer is not valid
+2015-04-27 23:09:24,322 - kafka.utils.VerifiableProperties - WARN - Property socket.send.buffer is not valid
+2015-04-27 23:09:24,463 - kafka.producer.Producer - INFO - Shutting down producer
+2015-04-27 23:09:24,466 - kafka.producer.async.ProducerSendThread - INFO - Begin shutting down ProducerSendThread
+2015-04-27 23:09:24,466 - kafka.producer.async.ProducerSendThread - DEBUG - Handling 30 events
+2015-04-27 23:09:24,475 - kafka.producer.async.DefaultEventHandler - DEBUG - Handling 30 events
+2015-04-27 23:09:24,527 - kafka.client.ClientUtils$ - INFO - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(testin_1)
+2015-04-27 23:09:24,562 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 23:09:24,563 - kafka.producer.SyncProducer - INFO - Connected to localhost:9092 for producing
+2015-04-27 23:09:24,603 - kafka.producer.SyncProducer - INFO - Disconnecting from localhost:9092
+2015-04-27 23:09:24,611 - kafka.client.ClientUtils$ - DEBUG - Successfully fetched metadata for 1 topic(s) Set(testin_1)
+2015-04-27 23:09:24,634 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,635 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,638 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,641 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,646 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,646 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,646 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,646 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,647 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,647 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,647 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,650 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,650 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,650 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,650 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,651 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,651 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,651 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,652 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,652 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,652 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,652 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,652 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,652 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,656 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,657 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,657 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,657 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,657 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,657 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,659 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,659 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,660 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,660 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,660 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,660 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,660 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,660 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,660 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,661 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,661 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,661 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,663 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,663 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,663 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,663 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,663 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,664 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,664 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,664 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,665 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,665 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,667 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,667 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,668 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,668 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,668 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,668 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,670 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,670 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,670 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,671 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,671 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,677 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,677 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,679 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,679 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,679 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,681 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,681 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,681 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,682 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,682 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,682 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,683 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,683 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,686 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,687 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,687 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,687 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,688 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,689 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,689 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,689 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,690 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,690 - kafka.producer.BrokerPartitionInfo - DEBUG - Getting broker partition info for topic testin_1
+2015-04-27 23:09:24,690 - kafka.producer.BrokerPartitionInfo - DEBUG - Partition [testin_1,0] has leader 0
+2015-04-27 23:09:24,690 - kafka.producer.async.DefaultEventHandler - DEBUG - Broker partitions registered for topic: testin_1 are 0
+2015-04-27 23:09:24,694 - kafka.producer.async.DefaultEventHandler - DEBUG - Sending 30 messages with no compression to [testin_1,0]
+2015-04-27 23:09:24,709 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sending messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 23:09:24,719 - kafka.network.BlockingChannel - DEBUG - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 43690 (requested -1), SO_SNDBUF = 102400 (requested 102400).
+2015-04-27 23:09:24,719 - kafka.producer.SyncProducer - INFO - Connected to quickstart.cloudera:9092 for producing
+2015-04-27 23:09:24,725 - kafka.producer.async.DefaultEventHandler - DEBUG - Producer sent messages with correlation id 31 for topics [testin_1,0] to broker 0 on quickstart.cloudera:9092
+2015-04-27 23:09:24,726 - kafka.producer.async.ProducerSendThread - INFO - Shutdown ProducerSendThread complete
+2015-04-27 23:09:24,727 - kafka.producer.ProducerPool - INFO - Closing all sync producers
+2015-04-27 23:09:24,728 - kafka.producer.SyncProducer - INFO - Disconnecting from quickstart.cloudera:9092

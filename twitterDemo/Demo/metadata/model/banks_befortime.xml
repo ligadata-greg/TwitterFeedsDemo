@@ -433,39 +433,38 @@
 			
 			<DerivedField name="PrepareFraudAlertMsg" dateType="string" optype="categorical">
 					<Apply function="Concat">
-						<Constant dataType="string">fraud alerts at </Constant>
-						<FieldRef field="msg.tweet_date_time"/>
-						<Constant dataType="string">min with </Constant>
+						<Constant dataType="string">fraud alerts at min </Constant>
+						<Constant dataType="string"> </Constant>
 						<FieldRef field="TWM_WORDSET_CNT_1"/> 
-						<Constant dataType="string"> tweets </Constant>
+						<Constant dataType="string"> </Constant>
+						<Constant dataType="string"> tweets</Constant>
 					</Apply>
 			</DerivedField>
 			<DerivedField name="PrepareSecurityAlertMsg" dateType="string" optype="categorical">
 			<Apply function="Concat">
-						<Constant dataType="string">security alerts at </Constant>
-						<FieldRef field="msg.tweet_date_time"/>
-						<Constant dataType="string"> min with</Constant>
+						<Constant dataType="string">security alerts at min </Constant>
+						<Constant dataType="string"> </Constant>
 						<FieldRef field="TWM_WORDSET_CNT_2"/> 
+						<Constant dataType="string"> </Constant>
 						<Constant dataType="string"> tweets</Constant>
 					</Apply>
 			</DerivedField>
 			<DerivedField name="PrepareInvestmentAlertMsg" dateType="string" optype="categorical">
 			<Apply function="Concat">
-						<Constant dataType="string">investment alerts at </Constant>
-						<FieldRef field="msg.tweet_date_time"/>
-						<Constant dataType="string"> min with </Constant>
-						<FieldRef field="TWM_WORDSET_CNT_3"/>
+						<Constant dataType="string">investment alerts at min </Constant>
+						<Constant dataType="string"> </Constant>
+						<FieldRef field="TWM_WORDSET_CNT_3"/> 
+						<Constant dataType="string"> </Constant>
 						<Constant dataType="string"> tweets</Constant>
 					</Apply>
 			</DerivedField>
 			<DerivedField name="PrepareRetirementAlertMsg" dateType="string" optype="categorical">
 			<Apply function="Concat">
-						<Constant dataType="string">retirement alerts at </Constant>
-						<FieldRef field="msg.tweet_date_time"/>
-						<Constant dataType="string"> min with</Constant>
-						<FieldRef field="TWM_WORDSET_CNT_4"/>
+						<Constant dataType="string">retirement alerts at min </Constant>
+						<Constant dataType="string"> </Constant>
+						<FieldRef field="TWM_WORDSET_CNT_4"/> 
+						<Constant dataType="string"> </Constant>
 						<Constant dataType="string"> tweets</Constant>
-						 
 					</Apply>
 			</DerivedField> 
 		
