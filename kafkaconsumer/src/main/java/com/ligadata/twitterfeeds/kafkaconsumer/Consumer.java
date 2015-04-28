@@ -1,5 +1,10 @@
 package com.ligadata.twitterfeeds.kafkaconsumer;
 
+import java.sql.Connection;
+
+import com.ligadata.fatafat.GenericDAO;
+import com.ligadata.fatafat.impl.OutputJsonDAO;
+import com.ligadata.fatafat.objs.OutputJsonObj;
 import com.ligadata.twitterfeeds.zookeeperclient.Client;
 
 import kafka.consumer.ConsumerIterator;
@@ -29,7 +34,9 @@ public class Consumer {
 			System.out.println("connect to zookeeper");
 			long globalStartTime = System.nanoTime();
 		    float currentTime = 0;
-
+		    GenericDAO dao = new GenericDAO();
+		    Connection con = dao.getConnection();
+		    
 			while (true) {
 				if (it.hasNext()) {
 					
@@ -58,7 +65,11 @@ public class Consumer {
 
 //					c.setHashTagData("#Obama",obj.toString());
 //					c.setData(obj.toString());
-					c.setData(new String(it.next().message()));
+//					c.setData(new String(it.next().message()));
+					
+					OutputJsonDAO ojDao = new OutputJsonDAO();
+					OutputJsonObj obj = new OutputJsonObj("1", new String(it.next().message()));
+					System.out.println(ojDao.insert(obj, con));
 					
 				}
 			}
