@@ -60,7 +60,7 @@
 {
   "MetadataType" : "ArrayTypeDef",
   "NameSpace" : "system",
-  "Name" : "arrayofinteger",
+  "Name" : "arrayofint",
   "TypeTypeName" : "tScalar",
   "TypeNameSpace" : "system",
   "TypeName" : "Int",
