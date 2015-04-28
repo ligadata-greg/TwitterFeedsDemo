@@ -490,7 +490,15 @@
 				</Apply>
             </DerivedField>			
 			
-			
+				<!-- Increment the Banks Counter -->
+			<DerivedField name="cumAlerts" dataType="integer" optype="categorical">
+                <Apply function="+">
+                    <FieldRef field="SumCounters.fraudcounter"/>
+					<FieldRef field="SumCounters.securitycounter"/>
+                    <FieldRef field="SumCounters.investmentcounter"/>
+					<FieldRef field="SumCounters.retirementcounter"/>
+                </Apply>
+            </DerivedField>
 			
 			
 
@@ -508,7 +516,9 @@
 				<MiningField name="alert_text1" usageType="supplementary"/> 
 				<MiningField name="alert_text2" usageType="supplementary"/> 
 				<MiningField name="alert_text3" usageType="supplementary"/> 
-				<MiningField name="alert_text4" usageType="supplementary"/> 
+				<MiningField name="alert_text4" usageType="supplementary"/>
+	
+				<MiningField name="cumAlerts" usageType="supplementary"/>				
 
 				<MiningField name="predictedField" usageType="predicted"/>
             </MiningSchema>
