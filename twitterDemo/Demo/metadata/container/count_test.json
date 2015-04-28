@@ -1,0 +1,31 @@
+{
+  "Container": {
+    "NameSpace": "System",
+    "Name": "abc",
+    "Version": "00.01.00",
+    "Description": "Counters",
+    "Fixed": "true",
+    "Fields": [
+      {
+        "Name": "Key",
+        "Type": "System.String"
+      },
+      {
+        "Name": "FraudCounter",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "SecurityCounter",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "InvestmentCounter",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "RetirementCounter",
+        "Type": "System.Int"
+      }
+    ]
+  }
+}

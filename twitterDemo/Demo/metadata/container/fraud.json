@@ -1,0 +1,19 @@
+{
+   	"Container": { 
+   		"NameSpace":"System",
+   		"Name":"fraud",
+   		"Version":"00.01.00",
+   		"Description":"Container for fraud",
+   		"Fixed":"true",
+   		"Fields" : [
+		{
+                "Name":"id",
+                "Type":"System.String"
+   		},
+   		{
+                "Name":"terms",
+                "Type":"System.String"
+   	        }
+   		]
+   	}
+}
