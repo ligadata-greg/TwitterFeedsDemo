@@ -1,229 +1,9 @@
 {
 	"ModelsResult": [{
-		"EventDate": 1430031608536,
-		"ExecutionTime": "2015-04-26T14:14:08.536-07:00",
-		"DataReadTime": "2015-04-26 14:14:07.594",
-		"ElapsedTimeFromDataRead": 965781,
-		"ModelName": "System.Demo",
-		"ModelVersion": "100",
-		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
-		"uniqVal": "{\"Version\":1,\"Offset\":0}",
-		"xformCntr": 1,
-		"xformTotl": 1,
-		"TxnId": 100000000000000,
-		"output": [{
-			"Name": "TWM_WORDSET_CNT_2",
-			"Type": "Supplementary",
-			"Value": "0"
-		},
-		{
-			"Name": "TWM_RECORD_CNT",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_1",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_4",
-			"Type": "Supplementary",
-			"Value": "0"
-		},
-		{
-			"Name": "predictedField",
-			"Type": "Predicted",
-			"Value": "1b"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_3",
-			"Type": "Supplementary",
-			"Value": "1"
-		}]
-	}]
-}{
-	"ModelsResult": [{
-		"EventDate": 1430031608871,
-		"ExecutionTime": "2015-04-26T14:14:08.871-07:00",
-		"DataReadTime": "2015-04-26 14:14:07.594",
-		"ElapsedTimeFromDataRead": 1277100,
-		"ModelName": "System.Demo",
-		"ModelVersion": "100",
-		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
-		"uniqVal": "{\"Version\":1,\"Offset\":3}",
-		"xformCntr": 1,
-		"xformTotl": 1,
-		"TxnId": 100000000000003,
-		"output": [{
-			"Name": "TWM_WORDSET_CNT_2",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_RECORD_CNT",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_1",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_4",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "predictedField",
-			"Type": "Predicted",
-			"Value": "1b"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_3",
-			"Type": "Supplementary",
-			"Value": "2"
-		}]
-	}]
-}{
-	"ModelsResult": [{
-		"EventDate": 1430031608998,
-		"ExecutionTime": "2015-04-26T14:14:08.998-07:00",
-		"DataReadTime": "2015-04-26 14:14:07.594",
-		"ElapsedTimeFromDataRead": 1404175,
-		"ModelName": "System.Demo",
-		"ModelVersion": "100",
-		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
-		"uniqVal": "{\"Version\":1,\"Offset\":8}",
-		"xformCntr": 1,
-		"xformTotl": 1,
-		"TxnId": 100000000000008,
-		"output": [{
-			"Name": "TWM_WORDSET_CNT_2",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "TWM_RECORD_CNT",
-			"Type": "Supplementary",
-			"Value": "3"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_1",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_4",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "predictedField",
-			"Type": "Predicted",
-			"Value": "1b"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_3",
-			"Type": "Supplementary",
-			"Value": "3"
-		}]
-	}]
-}{
-	"ModelsResult": [{
-		"EventDate": 1430031609099,
-		"ExecutionTime": "2015-04-26T14:14:09.099-07:00",
-		"DataReadTime": "2015-04-26 14:14:07.594",
-		"ElapsedTimeFromDataRead": 1504980,
-		"ModelName": "System.Demo",
-		"ModelVersion": "100",
-		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
-		"uniqVal": "{\"Version\":1,\"Offset\":20}",
-		"xformCntr": 1,
-		"xformTotl": 1,
-		"TxnId": 100000000000020,
-		"output": [{
-			"Name": "TWM_WORDSET_CNT_2",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "TWM_RECORD_CNT",
-			"Type": "Supplementary",
-			"Value": "4"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_1",
-			"Type": "Supplementary",
-			"Value": "1"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_4",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "predictedField",
-			"Type": "Predicted",
-			"Value": "1b"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_3",
-			"Type": "Supplementary",
-			"Value": "4"
-		}]
-	}]
-}{
-	"ModelsResult": [{
-		"EventDate": 1430031610151,
-		"ExecutionTime": "2015-04-26T14:15:10.151-07:00",
-		"DataReadTime": "2015-04-26 14:15:10.119",
-		"ElapsedTimeFromDataRead": 32271,
-		"ModelName": "System.Demo",
-		"ModelVersion": "100",
-		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
-		"uniqVal": "{\"Version\":1,\"Offset\":30}",
-		"xformCntr": 1,
-		"xformTotl": 1,
-		"TxnId": 100000000000030,
-		"output": [{
-			"Name": "TWM_WORDSET_CNT_2",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "TWM_RECORD_CNT",
-			"Type": "Supplementary",
-			"Value": "5"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_1",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_4",
-			"Type": "Supplementary",
-			"Value": "2"
-		},
-		{
-			"Name": "predictedField",
-			"Type": "Predicted",
-			"Value": "1b"
-		},
-		{
-			"Name": "TWM_WORDSET_CNT_3",
-			"Type": "Supplementary",
-			"Value": "5"
-		}]
-	}]
-}{
-	"ModelsResult": [{
-		"EventDate": 1430031610174,
-		"ExecutionTime": "2015-04-26T14:15:10.174-07:00",
-		"DataReadTime": "2015-04-26 14:15:10.119",
-		"ElapsedTimeFromDataRead": 54971,
+		"EventDate": 1430290814998,
+		"ExecutionTime": "2015-04-29T11:09:14.998-07:00",
+		"DataReadTime": "2015-04-29 11:09:14.152",
+		"ElapsedTimeFromDataRead": 845919,
 		"ModelName": "System.Demo",
 		"ModelVersion": "100",
 		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
@@ -237,6 +17,11 @@
 			"Value": "3"
 		},
 		{
+			"Name": "alert_text3",
+			"Type": "Supplementary",
+			"Value": "investment alerts at12:90"
+		},
+		{
 			"Name": "TWM_RECORD_CNT",
 			"Type": "Supplementary",
 			"Value": "6"
@@ -252,6 +37,16 @@
 			"Value": "3"
 		},
 		{
+			"Name": "cumAlerts",
+			"Type": "Supplementary",
+			"Value": "14"
+		},
+		{
+			"Name": "alert_text2",
+			"Type": "Supplementary",
+			"Value": "security alerts at12:90"
+		},
+		{
 			"Name": "predictedField",
 			"Type": "Predicted",
 			"Value": "1b"
@@ -260,14 +55,24 @@
 			"Name": "TWM_WORDSET_CNT_3",
 			"Type": "Supplementary",
 			"Value": "6"
+		},
+		{
+			"Name": "alert_text1",
+			"Type": "Supplementary",
+			"Value": "fraud alerts at12:90"
+		},
+		{
+			"Name": "alert_text4",
+			"Type": "Supplementary",
+			"Value": "retirement alerts at12:90"
 		}]
 	}]
 }{
 	"ModelsResult": [{
-		"EventDate": 1430031610185,
-		"ExecutionTime": "2015-04-26T14:15:10.185-07:00",
-		"DataReadTime": "2015-04-26 14:15:10.119",
-		"ElapsedTimeFromDataRead": 66387,
+		"EventDate": 1430290815151,
+		"ExecutionTime": "2015-04-29T11:09:15.151-07:00",
+		"DataReadTime": "2015-04-29 11:09:14.152",
+		"ElapsedTimeFromDataRead": 999192,
 		"ModelName": "System.Demo",
 		"ModelVersion": "100",
 		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
@@ -281,6 +86,11 @@
 			"Value": "4"
 		},
 		{
+			"Name": "alert_text3",
+			"Type": "Supplementary",
+			"Value": "investment alerts at12:90"
+		},
+		{
 			"Name": "TWM_RECORD_CNT",
 			"Type": "Supplementary",
 			"Value": "7"
@@ -296,6 +106,16 @@
 			"Value": "4"
 		},
 		{
+			"Name": "cumAlerts",
+			"Type": "Supplementary",
+			"Value": "17"
+		},
+		{
+			"Name": "alert_text2",
+			"Type": "Supplementary",
+			"Value": "security alerts at12:90"
+		},
+		{
 			"Name": "predictedField",
 			"Type": "Predicted",
 			"Value": "1b"
@@ -304,14 +124,24 @@
 			"Name": "TWM_WORDSET_CNT_3",
 			"Type": "Supplementary",
 			"Value": "7"
+		},
+		{
+			"Name": "alert_text1",
+			"Type": "Supplementary",
+			"Value": "fraud alerts at12:90"
+		},
+		{
+			"Name": "alert_text4",
+			"Type": "Supplementary",
+			"Value": "retirement alerts at12:90"
 		}]
 	}]
 }{
 	"ModelsResult": [{
-		"EventDate": 1430031610209,
-		"ExecutionTime": "2015-04-26T14:15:10.209-07:00",
-		"DataReadTime": "2015-04-26 14:15:10.119",
-		"ElapsedTimeFromDataRead": 89938,
+		"EventDate": 1430290815326,
+		"ExecutionTime": "2015-04-29T11:09:15.326-07:00",
+		"DataReadTime": "2015-04-29 11:09:14.152",
+		"ElapsedTimeFromDataRead": 1173579,
 		"ModelName": "System.Demo",
 		"ModelVersion": "100",
 		"uniqKey": "{\"Version\":1,\"Type\":\"Kafka\",\"Name\":\"testin_1\",\"TopicName\":\"testin_1\",\"PartitionId\":0}",
@@ -325,6 +155,11 @@
 			"Value": "4"
 		},
 		{
+			"Name": "alert_text3",
+			"Type": "Supplementary",
+			"Value": "investment alerts at12:90"
+		},
+		{
 			"Name": "TWM_RECORD_CNT",
 			"Type": "Supplementary",
 			"Value": "8"
@@ -340,6 +175,16 @@
 			"Value": "4"
 		},
 		{
+			"Name": "cumAlerts",
+			"Type": "Supplementary",
+			"Value": "18"
+		},
+		{
+			"Name": "alert_text2",
+			"Type": "Supplementary",
+			"Value": "security alerts at12:90"
+		},
+		{
 			"Name": "predictedField",
 			"Type": "Predicted",
 			"Value": "1b"
@@ -348,6 +193,16 @@
 			"Name": "TWM_WORDSET_CNT_3",
 			"Type": "Supplementary",
 			"Value": "8"
+		},
+		{
+			"Name": "alert_text1",
+			"Type": "Supplementary",
+			"Value": "fraud alerts at12:90"
+		},
+		{
+			"Name": "alert_text4",
+			"Type": "Supplementary",
+			"Value": "retirement alerts at12:90"
 		}]
 	}]
 }
