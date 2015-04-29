@@ -17,7 +17,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.ligadata</groupId>
+			<groupId>com.ligadata.twitterfeeds</groupId>
 			<artifactId>DaoLayer</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
