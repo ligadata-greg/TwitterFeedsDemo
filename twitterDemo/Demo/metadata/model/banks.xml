@@ -16,6 +16,7 @@
 				<DataField name="TWM_WORDSET_CNT_2"    displayName="TWM_WORDSET_CNT_2"    optype="continuous"  dataType="int"/>
 				<DataField name="TWM_WORDSET_CNT_3"    displayName="TWM_WORDSET_CNT_3"    optype="continuous"  dataType="int"/>
 				<DataField name="TWM_WORDSET_CNT_4"    displayName="TWM_WORDSET_CNT_4"    optype="continuous"  dataType="int"/>
+				<DataField name="matched_bank"    displayName="matched_bank"    optype="categorical"  dataType="string"/>
 				<DataField name="alert_text1"    displayName="alert_text1"    optype="categorical"  dataType="string"/>
 				<DataField name="alert_text2"    displayName="alert_text2"    optype="categorical"  dataType="string"/>
 				<DataField name="alert_text3"    displayName="alert_text3"    optype="categorical"  dataType="string"/>
@@ -27,6 +28,111 @@
 				<DataField name="tweet" displayName="tweet" optype="categorical" dataType="string"/>	
                 </DataDictionary>
         <TransformationDictionary>
+		
+		
+			<!--        get array of barclays  -->
+			
+            <DerivedField name="barclaysContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.barclays</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="barclays" dataType="ArrayOfBarclays" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="barclaysContainer"/>
+					<Constant dataType="mbrTypename">barclays</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="barclaysTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="barclays"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField>
+			
+								<!-- check if tweet has barclays-->
+			<DerivedField name="CheckIfBarclays" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="barclaysTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField>
+			
+				<!--        get array of bankOfAmerica  -->
+			
+            <DerivedField name="bankOfAmericaContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.bankofamerica</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="bankOfAmerica" dataType="ArrayOfBankOfAmerica" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="bankOfAmericaContainer"/>
+					<Constant dataType="mbrTypename">bankOfAmerica</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="bankOfAmericaTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="bankOfAmerica"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField>
+			
+								<!-- check if tweet has bankOfAmerica-->
+			<DerivedField name="CheckIfBankOfAmerica" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="bankOfAmericaTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField>
+			
+				<!--        get array of citigroup  -->
+			
+            <DerivedField name="citiGroupContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.citiGroup</Constant>
+				</Apply>
+			</DerivedField>
+
+			<DerivedField name="citiGroup" dataType="ArrayOfCitigroup" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="citiGroupContainer"/>
+					<Constant dataType="mbrTypename">citiGroup</Constant>
+				</Apply>
+			</DerivedField>
+               
+			<DerivedField name="citiGroupTermsArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="citiGroup"/>
+						<Constant dataType="ident">terms</Constant> 
+					</Apply>
+				</Apply>
+			</DerivedField>
+
+								<!-- check if tweet has citigroup-->
+			<DerivedField name="CheckIfcitiGroup" dataType="boolean" optype="categorical">
+                <Apply function="getTokenizedBoolean">
+					<FieldRef field="msg.tweet"/>
+					<FieldRef field="citiGroupTermsArray"/>
+					<Constant dataType="int">1</Constant>
+				</Apply>
+            </DerivedField>
+		
+		
 		
 		
 		<!--        get array of security  -->
@@ -71,46 +177,6 @@
             </DerivedField>
 			
 			
-			<!--        get array of banking  -->
-			
-            <DerivedField name="banksContainer" dataType="ArrayOfMessageContainerBase" optype="categorical">
-				<Apply function="GetArray">
-					<FieldRef field="gCtx"/>
-					<Constant dataType="string">System.banks</Constant>
-				</Apply>
-			</DerivedField>
-
-			<DerivedField name="banks" dataType="ArrayOfBanks" optype="categorical">
-				<Apply function="DownCastArrayMembers">
-					<FieldRef field="banksContainer"/>
-					<Constant dataType="mbrTypename">banks</Constant>
-				</Apply>
-			</DerivedField>
-               
-			<DerivedField name="banksTermsArray" dataType="ArrayOfString" optype="categorical">
-				<Apply function="ToArray">
-					<Apply function="ContainerMap">
-						<FieldRef field="banks"/>
-						<Constant dataType="ident">terms</Constant> 
-					</Apply>
-				</Apply>
-			</DerivedField>
-								<!--check count of matche -->
-			<DerivedField name="banksCounts" dataType="ArrayOfInt" optype="categorical">
-				<Apply function="getTokenizedCounts">
-					<FieldRef field="msg.tweet"/>
-					<FieldRef field="banksTermsArray"/>
-				</Apply>
-			</DerivedField>
-			
-								<!-- check if tweet has banking-->
-			<DerivedField name="CheckIfBanks" dataType="boolean" optype="categorical">
-                <Apply function="getTokenizedBoolean">
-					<FieldRef field="msg.tweet"/>
-					<FieldRef field="banksTermsArray"/>
-					<Constant dataType="int">1</Constant>
-				</Apply>
-            </DerivedField>
 			
 			<!--        get array of fraud  -->
 			
@@ -137,13 +203,6 @@
 				</Apply>
 			</DerivedField> 
 
-				<!--check count of matche -->
-			<DerivedField name="fraudCounts" dataType="ArrayOfInt" optype="categorical">
-				<Apply function="getTokenizedCounts">
-					<FieldRef field="msg.tweet"/>
-					<FieldRef field="fraudTermsArray"/>
-				</Apply>
-			</DerivedField> 
 			
 			<!-- check if tweet has fraud -->
 			<DerivedField name="CheckIfFraudMatch" dataType="boolean" optype="categorical">
@@ -179,13 +238,6 @@
 				</Apply>
 			</DerivedField> 
 
-				<!--check count of matche -->
-			<DerivedField name="investmentCounts" dataType="ArrayOfInt" optype="categorical">
-				<Apply function="getTokenizedCounts">
-					<FieldRef field="msg.tweet"/>
-					<FieldRef field="investmentTermsArray"/>
-				</Apply>
-			</DerivedField>
 			
 			<!-- check if tweet has Investment  -->
 			<DerivedField name="CheckIfInvestmentMatch" dataType="boolean" optype="categorical">
@@ -222,13 +274,6 @@
 				</Apply>
 			</DerivedField> 
 
-				<!--check count of matche -->
-			<DerivedField name="retirementCounts" dataType="ArrayOfInt" optype="categorical">
-				<Apply function="getTokenizedCounts">
-					<FieldRef field="msg.tweet"/>
-					<FieldRef field="retirementTermsArray"/>
-				</Apply>
-			</DerivedField> 
 			
 			<!-- check if tweet has Retirement  -->
 			<DerivedField name="CheckIfRetirementMatch" dataType="boolean" optype="categorical">
@@ -241,17 +286,51 @@
 			
 			
 			
+			
+			
 			<!-- Get Summary Counters cosniders all companies under one group -->
             <DerivedField name="SumCounters" dataType="Counters" optype="categorical">
                 <Apply function="GetMsgContainerElseNew">
                     <FieldRef field="gCtx"/>
                     <Constant dataType="typename">SumCounters</Constant>
 					<Constant dataType="string">System.Counters</Constant>
-                    <Constant dataType="string">0</Constant>
+                    <FieldRef field="matched_bank"/>
                 </Apply>
             </DerivedField>
-            
-
+			
+			
+			<!-- to git array of all counters for each bank -->
+			
+			<DerivedField name="SumCounters1" dataType="ArrayOfMessageContainerBase" optype="categorical">
+				<Apply function="GetArray">
+					<FieldRef field="gCtx"/>
+					<Constant dataType="string">System.Counters</Constant>
+				</Apply>
+			</DerivedField> 
+			
+			
+			<DerivedField name="counters" dataType="ArrayOfCounters" optype="categorical">
+				<Apply function="DownCastArrayMembers">
+					<FieldRef field="SumCounters1"/>
+					<Constant dataType="mbrTypename">counters</Constant>
+				</Apply>
+			</DerivedField>
+               
+			 
+			<DerivedField name="countersArray" dataType="ArrayOfString" optype="categorical">
+				<Apply function="ToArray">
+					<Apply function="ContainerMap">
+						<FieldRef field="counters"/>
+						<Constant dataType="ident">key</Constant>
+						<Constant dataType="ident">fraudcounter</Constant>
+						<Constant dataType="ident">securitycounter</Constant>
+						<Constant dataType="ident">investmentcounter</Constant>
+						<Constant dataType="ident">retirementcounter</Constant>
+					</Apply>
+				</Apply>
+			</DerivedField> 
+						
+					
             <!-- Increments the Fraud Counter -->
             <DerivedField name="IncFraudCounter" dataType="integer" optype="categorical">
                 <Apply function="+">
@@ -299,12 +378,12 @@
                 <Apply function="and">
 					<Apply function="setField">
                         <FieldRef field="SumCounters.key"/>
-                        <Constant dataType="string">0</Constant>
+                        <FieldRef field="matched_bank"/>
                     </Apply>
 					<Apply function="setField">
-						<FieldRef field="SumCounters.bankscounter"/>
+						<FieldRef field="SumCounters.bankscounter"/>    
 					<FieldRef field="IncBanksCounter"/>
-					</Apply>
+					</Apply>  
 					<Apply function="if">
 						<FieldRef field="CheckIfSecurityMatch"/>
 						<Apply function="setField">
@@ -460,22 +539,66 @@
 			<!-- Steps to take when the 'if' return a "true" -->
             <DerivedField name="SuccessPath" dataType="boolean" optype="categorical">
 				<Apply function="and">
-						<FieldRef field="IncrSetSumCounters"/>
-						<FieldRef field="SaveIncrSetSumCounters"/>
-						<FieldRef field="SetAndPrepareReturnString"/>
-						<FieldRef field="CheckThreshold"/>
+					<FieldRef field="IncrSetSumCounters"/>
+					<FieldRef field="SaveIncrSetSumCounters"/>
+					<FieldRef field="SetAndPrepareReturnString"/>
+					<FieldRef field="CheckThreshold"/>
                 </Apply>
             </DerivedField>
 			
 			
-			<!-- Banking Rule -->
-			<DerivedField name="ScoreCheckBanks" dataType="boolean" optype="categorical">
+			<!-- barclays Rule -->
+			<DerivedField name="CheckBarclays" dataType="boolean" optype="categorical">
                 <Apply function="if">
-                    <FieldRef field="CheckIfBanks"/>
-                    <FieldRef field="SuccessPath"/> 
+                    <FieldRef field="CheckIfBarclays"/>
+					<Apply function="and">
+						<Apply function="Put">
+							<Constant dataType="string">matched_bank</Constant>
+							<Constant dataType="string">Barclays</Constant>
+						</Apply>
+						<FieldRef field="SuccessPath"/>
+					</Apply>
 					<Constant dataType="boolean">false</Constant>
 				</Apply>
-            </DerivedField>			
+            </DerivedField>
+
+			<!-- Bank of Amireca Rule -->
+			<DerivedField name="CheckBankOfAmerica" dataType="boolean" optype="categorical">
+                <Apply function="if">
+                    <FieldRef field="CheckIfBankOfAmerica"/>
+					<Apply function="and">
+						<Apply function="Put">
+							<Constant dataType="string">matched_bank</Constant>
+							<Constant dataType="string">BankOfAmerica</Constant>
+						</Apply>
+						<FieldRef field="SuccessPath"/>
+					</Apply>
+				</Apply>
+            </DerivedField>	
+
+			<!-- citiGroup Rule -->
+			<DerivedField name="CheckCitiGroub" dataType="boolean" optype="categorical">
+                <Apply function="if">
+                    <FieldRef field="CheckIfcitiGroup"/>
+               		<Apply function="and">
+						<Apply function="Put">
+							<Constant dataType="string">matched_bank</Constant>
+							<Constant dataType="string">CitiGroub</Constant>
+						</Apply>
+						<FieldRef field="SuccessPath"/>
+					</Apply>
+				</Apply>
+            </DerivedField>		
+			
+
+			<DerivedField name="ScoreCheck" dataType="boolean" optype="categorical">
+                <Apply function="and">
+					<Apply function="if">
+						<FieldRef field="CheckIfcitiGroup"/>
+						<Constant dataType="boolean">true</Constant>
+					<Constant dataType="boolean">false</Constant>
+				</Apply>
+            </DerivedField>					
 			
 				<!-- Increment the Banks Counter -->
 			<DerivedField name="cumAlerts" dataType="integer" optype="categorical">
@@ -499,21 +622,19 @@
 				<MiningField name="TWM_WORDSET_CNT_2" usageType="supplementary"/>
 				 <MiningField name="TWM_WORDSET_CNT_3" usageType="supplementary"/> 
 				<MiningField name="TWM_WORDSET_CNT_4" usageType="supplementary"/>
-				
 				<MiningField name="alert_text1" usageType="supplementary"/> 
 				<MiningField name="alert_text2" usageType="supplementary"/> 
 				<MiningField name="alert_text3" usageType="supplementary"/> 
 				<MiningField name="alert_text4" usageType="supplementary"/>
-	
-				<MiningField name="cumAlerts" usageType="supplementary"/>				
-
+				<MiningField name="cumAlerts" usageType="supplementary"/>			
+				<MiningField name="countersArray" usageType="supplementary"/>  
 				<MiningField name="predictedField" usageType="predicted"/>
             </MiningSchema>
 			
             <RuleSet defaultScore="0">
                 <RuleSelectionMethod criterion="firstHit"/>
-                    <SimpleRule id="ScoreCheckRule" score="1b">
-                        <SimplePredicate field="ScoreCheckBanks" operator="equal" value="true"/>
+                    <SimpleRule id="ScoreCheckRule1" score="1b">
+                        <SimplePredicate field="ScoreCheck" operator="equal" value="true"/>
                     </SimpleRule>
             </RuleSet>
         </RuleSetModel>

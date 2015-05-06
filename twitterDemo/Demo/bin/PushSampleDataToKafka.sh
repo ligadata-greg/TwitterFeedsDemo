@@ -1,1 +1,1 @@
-java -jar /home/cloudera/Desktop/Demo-twitter/bin/SimpleKafkaProducer-0.1.0 --gz true --topics "testin_1" --threads 1 --topicpartitions 8 --brokerlist "localhost:9092" --files "/home/cloudera/Desktop/Demo-twitter/input/Demo/data/demo_30record.csv.gz" --partitionkeyidxs "1" --format CSV
+java -jar /root/Fatafat/bin/SimpleKafkaProducer-0.1.0 --gz false --topics "testin_1" --threads 1 --topicpartitions 8 --brokerlist "localhost:9092" --files "/root/Fatafat/input/Demo/data/demo_30record_1.csv" --partitionkeyidxs "1" --format CSV

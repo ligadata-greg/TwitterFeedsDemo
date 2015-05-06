@@ -1,0 +1,128 @@
+{
+  "Container": {
+    "NameSpace": "System",
+    "Name": "Counters",
+    "Version": "00.01.00",
+    "Description": "Counters",
+    "Fixed": "true",
+    "Fields": [
+      {
+        "Name": "key",
+        "Type": "System.String"
+      },
+      {
+        "Name": "CNT_1_1",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_1_2",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_1_3",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_1_4",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_2_1",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_2_2",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_2_3",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_2_4",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_3_1",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_3_2",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_3_3",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_3_4",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_4_1",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_4_2",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_4_3",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_4_4",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_a",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_b",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_c",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_d",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_e",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_f",
+        "Type": "System.Int"
+      }
+	  ,
+      {
+        "Name": "CNT_g",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "CNT_h",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "MatchCounter",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "cumtweetswithalerts",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "timewindow",
+        "Type": "System.Int"
+      },
+      {
+        "Name": "cntalltweets",
+        "Type": "System.Int"
+      }
+    ]
+  }
+}

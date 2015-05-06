@@ -25,10 +25,6 @@
       {
         "Name": "RetirementCounter",
         "Type": "System.Int"
-      },
-      {
-       	"Name": "BanksCounter",
-        "Type": "System.Int"
       }
     ]
   }

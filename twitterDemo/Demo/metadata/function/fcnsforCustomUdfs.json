@@ -2,6 +2,23 @@
 "Functions" :[ 
 {
   "NameSpace" : "pmml",
+  "Name" : "length",
+  "PhysicalName" : "com.ligadata.pmml.udfs.CustomUdfs.Length",
+  "ReturnTypeNameSpace" : "system",
+  "ReturnTypeName" : "int",
+  "Arguments" : [ {
+    "ArgName" : "str",
+    "ArgTypeNameSpace" : "system",
+    "ArgTypeName" : "string"
+  } ],
+  "Features" : [ ],
+  "Version" : "000000000000000100",
+  "JarName" : "pmmludfs_2.10-1.0.jar",
+  "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
+  "TransactionId" : 0
+},
+{
+  "NameSpace" : "pmml",
   "Name" : "gettokenizedboolean",
   "PhysicalName" : "com.ligadata.pmml.udfs.CustomUdfs.getTokenizedBoolean",
   "ReturnTypeNameSpace" : "system",
@@ -20,7 +37,7 @@
     "ArgTypeName" : "integer"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -30,7 +47,7 @@
   "Name" : "gettokenizedcounts",
   "PhysicalName" : "com.ligadata.pmml.udfs.CustomUdfs.getTokenizedCounts",
   "ReturnTypeNameSpace" : "system",
-  "ReturnTypeName" : "arrayofint",
+  "ReturnTypeName" : "arrayofinteger",
   "Arguments" : [ {
     "ArgName" : "inputString",
     "ArgTypeNameSpace" : "system",
@@ -41,7 +58,7 @@
     "ArgTypeName" : "arrayofstring"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -62,7 +79,7 @@
     "ArgTypeName" : "string"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -75,7 +92,7 @@
   "ReturnTypeName" : "double",
   "Arguments" : [ ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -96,7 +113,7 @@
     "ArgTypeName" : "any"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -121,7 +138,7 @@
     "ArgTypeName" : "any"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -138,7 +155,7 @@
     "ArgTypeName" : "any"
   } ],
   "Features" : [ "HAS_INDEFINITE_ARITY" ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -167,7 +184,7 @@
     "ArgTypeName" : "boolean"
   } ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -188,7 +205,7 @@
     "ArgTypeName" : "any"
   } ],
   "Features" : [ "HAS_INDEFINITE_ARITY" ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
@@ -201,7 +218,7 @@
   "ReturnTypeName" : "string",
   "Arguments" : [ ],
   "Features" : [ ],
-  "Version" : 100,
+  "Version" : "000000000000000100",
   "JarName" : "pmmludfs_2.10-1.0.jar",
   "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
   "TransactionId" : 0
