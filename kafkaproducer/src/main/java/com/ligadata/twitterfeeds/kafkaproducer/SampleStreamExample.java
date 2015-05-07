@@ -13,6 +13,8 @@
 
 package com.ligadata.twitterfeeds.kafkaproducer;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +41,9 @@ public class SampleStreamExample {
 		final String COMMA_DELIMITER = ",";
 		String originalTweet = null;
 		String filteredTweet = null;
-		Client zooKeeperClient = new Client();
+		//Client zooKeeperClient = new Client();
+		Date date = null;
+		String DateToStr;
 		// int counter = 0;
 
 		// Define our endpoint: By default, delimited=length is set (we need
@@ -82,9 +86,9 @@ public class SampleStreamExample {
 			} else {
 				StringBuffer str = new StringBuffer();
 				try {
-					param = zooKeeperClient.getParam().toString();
+					//param = zooKeeperClient.getParam().toString();
 //					paramsJSON = new JSONObject(param);
-					System.out.println(">>> zooKeeperData: :" + param + " <<<");
+					//System.out.println(">>> zooKeeperData: :" + param + " <<<");
 					json = new JSONObject(msg);
 					str.append("System.twittermsg");
 //					str.append("System.PlusStringStringTestMsg");
@@ -103,7 +107,12 @@ public class SampleStreamExample {
 					} else {
 						str.append("empty");
 					}
-
+					
+					date = new Date();
+					DateToStr = DateFormat.getTimeInstance(DateFormat.MEDIUM).format(date);
+					str.append(COMMA_DELIMITER);
+					str.append(DateToStr);
+					
 					producer.send(str.toString());
 
 				} catch (JSONException e) {
