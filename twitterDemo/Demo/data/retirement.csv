@@ -282,10 +282,10 @@ id,terms
 281,Irrevocable Income-Only Trust - IIOT
 282,Irrevocable Trust
 283,IRS Publication 517 - Social Security And Other Information For Members Of The Clergy ...
-284,IRS Publication 536 - Net Operating Losses For Individuals, Estates, And Trusts
+284,"IRS Publication 536 - Net Operating Losses For Individuals, Estates, And Trusts"
 285,IRS Publication 554
-286,IRS Publication 560: Retirement Plans for Small Business SEP SIMPLE and Qualified ...
-287,IRS Publication 571: Tax-Sheltered Annuity Plans 403(b) Plans For Employees of ...
+286,"IRS Publication 560: Retirement Plans for Small Business SEP, SIMPLE and Qualified ..."
+287,IRS Publication 571: Tax-Sheltered Annuity Plans (403(b) Plans) For Employees of ...
 288,IRS Publication 575
 289,IRS Publication 590: Individual Retirement Arrangements (IRAs)
 290,IRS Publication 939
@@ -387,8 +387,8 @@ id,terms
 386,Nuncupative Will
 387,oasdi
 388,oasdi
-389,Old Age, Survivors And Disability Insurance Program
-390,Old Age, Survivors And Disability Insurance Program
+389,"Old Age, Survivors And Disability Insurance Program"
+390,"Old Age, Survivors And Disability Insurance Program"
 391,Old-Age And Survivors Insurance Trust Fund
 392,Old-Age And Survivors Insurance Trust Fund
 393,Ontario Teachers' Pension Plan Board
@@ -749,7 +749,7 @@ id,terms
 748,whfit
 749,Widely Held Fixed Investment Trust
 750,Withdrawal Benefits
-751,Withdrawal Credits, Pension Plan
+751,"Withdrawal Credits, Pension Plan"
 752,Withdrawal Penalty
 753,wppda
 754,Year's Maximum Pensionable Earnings
