@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ActivateProducer</servlet-name>
+  	<display-name>ActivateProducer</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.ActivateProducer</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TwitterManager</servlet-name>
+  	<display-name>TwitterManager</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.servlets.TwitterManager</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ActivateTwitterProducder</servlet-name>
+  	<display-name>ActivateTwitterProducder</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.servlets.ActivateTwitterProducder</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ActivateTwitterProducer</servlet-name>
+  	<display-name>ActivateTwitterProducer</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.servlets.ActivateTwitterProducer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ActivateProducer</servlet-name>
+  	<url-pattern>/ActivateProducer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TwitterManager</servlet-name>
+  	<url-pattern>/TwitterManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ActivateTwitterProducder</servlet-name>
+  	<url-pattern>/ActivateTwitterProducder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ActivateTwitterProducer</servlet-name>
+  	<url-pattern>/ActivateTwitterProducer</url-pattern>
+  </servlet-mapping>
+</web-app>
