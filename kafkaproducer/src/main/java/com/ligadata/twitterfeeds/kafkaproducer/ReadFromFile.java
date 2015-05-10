@@ -32,7 +32,7 @@ public class ReadFromFile implements Runnable {
 						sb.append(line);
 					}
 					producer.send(sb.toString());
-					System.out.println(sb.toString());
+//					System.out.println(sb.toString());
 					line = br.readLine();
 				} catch (IOException e) {
 					e.printStackTrace();

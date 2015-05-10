@@ -69,7 +69,7 @@ public class ActivateProducer extends HttpServlet {
 			GlobalParamaters.setProducerActive(Boolean
 					.parseBoolean(activateProducerFlag));
 			if (GlobalParamaters.isProducerActive()) {
-				String[] args = { "D:\\Fatafat\\sample datasets\\filtered\\filtered.txt,D:\\Fatafat\\sample datasets\\alldata\\alldata.txt" };
+				String[] args = { "/data/filtered.txt,/data/alldata.txt" };
 				try {
 					Main.main(args);
 				} catch (Exception e) {
