@@ -11,7 +11,6 @@ public class KafkaProducer {
 	private Producer<String, String> producer = null;
 	private static final String ip = "127.0.0.1";
 	private static final String topic = "testin_1";
-	
 	public KafkaProducer() {
 
 		Properties props = new Properties();

@@ -10,7 +10,7 @@ public class ReadFromFile implements Runnable {
 	private StringBuilder sb;
 	private String line;
 	private KafkaProducer producer;
-
+	
 	public ReadFromFile(String filePath) {
 		try {
 			br = new BufferedReader(new FileReader(filePath));
@@ -22,7 +22,7 @@ public class ReadFromFile implements Runnable {
 	}
 
 	public void run() {
-		while (true) {
+		while (GlobalParamaters.isProducerActive()) {
 			if (line != null) {
 				try {
 					if(line.startsWith("System.twittermsg")){

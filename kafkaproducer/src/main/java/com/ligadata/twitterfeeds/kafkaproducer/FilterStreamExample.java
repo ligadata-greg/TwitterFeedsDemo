@@ -20,13 +20,17 @@ import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.text.DateFormat;
 
 public class FilterStreamExample implements Runnable {
@@ -57,10 +61,12 @@ public class FilterStreamExample implements Runnable {
 		// add some track terms
 		// endpoint.trackTerms(Lists.newArrayList("twitterapi", hashtag));
 		List<String> list = Arrays.asList(csvHashtags.split(","));
+		List<String> langList = new ArrayList<String>();
+		langList.add("en");
 		System.out.println("hashtags size: " + list.size());
 		System.out.println("hashtags list: " + list);
 		endpoint.trackTerms(list);
-
+		endpoint.languages(langList);
 		Authentication auth = new OAuth1(consumerKey, consumerSecret, token,
 				secret);
 		// Authentication auth = new BasicAuth(username, password);
@@ -120,7 +126,7 @@ public class FilterStreamExample implements Runnable {
 						str.append(COMMA_DELIMITER);
 						str.append(DateToStr);
 
-						 producer.send(str.toString());
+//						 producer.send(str.toString());
 
 					} catch (JSONException e) {
 						e.printStackTrace();
