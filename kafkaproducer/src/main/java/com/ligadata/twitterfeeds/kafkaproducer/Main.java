@@ -7,6 +7,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		if (args.length > 0) {
+//			List<String> list = Arrays.asList("C:\\Users\\Saleh\\Desktop\\alldata.txt,C:\\Users\\Saleh\\Desktop\\filtered.txt".split(","));
 			List<String> list = Arrays.asList(args[0].split(","));
 
 			for (String filepath : list) {

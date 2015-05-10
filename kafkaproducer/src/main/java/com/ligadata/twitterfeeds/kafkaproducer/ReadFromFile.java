@@ -25,8 +25,6 @@ public class ReadFromFile implements Runnable {
 		while (true) {
 			if (line != null) {
 				try {
-					line = br.readLine();
-					
 					if(line.startsWith("System.twittermsg")){
 						sb = new StringBuilder();
 						sb.append(line);
@@ -35,6 +33,7 @@ public class ReadFromFile implements Runnable {
 					}
 					producer.send(sb.toString());
 					System.out.println(sb.toString());
+					line = br.readLine();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
