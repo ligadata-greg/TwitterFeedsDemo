@@ -44,6 +44,27 @@
 },
 {
   "NameSpace" : "pmml",
+  "Name" : "getmatchingtokens",
+  "PhysicalName" : "com.ligadata.pmml.udfs.CustomUdfs.getMatchingTokens",
+  "ReturnTypeNameSpace" : "system",
+  "ReturnTypeName" : "string",
+  "Arguments" : [ {
+    "ArgName" : "inputString",
+    "ArgTypeNameSpace" : "system",
+    "ArgTypeName" : "string"
+  }, {
+    "ArgName" : "context",
+    "ArgTypeNameSpace" : "system",
+    "ArgTypeName" : "arrayofstring"
+  } ],
+  "Features" : [ ],
+  "Version" : "000000000000000100",
+  "JarName" : "pmmludfs_2.10-1.0.jar",
+  "DependantJars" : [ "json4s-native_2.10-3.2.9.jar", "pmmlruntime_2.10-1.0.jar", "scala-compiler-2.10.0.jar", "basetypes_2.10-0.1.0.jar", "json4s-core_2.10-3.2.9.jar", "jackson-annotations-2.3.0.jar", "json4s-jackson_2.10-3.2.9.jar", "paranamer-2.6.jar", "jackson-databind-2.3.1.jar", "joda-time-2.3.jar", "scala-library.jar", "joda-convert-1.6.jar", "jackson-core-2.3.1.jar", "scalap-2.10.0.jar", "metadata_2.10-1.0.jar", "json4s-ast_2.10-3.2.9.jar", "fatafatbase_2.10-1.0.jar", "scala-reflect-2.10.0.jar", "log4j-1.2.17.jar" ],
+  "TransactionId" : 0
+},
+{
+  "NameSpace" : "pmml",
   "Name" : "gettokenizedcounts",
   "PhysicalName" : "com.ligadata.pmml.udfs.CustomUdfs.getTokenizedCounts",
   "ReturnTypeNameSpace" : "system",
