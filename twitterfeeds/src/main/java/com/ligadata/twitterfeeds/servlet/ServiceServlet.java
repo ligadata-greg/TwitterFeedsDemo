@@ -19,7 +19,7 @@ import com.ligadata.fatafat.objs.OutputJsonObj;
 public class ServiceServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	OutputJsonDAO ojDao = new OutputJsonDAO();
-	GenericDAO dao = new GenericDAO();
+//	GenericDAO dao = new GenericDAO();
 	OutputJsonObj temp = null;
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
@@ -37,7 +37,7 @@ public class ServiceServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 
 		synchronized (session) {
-			con = dao.getConnection();
+			con = ojDao.getConnection();
 			java.io.PrintWriter out = response.getWriter();
 			try {
 //				out.println(c.getHashTagData("#Obama"));
