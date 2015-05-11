@@ -1,6 +1,8 @@
 package com.ligadata.twitterfeeds.kafkaconsumer;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import com.ligadata.fatafat.GenericDAO;
 import com.ligadata.fatafat.impl.OutputJsonDAO;
@@ -27,17 +29,26 @@ public class Consumer {
 	}
 
 	public void run() {
+		Connection con = null;
+		PreparedStatement preparedStatement = null;
+		Client c = null;
+		GenericDAO dao = null;
+		OutputJsonDAO ojDao = null;
+		
 		try {
 			System.out.println("calling Consumer.run()");
 			ConsumerIterator<byte[], byte[]> it = m_stream.iterator();
-			Client c = new Client();
+			c = new Client();
 			System.out.println("connect to zookeeper");
 			long globalStartTime = System.nanoTime();
 		    float currentTime = 0;
-		    GenericDAO dao = new GenericDAO();
-		    Connection con = dao.getConnection();
-		    
-			while (true) {
+		    dao = new GenericDAO();
+		    con = dao.getConnection();
+		    ojDao = new OutputJsonDAO();
+		    preparedStatement = con.prepareStatement("INSERT INTO "
+					+ GenericDAO.getSCHEMA_NAME() + ".outputdata(userid, json)" + "VALUES (?, ?)");
+			
+		    while (true) {
 				if (it.hasNext()) {
 					
 					currentTime = (System.nanoTime() - globalStartTime) /  1000000000f;
@@ -67,9 +78,8 @@ public class Consumer {
 //					c.setData(obj.toString());
 //					c.setData(new String(it.next().message()));
 					
-					OutputJsonDAO ojDao = new OutputJsonDAO();
 					OutputJsonObj obj = new OutputJsonObj("1", new String(it.next().message()));
-					System.out.println(ojDao.insert(obj, con));
+					System.out.println(ojDao.insert(obj, preparedStatement));
 					
 				}
 			}
@@ -80,6 +90,16 @@ public class Consumer {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		finally{
+			try {
+				con.close();
+				preparedStatement.close();
+				c.close();
+			}catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 
