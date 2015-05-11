@@ -7,6 +7,7 @@ import com.ligadata.fatafat.GenericDAO;
 import com.ligadata.fatafat.IGenericDAO;
 import com.ligadata.fatafat.objs.GenericObjs;
 import com.ligadata.fatafat.objs.OutputJsonObj;
+
 import java.sql.Connection;
 
 public class OutputJsonDAO extends GenericDAO implements IGenericDAO{
@@ -42,46 +43,64 @@ public class OutputJsonDAO extends GenericDAO implements IGenericDAO{
 		
 	}
 
-	public int insert(GenericObjs obj, Connection con) {
+	public int insert(GenericObjs obj, PreparedStatement ps) {
 		OutputJsonObj jsonObj = null;
 		int output = 0;
-		if(obj instanceof OutputJsonObj)
+		if (obj instanceof OutputJsonObj)
 			jsonObj = (OutputJsonObj) obj;
-		
-		Connection connection = null;
-        PreparedStatement preparedStatement = null;
- 
-        try {
-            connection = con;
-            preparedStatement = connection.prepareStatement("INSERT INTO demo.outputdata(userid, json)" +
-                    "VALUES (?, ?)");
-            preparedStatement.setString(1, jsonObj.getUserId());
-            preparedStatement.setString(2, jsonObj.getJson());
-            output = preparedStatement.executeUpdate();
-            System.out.println("INSERT INTO demo.outputdata(userid, json)" +
-                    "VALUES (?, ?)");
- 
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
- 
-//            if (connection != null) {
+
+		try {
+			ps.setString(1, jsonObj.getUserId());
+			ps.setString(2, jsonObj.getJson());
+			output = ps.executeUpdate();
+			System.out.println("INSERT INTO " + GenericDAO.getSCHEMA_NAME()
+					+ ".outputdata(userid, json)" + "VALUES (?, ?)");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return output;
+	}
+//	public int insert(GenericObjs obj, Connection con) {
+//		OutputJsonObj jsonObj = null;
+//		int output = 0;
+//		if(obj instanceof OutputJsonObj)
+//			jsonObj = (OutputJsonObj) obj;
+//		
+//		Connection connection = null;
+//        PreparedStatement preparedStatement = null;
+// 
+//        try {
+//            connection = con;
+//            preparedStatement = connection.prepareStatement("INSERT INTO demo.outputdata(userid, json)" +
+//                    "VALUES (?, ?)");
+//            preparedStatement.setString(1, jsonObj.getUserId());
+//            preparedStatement.setString(2, jsonObj.getJson());
+//            output = preparedStatement.executeUpdate();
+//            System.out.println("INSERT INTO demo.outputdata(userid, json)" +
+//                    "VALUES (?, ?)");
+// 
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (preparedStatement != null) {
 //                try {
-//                    connection.close();
+//                    preparedStatement.close();
 //                } catch (SQLException e) {
 //                    e.printStackTrace();
 //                }
 //            }
-        }
-		return output;
-	}
+// 
+////            if (connection != null) {
+////                try {
+////                    connection.close();
+////                } catch (SQLException e) {
+////                    e.printStackTrace();
+////                }
+////            }
+//        }
+//		return output;
+//	}
 
 	public GenericObjs selectLastRecord(Connection con){
 		OutputJsonObj jsonOutput = new OutputJsonObj();
