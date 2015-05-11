@@ -1,14 +1,16 @@
 package com.ligadata.fatafat;
 
+import java.sql.Connection;
 import java.util.List;
 
 import com.ligadata.fatafat.objs.GenericObjs;
-import com.mysql.jdbc.Connection;
 
-public interface IGenericDAO {
+interface IGenericDAO {
 
-	void createOutputTable();
-	 
+	void createTable();
+	
+	void truncateTable();
+	
     int insert(GenericObjs obj, Connection con);
  
     GenericObjs selectById(int id);
