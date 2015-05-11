@@ -309,7 +309,10 @@ CODING TO DO:
       </Apply>
       
       <!-- else -->
-      <Constant dataType="boolean">true</Constant>
+      <Apply function="Put">
+          <Constant dataType="string">cntWithAlert</Constant>    
+          <FieldRef field="sumCounters.cumtweetswithalerts"/>
+        </Apply>
     </Apply> <!-- end "if" -->
   </DerivedField>   <!-- end cumTweetsWithAlerts -->
     
