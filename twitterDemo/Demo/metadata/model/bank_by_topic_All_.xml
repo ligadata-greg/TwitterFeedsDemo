@@ -459,7 +459,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_1_1"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -476,7 +476,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_1_2"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -493,7 +493,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_1_3"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -510,7 +510,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_1_4"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -529,7 +529,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_2_1"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -546,7 +546,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_2_2"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -563,7 +563,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_2_3"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -580,7 +580,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_2_4"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -599,7 +599,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_3_1"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -616,7 +616,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_3_2"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -633,7 +633,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_3_3"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -650,7 +650,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_3_4"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -668,7 +668,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_4_1"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -685,7 +685,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_4_2"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -702,7 +702,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_4_3"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
@@ -719,7 +719,7 @@ CODING TO DO:
       <Apply function="if">
         <Apply function="GreaterOrEqual">
           <FieldRef field="cnt_4_4"/>
-          <Constant dataType="integer">5</Constant>         <!-- change back to 5.  later, use field from GUI -->  
+          <Constant dataType="integer">100</Constant>         <!-- change back to 100.  later, use field from GUI -->  
         </Apply>
         <!-- THEN -->
         <Apply function="Put">
