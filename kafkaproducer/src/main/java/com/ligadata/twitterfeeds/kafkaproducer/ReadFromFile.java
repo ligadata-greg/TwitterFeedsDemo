@@ -9,11 +9,13 @@ public class ReadFromFile implements Runnable {
 	private BufferedReader br;
 	private StringBuilder sb;
 	private String line;
+	private String path;
 	private KafkaProducer producer;
-	private int counter = 0;
+//	private int counter = 0;
 	
 	public ReadFromFile(String filePath) {
 		try {
+			path = filePath;
 			br = new BufferedReader(new FileReader(filePath));
 			line = br.readLine();
 			producer = new KafkaProducer();
@@ -35,14 +37,23 @@ public class ReadFromFile implements Runnable {
 					producer.send(sb.toString().trim());
 //					System.out.println(sb.toString());
 					line = br.readLine();
-					counter ++;
-					if(counter > 10000){
-						counter =0;
-						Thread.sleep(50000);
-					}
+//					counter ++;
+//					if(counter > 10000){
+//						counter =0;
+//						Thread.sleep(50000);
+//					}
 				} catch (IOException e) {
 					e.printStackTrace();
-				} catch (InterruptedException e) {
+				}
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
+			}else{
+				System.out.println("end of " + path);
+				try {
+					br = new BufferedReader(new FileReader(path));
+					line = br.readLine();
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
