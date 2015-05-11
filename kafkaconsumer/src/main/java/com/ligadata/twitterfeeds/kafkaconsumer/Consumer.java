@@ -42,9 +42,8 @@ public class Consumer {
 			System.out.println("connect to zookeeper");
 			long globalStartTime = System.nanoTime();
 		    float currentTime = 0;
-		    dao = new GenericDAO();
-		    con = dao.getConnection();
 		    ojDao = new OutputJsonDAO();
+		    con = ojDao.getConnection();
 		    preparedStatement = con.prepareStatement("INSERT INTO "
 					+ GenericDAO.getSCHEMA_NAME() + ".outputdata(userid, json)" + "VALUES (?, ?)");
 			
