@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import com.ligadata.fatafat.GenericDAO;
 import com.ligadata.fatafat.impl.OutputJsonDAO;
 import com.ligadata.fatafat.objs.OutputJsonObj;
-import com.ligadata.twitterfeeds.zookeeperclient.Client;
+//import com.ligadata.twitterfeeds.zookeeperclient.Client;
 
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
@@ -31,14 +31,14 @@ public class Consumer {
 	public void run() {
 		Connection con = null;
 		PreparedStatement preparedStatement = null;
-		Client c = null;
+//		Client c = null;
 		GenericDAO dao = null;
 		OutputJsonDAO ojDao = null;
 		
 		try {
 			System.out.println("calling Consumer.run()");
 			ConsumerIterator<byte[], byte[]> it = m_stream.iterator();
-			c = new Client();
+//			c = new Client();
 			System.out.println("connect to zookeeper");
 			long globalStartTime = System.nanoTime();
 		    float currentTime = 0;
@@ -95,7 +95,7 @@ public class Consumer {
 			try {
 				con.close();
 				preparedStatement.close();
-				c.close();
+//				c.close();
 			}catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
