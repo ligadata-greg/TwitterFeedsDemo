@@ -8,7 +8,8 @@ public final class GlobalWordSets {
 
 	private static HashMap<String, String[]> subjectsDataSets = new HashMap<String, String[]>();
 	private static HashMap<String, String[]> industriesDataSets = new HashMap<String, String[]>();
-	private final static String rootDirectory = "D:\\Fatafat\\sample datasets\\";
+	private final static String rootDirectory = "C:\\Fatafat\\sample datasets\\";
+	
 	private GlobalWordSets() {
 	}
 
