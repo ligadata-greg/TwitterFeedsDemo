@@ -16,6 +16,7 @@ import com.ligadata.fatafat.objs.OutputJsonObj;
 /**
  * Servlet implementation class TestServlet
  */
+
 public class ServiceServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	OutputJsonDAO ojDao = new OutputJsonDAO();
