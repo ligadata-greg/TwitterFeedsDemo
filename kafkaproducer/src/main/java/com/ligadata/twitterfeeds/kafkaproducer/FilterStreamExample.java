@@ -13,6 +13,7 @@
 
 package com.ligadata.twitterfeeds.kafkaproducer;
 
+import com.files.utils.Utility;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Client;
 import com.twitter.hbc.core.Constants;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Vector;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -41,7 +43,6 @@ public class FilterStreamExample implements Runnable {
 	private String token;
 	private String secret;
 	private String csvHashtags;
-	
 
 	public FilterStreamExample(String consumerKey, String consumerSecret,
 			String token, String secret, String csvHashtags) {
@@ -79,7 +80,7 @@ public class FilterStreamExample implements Runnable {
 		// Establish a connection
 		client.connect();
 
-		final KafkaProducer producer = new KafkaProducer();
+		// final KafkaProducer producer = new KafkaProducer();
 
 		// @SuppressWarnings("static-access")
 		// com.ligadata.twitterfeeds.zookeeperclient.Client c = new
@@ -93,47 +94,78 @@ public class FilterStreamExample implements Runnable {
 			// }
 			//
 			// while (c.getHashTag(hashtag).equals("true")) {
+			Vector<String> tweetsList = new Vector<String>();
+			Vector<String> tweetsListCopy = null;
+			JSONObject json;
+			JSONObject paramsJSON;
+			KafkaProducer producer = new KafkaProducer();
+			String fileName = null;
+			int count = 0;
+			Thread thread = null;
+			String msg = null;
+			StringBuffer str = null;
+
 			while (true) {
-				JSONObject json;
-				String msg = null;
+
 				msg = queue.take();
 
 				if (msg == null) {
 					System.out
 							.println("Did not receive a message in 5 seconds");
 				} else {
-					StringBuffer str = new StringBuffer();
+					str = new StringBuffer();
 					try {
 
 						json = new JSONObject(msg);
-						str.append("System.twittermsg");
-						// str.append("System.twittermsg");
-						str.append(COMMA_DELIMITER);
-						if (json.has("id")) {
-							str.append(json.get("id"));
-						} else {
-							str.append("0");
-						}
-						str.append(COMMA_DELIMITER);
 						if (json.has("text")) {
-							str.append(json.get("text").toString()
-									.replace(",", " "));
-						} else {
-							str.append("empty");
-						}
-						date = new Date();
-						DateToStr = DateFormat.getTimeInstance(DateFormat.MEDIUM).format(date);
-						str.append(COMMA_DELIMITER);
-						str.append(DateToStr);
+							str.append("System.twittermsg");
+							// str.append("System.twittermsg");
+							str.append(COMMA_DELIMITER);
+							if (json.has("id")) {
+								str.append(json.get("id"));
+							} else {
+								str.append("0");
+							}
+							str.append(COMMA_DELIMITER);
+							if (json.has("text")) {
+								str.append(json.get("text").toString()
+										.replace(",", " ").replace("\n", " "));
+							} else {
+								str.append("empty");
+							}
+							date = new Date();
+							DateToStr = DateFormat.getTimeInstance(
+									DateFormat.MEDIUM).format(date);
+							str.append(COMMA_DELIMITER);
+							str.append(DateToStr);
 
-//						 producer.send(str.toString());
+							// producer.send(str.toString());
+							System.out.println(str.toString());
+							System.out.println("file#: " + count +" Processed tweets: " + tweetsList.size());
+							if (tweetsList.size() < 10000)
+								tweetsList.add(str.toString());
+							else {
+								count++;
+								fileName = "D:\\Fatafat\\data110515\\temp_"
+										+ count + ".txt";
+								// Utility.writeToFile(tweetsList, fileName);
+								tweetsListCopy = (Vector<String>) tweetsList
+										.clone();
+								Utility util = new Utility(tweetsListCopy,
+										fileName);
+								thread = new Thread(util);
+								thread.start();
+								tweetsList.clear();
+								tweetsList.add(str.toString());
+							}
+						}
 
 					} catch (JSONException e) {
 						e.printStackTrace();
 						continue;
 					}
 
-					System.out.println(str.toString());
+//					System.out.println(str.toString());
 				}
 
 			}
