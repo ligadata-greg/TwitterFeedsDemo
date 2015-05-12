@@ -2,6 +2,8 @@ package com.ligadata.twitterfeeds.kafkaproducer;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Main {
 
@@ -11,13 +13,17 @@ public class Main {
 		if (args!=null) {
 //			 List<String> list =  Arrays.asList("C:\\Users\\Saleh\\Desktop\\alldata.txt,C:\\Users\\Saleh\\Desktop\\filtered.txt".split(","));
 			 List<String> list = Arrays.asList(args[0].split(","));
-			
+			 ExecutorService executor = Executors.newFixedThreadPool(5);
+			 
 			 for (String filepath : list) {
 				 ReadFromFile f = new ReadFromFile(filepath);
-				 Thread t = new Thread(f);
-				 t.start();
+				 executor.execute(f);
+//				 Thread t = new Thread(f);
+//				 t.start();
 			 }
-
+			 
+			 executor.shutdown();
+			 
 //			FilterStreamExample f = new FilterStreamExample(
 //					"JET4XHa2TpAdcpSKY1r6gn47Y",
 //					"u0EDXjhzUeRECuV2PiPFgJgEpdZUUD79eGGcXEHmXdiHG5sYr7",
