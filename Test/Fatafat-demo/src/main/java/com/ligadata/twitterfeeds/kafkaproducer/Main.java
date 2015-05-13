@@ -1,26 +1,18 @@
 package com.ligadata.twitterfeeds.kafkaproducer;
 
-public class Main{
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-	public static void mainFunc(String[] args) throws Exception {
-		if (args.length > 0) {
+import com.ligadata.parameters.GlobalParams;
 
-			FilterStreamExample f = new FilterStreamExample(
-					"JET4XHa2TpAdcpSKY1r6gn47Y",
-					"u0EDXjhzUeRECuV2PiPFgJgEpdZUUD79eGGcXEHmXdiHG5sYr7",
-					"334088612-wYvtA22ZnLkhNgsXheM8FJMU8Zu3guuraiEgQbiX",
-					"cM4lMELZxP0xpX2SY7tNDD7JMwkEdwc4e5ELg3Tx5HiiB",args);// "apple"
+public class Main {
 
-
-			Thread t = new Thread(f);
-			t.start();
-		} else {
-			throw new IllegalArgumentException();
+	public static void mainFunc() throws Exception {
+		ExecutorService executor = Executors.newFixedThreadPool(15);
+		for (String filepath : GlobalParams.getDataFiles()) {
+			ReadFromFile f = new ReadFromFile(filepath);
+			executor.execute(f);
 		}
-		// new SampleStreamExample().run("JET4XHa2TpAdcpSKY1r6gn47Y",
-		// "u0EDXjhzUeRECuV2PiPFgJgEpdZUUD79eGGcXEHmXdiHG5sYr7",
-		// "334088612-wYvtA22ZnLkhNgsXheM8FJMU8Zu3guuraiEgQbiX",
-		// "cM4lMELZxP0xpX2SY7tNDD7JMwkEdwc4e5ELg3Tx5HiiB");
-		//
+		executor.shutdown();
 	}
 }

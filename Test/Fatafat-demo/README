@@ -1,0 +1,6 @@
+right click on project explorer
+import existing maven project
+brown to it and check the checkbox where it finds the pom.xml
+click on finish.
+right click on the project -> go to Maven -> selec update project
+run the main function after modifying the files config.

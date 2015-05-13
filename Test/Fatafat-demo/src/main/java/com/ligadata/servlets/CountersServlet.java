@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.ligadata.parameters.Params;
+import com.ligadata.parameters.MatchingParameters;
 import com.ligadata.twitterfeeds.kafkaproducer.Main;
 
 public class CountersServlet extends HttpServlet {
@@ -33,11 +33,11 @@ public class CountersServlet extends HttpServlet {
 
 		JSONObject json = new JSONObject();
 		try {
-			json.put("processed", Params.getTotalProcessedTweets());
-			json.put("matched", Params.getTotalMatchedTweets());
-			json.put("getCummulativeNumOfAlertsOverThreshold", Params.getCummulativeNumOfAlertsOverThreshold());
-			json.put("matrix", Params.getCummulativeResult());
-			json.put("alerts", Params.getAlerts());
+			json.put("processed", MatchingParameters.getTotalProcessedTweets());
+			json.put("matched", MatchingParameters.getTotalMatchedTweets());
+			json.put("getCummulativeNumOfAlertsOverThreshold", MatchingParameters.getCummulativeNumOfAlertsOverThreshold());
+			json.put("matrix", MatchingParameters.getCummulativeResult());
+			json.put("alerts", MatchingParameters.getAlerts());
 			
 //			System.out.println(json);
 			

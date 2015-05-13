@@ -41,15 +41,23 @@ public class ActivateTwitterProducer extends HttpServlet {
 			throw new ServletException(
 					"activateProducerParam is null or doesnt contain true or false values..");
 
-		Params.setProducerActived(Boolean.parseBoolean(activateProducerFlag));
+		GlobalParams.setProducerActived(Boolean.parseBoolean(activateProducerFlag));
 
-		if (Params.isProducerActived()) {
-			String[] arr = { "google", "facebook", "twitter", "apple",
-					"iphone", "mac", "barclays", "citi bank",
-					"bank of america", "chase bank", "bank" };
+		if (GlobalParams.isProducerActived()) {
+			String[] arr = 
+				{"D:\\Fatafat\\data110515\\v1-temp_1.txt",
+					"D:\\Fatafat\\data110515\\v2-temp_5.txt",
+					"D:\\Fatafat\\data110515\\v3-temp_4.txt",
+					"D:\\Fatafat\\data110515\\v4-temp_3.txt",
+					"D:\\Fatafat\\data110515\\v5-temp_2.txt",
+					"D:\\Fatafat\\data110515\\v6-temp_1.txt",
+					"D:\\Fatafat\\data110515\\temp_1.txt",
+					"D:\\Fatafat\\data110515\\temp_2.txt",
+					"D:\\Fatafat\\data110515\\temp_3.txt"
+					};
 
 			try {
-				Main.mainFunc(arr);
+				//Main.mainFunc(arr);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

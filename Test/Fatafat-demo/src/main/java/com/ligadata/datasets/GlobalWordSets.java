@@ -3,25 +3,25 @@ package com.ligadata.datasets;
 import java.util.HashMap;
 
 import com.ligadata.datasets.utils.ReadCSV;
+import com.ligadata.parameters.GlobalParams;
 
 public final class GlobalWordSets {
 
 	private static HashMap<String, String[]> subjectsDataSets = new HashMap<String, String[]>();
 	private static HashMap<String, String[]> industriesDataSets = new HashMap<String, String[]>();
-	private final static String rootDirectory = "C:\\Fatafat\\sample datasets\\";
 	
 	private GlobalWordSets() {
 	}
 
 	static {
-		String[] subjectsFiles = {"investment", "fraud"};
-		String[] indusriesFiles = {"topBanks", "Apple"};
-		for (String string : subjectsFiles) {
-			subjectsDataSets.put(string, ReadCSV.loadCSVFile(rootDirectory + string + ".csv"));
+		for (String string : GlobalParams.getSubjectsFiles()) {
+			subjectsDataSets.put(string, ReadCSV.loadCSVFile(GlobalParams.getSubjectsDir() + string));
 		}
-		for (String string : indusriesFiles) {
-			industriesDataSets.put(string, ReadCSV.loadCSVFile(rootDirectory + string + ".csv"));
+		for (String string : GlobalParams.getIndustriesFiles()) {
+			industriesDataSets.put(string, ReadCSV.loadCSVFile(GlobalParams.getIndustriesDir() + string));
 		}
+		
+		System.out.println();
 	}
 
 	public static HashMap<String, String[]> getSubjectsDataSets() {

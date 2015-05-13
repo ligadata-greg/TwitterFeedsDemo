@@ -14,8 +14,10 @@
 package com.ligadata.twitterfeeds.kafkaproducer;
 
 import org.apache.commons.lang.time.StopWatch;
+
 import com.ligadata.demo.TweetAnalysis;
-import com.ligadata.parameters.Params;
+import com.ligadata.parameters.GlobalParams;
+import com.ligadata.parameters.MatchingParameters;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Client;
 import com.twitter.hbc.core.Constants;
@@ -101,13 +103,13 @@ public class FilterStreamExample implements Runnable {
 
 		try {
 			stopWatch.start();
-			while (Params.isProducerActived()) {
+			while (GlobalParams.isProducerActived()) {
 				seconds = (int) (stopWatch.getTime() / 1000);
-				if (seconds >= Params.getRefreshMatrixAfter()) {
+				if (seconds >= MatchingParameters.getRefreshMatrixAfter()) {
 					stopWatch.reset();
 					stopWatch.start();
-					Params.refreshAlerts();
-					Params.resetSubjectsByIndustry();
+					MatchingParameters.refreshAlerts();
+					MatchingParameters.resetSubjectsByIndustry();
 				}
 
 				String msg = null;
@@ -121,17 +123,17 @@ public class FilterStreamExample implements Runnable {
 					if (json.has("text")) {
 						// System.out.println(json.get("text").toString());
 						tweet = new TweetAnalysis(json.get("text").toString());
-						Params.incCounters(tweet);
+						MatchingParameters.incCounters(tweet);
 
 						 System.out.println("Processed: "
-						 + Params.getTotalProcessedTweets());
+						 + MatchingParameters.getTotalProcessedTweets());
 						 System.out.println("Matched:"
-						 + Params.getTotalMatchedTweets());
+						 + MatchingParameters.getTotalMatchedTweets());
 						 System.out.println("Cummulative alerts over threshold: "
-						 + Params.getCummulativeNumOfAlertsOverThreshold());
+						 + MatchingParameters.getCummulativeNumOfAlertsOverThreshold());
 						 System.out.println("Matrix: "
-						 + Params.getCummulativeResult());
-						 System.out.println("Alerts: " + Params.getAlerts());
+						 + MatchingParameters.getCummulativeResult());
+						 System.out.println("Alerts: " + MatchingParameters.getAlerts());
 					}
 
 				}
