@@ -25,7 +25,8 @@ public class ReadFromFile implements Runnable {
 	}
 
 	public void run() {
-		while (GlobalParamaters.isProducerActive()) {
+//		while (GlobalParamaters.isProducerActive()) {
+	    while (true) {
 			if (line != null) {
 				try {
 					if(line.startsWith("System.twittermsg")){
@@ -51,6 +52,7 @@ public class ReadFromFile implements Runnable {
 			}else{
 				System.out.println("end of " + path);
 				try {
+					Thread.sleep(15000);
 					br = new BufferedReader(new FileReader(path));
 					line = br.readLine();
 				} catch (Exception e) {
