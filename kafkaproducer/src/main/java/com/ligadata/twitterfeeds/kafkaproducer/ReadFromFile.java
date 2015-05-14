@@ -25,8 +25,8 @@ public class ReadFromFile implements Runnable {
 	}
 
 	public void run() {
-//		while (GlobalParamaters.isProducerActive()) {
-	    while (true) {
+		while (GlobalParamaters.isProducerActive()) {
+//	    while (true) {
 			if (line != null) {
 				try {
 					if(line.startsWith("System.twittermsg")){
