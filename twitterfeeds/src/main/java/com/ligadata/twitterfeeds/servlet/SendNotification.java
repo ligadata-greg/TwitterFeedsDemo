@@ -62,7 +62,6 @@ public class SendNotification extends HttpServlet {
 			}
 		}
 		out.print(str);
-
 	}
 
 	/**
