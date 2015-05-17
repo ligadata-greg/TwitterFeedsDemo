@@ -46,6 +46,12 @@
   	<description></description>
   	<servlet-class>com.ligadata.twitterfeeds.servlet.ActivateProducer</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SendNotification</servlet-name>
+  	<display-name>SendNotification</display-name>
+  	<description></description>
+  	<servlet-class>com.ligadata.twitterfeeds.servlet.SendNotification</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServiceServlet</servlet-name>
   	<url-pattern>/ServiceServlet</url-pattern>
@@ -73,5 +79,9 @@
   <servlet-mapping>
   	<servlet-name>ActivateProducer</servlet-name>
   	<url-pattern>/ActivateProducer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SendNotification</servlet-name>
+  	<url-pattern>/SendNotification</url-pattern>
   </servlet-mapping>
 </web-app>
