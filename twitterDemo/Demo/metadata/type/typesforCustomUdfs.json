@@ -3,20 +3,6 @@
 {
   "MetadataType" : "ScalarTypeDef",
   "NameSpace" : "system",
-  "Name" : "int",
-  "TypeTypeName" : "tScalar",
-  "TypeNameSpace" : "System",
-  "TypeName" : "int",
-  "PhysicalName" : "Int",
-  "Version" : "000000000000000001",
-  "JarName" : "basetypes_2.10-0.1.0.jar",
-  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
-  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
-  "TransactionId" : 0
-},
-{
-  "MetadataType" : "ScalarTypeDef",
-  "NameSpace" : "system",
   "Name" : "string",
   "TypeTypeName" : "tScalar",
   "TypeNameSpace" : "System",
@@ -31,6 +17,20 @@
 {
   "MetadataType" : "ScalarTypeDef",
   "NameSpace" : "system",
+  "Name" : "any",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "any",
+  "PhysicalName" : "Any",
+  "Version" : "000000000000000001",
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.AnyImpl",
+  "TransactionId" : 0
+},
+{
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
   "Name" : "boolean",
   "TypeTypeName" : "tScalar",
   "TypeNameSpace" : "System",
@@ -40,6 +40,20 @@
   "JarName" : "basetypes_2.10-0.1.0.jar",
   "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
   "Implementation" : "com.ligadata.BaseTypes.BoolImpl",
+  "TransactionId" : 0
+},
+{
+  "MetadataType" : "ScalarTypeDef",
+  "NameSpace" : "system",
+  "Name" : "int",
+  "TypeTypeName" : "tScalar",
+  "TypeNameSpace" : "System",
+  "TypeName" : "int",
+  "PhysicalName" : "Int",
+  "Version" : "000000000000000001",
+  "JarName" : "basetypes_2.10-0.1.0.jar",
+  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
+  "Implementation" : "com.ligadata.BaseTypes.IntImpl",
   "TransactionId" : 0
 },
 {
@@ -72,46 +86,20 @@
   "TransactionId" : 0
 },
 {
-  "MetadataType" : "ArrayTypeDef",
+  "MetadataType" : "SetTypeDef",
   "NameSpace" : "system",
-  "Name" : "arrayofinteger",
-  "TypeTypeName" : "tScalar",
+  "Name" : "setofstring",
+  "TypeTypeName" : "tContainer",
   "TypeNameSpace" : "system",
-  "TypeName" : "Int",
+  "TypeName" : "setofstring",
   "PhysicalName" : null,
   "Version" : "000000000000000100",
   "JarName" : null,
   "DependencyJars" : [ "basetypes_2.10-0.1.0.jar", "metadata_2.10-1.0.jar" ],
   "Implementation" : null,
-  "NumberOfDimensions" : 1,
-  "TransactionId" : 0
-},
-{
-  "MetadataType" : "ScalarTypeDef",
-  "NameSpace" : "system",
-  "Name" : "any",
-  "TypeTypeName" : "tScalar",
-  "TypeNameSpace" : "System",
-  "TypeName" : "any",
-  "PhysicalName" : "Any",
-  "Version" : "000000000000000001",
-  "JarName" : "basetypes_2.10-0.1.0.jar",
-  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
-  "Implementation" : "com.ligadata.BaseTypes.AnyImpl",
-  "TransactionId" : 0
-},
-{
-  "MetadataType" : "ScalarTypeDef",
-  "NameSpace" : "system",
-  "Name" : "double",
-  "TypeTypeName" : "tScalar",
-  "TypeNameSpace" : "System",
-  "TypeName" : "double",
-  "PhysicalName" : "Double",
-  "Version" : "000000000000000001",
-  "JarName" : "basetypes_2.10-0.1.0.jar",
-  "DependencyJars" : [ "metadata_2.10-1.0.jar" ],
-  "Implementation" : "com.ligadata.BaseTypes.DoubleImpl",
+  "Fixed" : false,
+  "KeyTypeNameSpace" : "system",
+  "KeyTypeName" : "String",
   "TransactionId" : 0
 } ]
 

@@ -117,7 +117,7 @@
       },
       {
         "Name": "timewindow",
-        "Type": "System.Int"
+        "Type": "System.Long"
       },
       {
         "Name": "cntalltweets",
