@@ -108,7 +108,7 @@ public class FilterStreamExample implements Runnable {
 				if (seconds >= MatchingParameters.getRefreshMatrixAfter()) {
 					stopWatch.reset();
 					stopWatch.start();
-					MatchingParameters.refreshAlerts();
+//					MatchingParameters.refreshAlerts();
 					MatchingParameters.resetSubjectsByIndustry();
 				}
 

@@ -7,10 +7,12 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.apache.commons.lang.time.StopWatch;
+
 import com.ligadata.demo.TweetAnalysis;
 
-public class MatchingParameters {
-	
+public class MatchingParameters implements Runnable {
+
 	private static int totalProcessedTweets = 0;
 	private static int totalMatchedTweets = 0;
 	private static int cummulativeNumOfAlertsOverThreshold = 0;
@@ -18,17 +20,39 @@ public class MatchingParameters {
 	private static int threshold = 10;
 	private static ConcurrentHashMap<String, Integer> cummulativeResult = new ConcurrentHashMap<String, Integer>();
 	private static ConcurrentHashMap<String, String> alerts = new ConcurrentHashMap<String, String>();
-	
-	public static void resetAllCounters(){
+
+	public void run() {
+		// TODO Auto-generated method stub
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+		int seconds = 0;
+		while (GlobalParams.isProducerActived()) {
+			seconds = (int) (stopWatch.getTime() / 1000);
+			if (seconds >= MatchingParameters.getRefreshMatrixAfter()) {
+				stopWatch.reset();
+				stopWatch.start();
+				MatchingParameters.refreshAlerts();
+				MatchingParameters.resetSubjectsByIndustry();
+			}
+		}
+	}
+
+	public static void resetAllCounters() {
 		totalProcessedTweets = 0;
 		totalMatchedTweets = 0;
 		cummulativeNumOfAlertsOverThreshold = 0;
-		refreshMatrixAfter = 0;
-		threshold = 0;
+//		refreshMatrixAfter = 0;
+//		threshold = 0;
 		resetSubjectsByIndustry();
-		alerts.clear();
+		resetAlerts();
 	}
-	public static void refreshAlerts() {
+
+	public static void resetAlerts(){
+		alerts.clear();
+		cummulativeNumOfAlertsOverThreshold = 0;
+	}
+	
+	private static void refreshAlerts() {
 		Iterator it = cummulativeResult.entrySet().iterator();
 		Map.Entry pair = null;
 		String tempKey = null;
@@ -36,7 +60,7 @@ public class MatchingParameters {
 		String alertText = null;
 		Date date = null;
 		String dateToStr = null;
-		
+
 		while (it.hasNext()) {
 			pair = (Map.Entry) it.next();
 			tempKey = (String) pair.getKey();
@@ -44,13 +68,13 @@ public class MatchingParameters {
 
 			if (tempVal.intValue() >= threshold) {
 				date = new Date();
-				dateToStr = DateFormat.getTimeInstance(
-						DateFormat.MEDIUM).format(date);
+				dateToStr = DateFormat.getTimeInstance(DateFormat.MEDIUM)
+						.format(date);
 				cummulativeNumOfAlertsOverThreshold++;
 				alertText = tempVal + " Alerts "
 						+ tempKey.substring(0, tempKey.indexOf('_')) + "/"
-						+ tempKey.substring(tempKey.indexOf('_')+1)
-						+ " at " + dateToStr;
+						+ tempKey.substring(tempKey.indexOf('_') + 1) + " at "
+						+ dateToStr;
 				alerts.put(tempKey, alertText);
 			}
 		}
@@ -108,8 +132,6 @@ public class MatchingParameters {
 		}
 	}
 
-
-	
 	public static void resetSubjectsByIndustry() {
 		cummulativeResult.clear();
 	}
@@ -149,5 +171,4 @@ public class MatchingParameters {
 	public static void setThreshold(int threshold) {
 		MatchingParameters.threshold = threshold;
 	}
-
 }

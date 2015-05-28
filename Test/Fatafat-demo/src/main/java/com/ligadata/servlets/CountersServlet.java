@@ -6,12 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import com.ligadata.parameters.MatchingParameters;
-import com.ligadata.twitterfeeds.kafkaproducer.Main;
 
 public class CountersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -33,6 +30,8 @@ public class CountersServlet extends HttpServlet {
 
 		JSONObject json = new JSONObject();
 		try {
+			json.put("timeWindow", MatchingParameters.getRefreshMatrixAfter());
+			json.put("threshold", MatchingParameters.getThreshold());
 			json.put("processed", MatchingParameters.getTotalProcessedTweets());
 			json.put("matched", MatchingParameters.getTotalMatchedTweets());
 			json.put("getCummulativeNumOfAlertsOverThreshold", MatchingParameters.getCummulativeNumOfAlertsOverThreshold());

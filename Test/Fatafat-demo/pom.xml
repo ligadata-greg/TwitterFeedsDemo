@@ -3,11 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ligadata.fatafat</groupId>
   <artifactId>Fatafat-demo</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>Fatafat-demo Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  <!-- matching functions -->
+		<dependency>
+			<groupId>com.ligadata.fatafat</groupId>
+			<artifactId>TextProcessor</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -38,12 +45,6 @@
 			<artifactId>hbc-twitter4j</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-		<!-- JSON -->
-		<dependency>
-			<groupId>com.googlecode.json-simple</groupId>
-			<artifactId>json-simple</artifactId>
-			<version>1.1</version>
-		</dependency>
 
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -55,12 +56,6 @@
 			<groupId>com.twitter</groupId>
 			<artifactId>hbc-twitter4j</artifactId>
 			<version>2.2.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -87,14 +82,67 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- JSON -->
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20090211</version>
-		</dependency>
 	</dependencies>
-  <build>
-    <finalName>Fatafat-demo</finalName>
-  </build>
+  <properties>
+		<jdk.version>1.7</jdk.version>
+	</properties>
+
+	<build>
+		<finalName>Fatafat-demo</finalName>
+		<plugins>
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<!-- Set a compiler level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Maven Assembly Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<!-- get all project dependencies -->
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<!-- MainClass in mainfest make a executable jar -->
+					<archive>
+						<manifest>
+							<mainClass>com.fatafat.launcher.App</mainClass>
+						</manifest>
+					</archive>
+
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<!-- bind to the packaging phase -->
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
 </project>

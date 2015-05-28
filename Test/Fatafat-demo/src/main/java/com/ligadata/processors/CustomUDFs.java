@@ -1,9 +1,23 @@
 package com.ligadata.processors;
 
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import main.TextFilter;
+
 public class CustomUDFs {
+	
+	public static HashMap<String, Integer> getTokenizedCounts(String tweet, HashMap<String, Integer> wordSet) {
+		TextFilter filter = new TextFilter(tweet);
+		
+		return null;
+	}
+
+	public static boolean getTokenizedBoolean(String tweet, HashMap<String, Integer> wordSet) {
+		return false;
+	}
+
 	public static Integer[] getTokenizedCounts(String tweet, String[] wordSet) {
 		int count = 0;
 		Integer[] ret = new Integer[wordSet.length];
