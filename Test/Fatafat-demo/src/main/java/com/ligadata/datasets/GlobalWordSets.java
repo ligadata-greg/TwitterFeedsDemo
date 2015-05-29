@@ -23,10 +23,16 @@ public final class GlobalWordSets {
 	}
 
 	public static HashMap<String, HashMap<String, Integer>> getSubjectsDataSets() {
+//		return subjectsDataSets;
+		for (String string : GlobalParams.getSubjectsFiles())
+			subjectsDataSets.put(string, ReadCSV.loadTextFileToHashMap(GlobalParams.getSubjectsDir() + string));
 		return subjectsDataSets;
 	}
 
 	public static HashMap<String, HashMap<String, Integer>> getIndustriesDataSets() {
+//		return industriesDataSets;
+		for (String string : GlobalParams.getIndustriesFiles())
+			industriesDataSets.put(string, ReadCSV.loadTextFileToHashMap(GlobalParams.getIndustriesDir() + string));
 		return industriesDataSets;
 	}
 
