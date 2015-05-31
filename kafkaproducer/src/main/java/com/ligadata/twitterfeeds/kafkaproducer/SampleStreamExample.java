@@ -156,7 +156,6 @@ public class SampleStreamExample {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
 				// System.out.println(filteredTweet+"***" + originalTweet);
 				
 				// System.out.println(counter++);
