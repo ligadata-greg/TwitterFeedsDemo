@@ -150,7 +150,7 @@ public class FilterStreamExample implements Runnable {
 							if (json.has("retweet_count")) {
 								str.append(json.get("retweet_count"));
 								numOfReTweet = Integer.parseInt(json
-										.getString("retweet_count"));
+										.get("retweet_count").toString());
 							} else {
 								str.append("0");
 								numOfReTweet = 0;
@@ -159,8 +159,8 @@ public class FilterStreamExample implements Runnable {
 							if (json.has("favorite_count")
 									&& json.getBoolean("favorited")) {
 								str.append(json.get("favorite_count"));
-								numbOfFav = Integer.parseInt(json
-										.get("favorite_count").toString());
+								numbOfFav = Integer.parseInt(json.get(
+										"favorite_count").toString());
 							} else {
 								str.append("0");
 								numbOfFav = 0;
@@ -169,13 +169,14 @@ public class FilterStreamExample implements Runnable {
 							if (userJson.has("followers_count")) {
 								str.append(userJson.get("followers_count"));
 								numOfFollowers = Integer.parseInt(userJson
-										.getString("followers_count"));
+										.get("followers_count").toString());
 							} else {
 								str.append("0");
 								numOfFollowers = 0;
 							}
 							str.append(COMMA_DELIMITER);
-							nps = numOfReTweet * 1 + numbOfFav * 0.5 + numOfFollowers * 0.01;
+							nps = numOfReTweet * 1 + numbOfFav * 0.5
+									+ numOfFollowers * 0.01;
 							str.append(nps);
 							// ////////
 							str.append(COMMA_DELIMITER);
@@ -184,26 +185,29 @@ public class FilterStreamExample implements Runnable {
 									DateFormat.MEDIUM).format(date);
 							str.append(DateToStr);
 
+							System.out.println(str);
 							// producer.send(str.toString());
-							System.out.println(str.toString());
+//							System.out.println(str.toString());
 							// System.out.println("file#: " + count
 							// +" Processed tweets: " + tweetsList.size());
-							// if (tweetsList.size() < 10000)
-							// tweetsList.add(str.toString());
-							// else {
-							// count++;
-							// fileName = "D:\\Fatafat\\data110515\\temp_"
-							// + count + ".txt";
-							// // Utility.writeToFile(tweetsList, fileName);
-							// tweetsListCopy = (Vector<String>) tweetsList
-							// .clone();
-							// Utility util = new Utility(tweetsListCopy,
-							// fileName);
-							// thread = new Thread(util);
-							// thread.start();
-							// tweetsList.clear();
-							// tweetsList.add(str.toString());
-							// }
+							if (tweetsList.size() < 10000)
+								tweetsList.add(str.toString());
+							else {
+								count++;
+								fileName = "/tmp/tweets/temp_"
+										+ count + ".txt";
+//								fileName = "D:\\Fatafat\\data110515\\temp_"
+//										+ count + ".txt";
+								// Utility.writeToFile(tweetsList, fileName);
+								tweetsListCopy = (Vector<String>) tweetsList
+										.clone();
+								Utility util = new Utility(tweetsListCopy,
+										fileName);
+								thread = new Thread(util);
+								thread.start();
+								tweetsList.clear();
+								tweetsList.add(str.toString());
+							}
 						}
 
 					} catch (Exception e) {
