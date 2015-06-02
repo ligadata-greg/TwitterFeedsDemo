@@ -2,7 +2,6 @@ package com.fatafat.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
 import com.fatafat.idao.IGenericDao;
 
 public abstract class GenericDao implements IGenericDao{
