@@ -1,9 +1,19 @@
 package com.ligadata.demo;
 
+import java.sql.Connection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+
 import main.TextFilter;
+
+import com.fatafat.dao.impl.DatasetsDao;
+import com.fatafat.dao.objs.DatasetObj;
+import com.fatafat.dao.objs.GenericObj;
+import com.ligadata.datasets.DataSetsWrapper;
 import com.ligadata.datasets.GlobalWordSets;
 import com.ligadata.fatafat.wordsets.WordSets;
 
@@ -25,10 +35,23 @@ public class TweetAnalysis {
 	public TweetAnalysis(String tweet) {
 
 		this.tweet = tweet;
-		HashMap<String, HashMap<String, Integer>> tempSubDataSets = (HashMap<String, HashMap<String, Integer>>) GlobalWordSets
-				.getSubjectsDataSets().clone();
-		HashMap<String, HashMap<String, Integer>> tempIndDataSets = (HashMap<String, HashMap<String, Integer>>) GlobalWordSets
-				.getIndustriesDataSets().clone();
+//		HashMap<String, HashMap<String, Integer>> tempSubDataSets = (HashMap<String, HashMap<String, Integer>>) GlobalWordSets
+//				.getSubjectsDataSets().clone();
+//		HashMap<String, HashMap<String, Integer>> tempIndDataSets = (HashMap<String, HashMap<String, Integer>>) GlobalWordSets
+//				.getIndustriesDataSets().clone();
+		
+		HashMap<String, HashMap<String, Integer>> tempSubDataSets = null;
+		HashMap<String, HashMap<String, Integer>> tempIndDataSets = null;
+		
+		debug("static initializer started >>");
+		DataSetsWrapper wrap;
+		DatasetsDao dao = new DatasetsDao();
+		Connection con = dao.getConnection();
+		wrap = getDataSetsInMap(dao.selectAll(con));
+		tempSubDataSets = (HashMap<String, HashMap<String, Integer>>) wrap.getSubjects();
+		tempIndDataSets = (HashMap<String, HashMap<String, Integer>>) wrap.getIndustries();
+		debug("static initializer finished >>");
+		
 		Boolean subTemp;
 		Boolean indTemp;
 
@@ -138,7 +161,32 @@ public class TweetAnalysis {
 	// }
 	//
 	// }
+	private static DataSetsWrapper getDataSetsInMap(List<GenericObj> datasets) {
 
+		DataSetsWrapper wrapper = new DataSetsWrapper();
+		Map subs = new HashMap<String, HashMap<String, Integer>>();
+		Map inds = new HashMap<String, HashMap<String, Integer>>();
+		DatasetObj obj = null;
+
+		for (GenericObj genericObj : datasets) {
+			if (genericObj instanceof DatasetObj) {
+				obj = (DatasetObj) genericObj;
+				if (obj.getType().toLowerCase().equals("subject"))
+					subs.put(obj.getName(), obj.getDataset());
+				else if (obj.getType().toLowerCase().equals("industry"))
+					inds.put(obj.getName(), obj.getDataset());
+			}
+		}
+		wrapper.setIndustries(inds);
+		wrapper.setSubjects(subs);
+
+		return wrapper;
+	}
+	private static void debug(String msg) {
+		SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss SSS");
+		System.out.println(msg + format.format(new Date()));
+	}
+	
 	private int getSum(Integer[] array) {
 		int count = 0;
 		for (Integer integer : array) {
