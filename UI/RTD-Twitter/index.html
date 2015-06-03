@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Powered by ligaDATA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <link href="_libs/bootstrap-flat/css/bootstrap-flat.min.css" rel="stylesheet" />
+    <link href="_libs/bootstrap-flat/css/bootstrap-flat-extras.min.css" rel="stylesheet" />
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+
+    <link href="_libs/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
+
+    <link href="_libs/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/tokenfield-typeahead.min.css" rel="stylesheet">
+
+    <link href="_libs/bootstrap-slider/css/bootstrap-slider.min.css" rel="stylesheet">
+
+    <link href="_libs/jQCloud-master/dist/jqcloud.min.css" rel="stylesheet">
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <link href="_css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="_images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<script src="_js/html5shiv.js"></script>
+<![endif]-->
+
+    <style type="text/css">
+        .dot {
+            stroke: #000 !important;
+        }
+        /*.yaxis, path, .axis line {
+            fill: none;
+            stroke: #337ab7 !important;
+            shape-rendering: crispEdges;
+            font-family: 'Jura', sans-serif;
+            }*/
+        
+        .axis {
+            visibility: hidden
+        }
+        
+        .yaxis {}
+        
+        .line {
+            fill: none;
+            stroke: blue;
+            stroke-width: 1px;
+        }
+        
+        .yaxis path,
+        .yaxis line {
+            fill: none;
+            stroke: black;
+        }
+        
+        .yaxis path {
+            stroke-width: 1;
+        }
+        
+        .yaxis .tick {
+            /*stroke: lightgrey;*/
+            
+            opacity: 0.5 !important;
+        }
+        
+        .yaxis path {
+            stroke-width: 0;
+        }
+        
+        .overlay {
+            fill: none;
+            pointer-events: all;
+            cursor: ew-resize;
+        }
+        
+        .tooltip {
+            background: #eee;
+            box-shadow: 0 0 5px #999999;
+            color: #333;
+            display: none;
+            font-size: 12px;
+            left: 130px;
+            padding: 10px;
+            position: absolute;
+            text-align: center;
+            top: 95px;
+            width: 80px;
+            z-index: 10;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row clearfix text-center">
+
+            <div class="col-md-3 column hidden-xs hidden-sm">
+
+                <span class="counter counter-analog counter-style" data-direction="up" data-format="59:59:59" data-stop="">00:00:00</span>
+                <span class="counter-label"> Elapsed Time </span>
+
+            </div>
+
+            <div class="col-md-6 column">
+                <h1 class="text-uppercase"> FATAFAT REAL TIME ALERT ENGINE </h1>
+                <h2 class="text-uppercase text-primary"><i class="fa fa-twitter-square"></i> Twitter Use Case</h2>
+            </div>
+
+            <div class="column hidden-md hidden-lg">
+
+                <span class="counter counter-analog counter-style" data-direction="up" data-format="59:59" data-stop="10:00">00:00</span>
+                <span class="counter-label"> Elapsed Time </span>
+
+            </div>
+
+            <div class="col-md-3 column">
+
+                </br>
+                <input id="run-toggle" data-toggle="toggle" type="checkbox" data-size="mini" data-on="Stop" data-off="Start">
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix text-center">
+
+            <div class="col-md-6 column">
+                <span class="count-total counter-style text-primary">0</span>
+                <span class="counter-label"> CUMULATIVE TWEETS PROCESSED </span>
+            </div>
+
+            <div class="col-md-6 column">
+                <span class="count-cumulative counter-style text-primary">0</span>
+                <span class="counter-label"> CUMULATIVE MATCHED TWEETS </span>
+            </div>
+
+        </div>
+        
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+
+                <div class="row clearfix">
+
+                    <div class="col-md-6 column">
+                        <div id="chart1" class="chartsSpec"></div>
+                    </div>
+
+                    <div class="col-md-6 column">
+                        <div id="chart2" class="chartsSpec"></div>
+                    </div>
+
+                </div>
+
+                <div class="row clearfix">
+
+                    <div class="col-md-6 column">
+                        <div id="chart3" class="chartsSpec"></div>
+                    </div>
+
+                    <div class="col-md-6 column">
+                        <div id="chart4" class="chartsSpec"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row clearfix text-center">
+
+            <div class="col-md-12 column">
+
+                <input id="chart-toggle" checked data-toggle="toggle" type="checkbox" data-size="mini" data-on="Stacked" data-off="Heatmap">
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+
+            <div class="col-md-10 col-md-offset-1 column 1-chart">
+                <div id="container" class="chartsSpec"></div>
+
+            </div>
+
+            <div class="col-md-10 col-md-offset-1 column 2-chart">
+                <div id="containerHeat" class="chartsSpec"></div>
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+
+            <div class="col-md-6 column">
+                <label for="">Select tweets that match one of these term sets</label>
+                <input type="text" value="Insurance, Retail Banks, Investment Banks, Financial Publications" data-role="tagsinput" class="form-control">
+
+            </div>
+
+            <div class="col-md-6 column">
+                <label for="">Track and report on tweets that match the topics of these term sets</label>
+                <input type="text" value="Fraud, Security, Investment, Retirement" data-role="tagsinput" class="form-control">
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix text-center">
+
+            <div class="col-md-6 column">
+
+                <form role="form">
+
+                    <div class="form-group text-center">
+
+                        <span class="count-threshold counter-style text-primary">0</span>
+                        <span class="counter-label"> CUMULATIVE NUMBER OF ALERTS OVER THRESHOLD </span>
+
+                    </div>
+
+                    <div class="form-group text-center">
+
+                        <label for="windowWidth">Time window width : </label><span id="windowWidthCurrentSliderValLabel"> 30 sec</span>
+                        <!--                        <input data-slider-handle="square" data-slider-enabled="true" id="windowWidth" data-slider-id='windowWidth' type="number" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" class="form-control" />-->
+
+                    </div>
+
+                    <div class="form-group text-center">
+
+                        <label for="thresholdSlider">Alert threshold per topic : </label><span id="thresholdSliderValLabel"> 125 tweets / subject</span>
+                        <!--                        <input data-slider-handle="square" data-slider-enabled="true" id="thresholdSlider" data-slider-id='thresholdSlider' type="number" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50" class="" />-->
+
+                    </div>
+
+                    <div class="form-group text-center">
+                        <label for="radio-list">Select Room : </label>
+                        <select class="form-control" id="radio-list" style="width: 50%; display: inline;">
+
+                        </select>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-md-6 column">
+
+                </br>
+                <div id="subjectsScroll">
+
+                    <table class="table table-condensed text-center" id="alertsTable">
+
+                        <tbody>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row clearfix hide">
+
+            <div class="col-md-6 column">
+
+                <form role="form">
+
+                    <div class="form-group hide">
+
+                        <input type="checkbox" disabled checked data-size="mini" data-toggle="toggle">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="exampleInputEmail1">Description</label>
+
+                        <a id="modal-965785" href="#modal-container-965785" role="button" class="twitter-color btn btn-default btn-xs pull-right" data-toggle="modal"><i class="fa fa-external-link-square"></i> PMML</a>
+
+
+                        <input disabled class="form-control" value="Track subjects of bank tweets" style="height: 32px;"></input>
+
+                        <div class="modal fade" id="modal-container-965785" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                            <div class="modal-dialog">
+
+                                <div class="modal-content">
+
+                                    <div class="modal-body">
+                                        <div class="" style="height: 500px; overflow: hidden;">
+
+                                            <textarea id="pmml" style="border:none; height:100% ; width: 100%">
+
+                                            </textarea>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="">Contains</label>
+                        <input type="text" value="Insurance, Retail Banks, Investment Banks, Financial Publications" data-role="tagsinput" class="form-control">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="">Topic</label>
+                        <input type="text" value="Fraud, Security, Investment, Retirement" data-role="tagsinput" class="form-control">
+
+                    </div>
+
+                    <div class="form-group hide">
+
+                        <label for="">Does Not Contain</label>
+                        <input type="text" value="" data-role="tagsinput" class="form-control" />
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-md-6 column">
+
+                <form role="form">
+
+                    <div class="form-group text-center">
+
+                    </div>
+
+                    <div class="form-group text-center">
+
+                    </div>
+
+                    <div class="form-group text-center hide">
+
+                        <label for="refreshSlider">Data refresh rate : </label><span id="refreshSliderValLabel"> 2 sec</span>
+                        <input data-slider-handle="square" data-slider-id='refreshSlider' id="refreshSlider" type="number" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="2" class="" />
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="_js/jquery.tmpl.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.min.js" type="text/javascript"></script>
+
+    <script src="_libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+
+    <!--highcharts-->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <script src="_libs/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script src="_libs/jquery-counter/src/jquery.counter.js"></script>
+
+    <script src="_libs/jQCloud-master/dist/jqcloud.min.js"></script>
+
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+    <script src="_js/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="_js/scripts.js"></script>
+    <script src="_js/events.js"></script>
+    <script src="_js/webServicesReferences.js"></script>
+
+    <script type="text/javascript">
+        var colors = ['#dff0d8', '#d9edf7', '#fcf8e3', '#f2dede', '#9e8e9b', '#d5ccc3', '#3A5FCD'];
+
+        var Time_window_width = 1;
+        var Alert_threshold_per_subject = 1;
+        var Page_refresh_rate = 2;
+
+        var CUMULATIVE_TWEETS_PROCESSED_Base = 0;
+        var CUMULATIVE_MATCHED_TWEETS_Base = 0;
+        var CUMULATIVE_NUMBER_OF_ALERTS_OVER_THRESHOLD_Base = 0;
+        var Fraud = 0;
+        var Security = 0;
+        var Investment = 0;
+        var Retirement = 0;
+
+        var fraudDataSeries = [];
+        var securityDataSeries = [];
+        var investmentDataSeries = [];
+        var retirementDataSeries = [];
+        var thresholdDataSeries = [];
+        var timeDataSeries = [];
+        var step = 6;
+
+        var firstCall = true;
+        var firstCounter = 0;
+
+        // Chart Details
+        //Width and height
+        var w = 800;
+        var h = 270;
+        var padding = 57;
+        var svg;
+        var xScale;
+        var yScale;
+        var rScale;
+        var dataset = [[0, 0], [0, 0], [0, 0], [0, 0]];
+        var rollingSum = [];
+        var barRollingSum = [];
+
+        var engineStarted = false;
+        var numberOfAlerts = 0;
+
+
+        var tempCounter = 0;
+        var res = 10;
+
+        var frfi = new Array(res);
+        var frin = new Array(res);
+        var frinv = new Array(res);
+        var frret = new Array(res);
+
+        var invfi = new Array(res);
+        var invin = new Array(res);
+        var invinv = new Array(res);
+        var invret = new Array(res);
+
+        var reti = new Array(res);
+        var retin = new Array(res);
+        var retinv = new Array(res);
+        var retret = new Array(res);
+
+        var secfi = new Array(res);
+        var secin = new Array(res);
+        var secinv = new Array(res);
+        var secret = new Array(res);
+
+
+        $(document).ready(function () {
+
+            $('.counter').counter({});
+            $('.counter').counter('stop');
+
+            $("[data-slider-id='windowWidth']").slider({
+                formatter: function (value) {
+                    return 'Current value: ' + value;
+                }
+            });
+            $("[data-slider-id='windowWidth']").on("slideStop", function (slideEvt) {
+
+                $("#windowWidthCurrentSliderValLabel").text(' ' + slideEvt.value + ' sec');
+
+                Time_window_width = parseInt(slideEvt.value)
+            });
+
+            $("[data-slider-id='thresholdSlider']").slider({
+                formatter: function (value) {
+                    return 'Current value: ' + value;
+                }
+            });
+            $("[data-slider-id='thresholdSlider']").on("slideStop", function (slideEvt) {
+
+                $("#thresholdSliderValLabel").text(' ' + slideEvt.value + ' tweets/subject');
+
+                Alert_threshold_per_subject = parseInt(slideEvt.value)
+            });
+
+            $("[data-slider-id='refreshSlider']").slider({
+                formatter: function (value) {
+                    return 'Current value: ' + value;
+                }
+            });
+            $("[data-slider-id='refreshSlider']").on("slideStop", function (slideEvt) {
+
+                $("#refreshSliderValLabel").text(' ' + slideEvt.value + ' sec');
+
+                Page_refresh_rate = parseInt(slideEvt.value)
+            });
+
+            // $('#pmml').load('banks.xml');            
+
+            $.ajax({
+                url: 'http://fatafat-prod.ligadata.com/twitterfeeds/SendNotification',
+                data: {},
+                type: "get",
+                success: function (output) {
+
+                    var rooms = $.parseJSON(output).rooms;
+
+                    $.each(rooms, function () {
+
+                        $('#roomsRadio').tmpl({
+                            'id': this.room_id,
+                            'name': this.name
+                        }).prependTo('#radio-list')
+                    });
+                },
+                error: function (error) {
+
+                    console.log(error);
+                }
+            });
+
+
+            initGraph();
+            InitGraphHeat();
+
+            // 'Financial Publications', 'Insurance', 'Investment Banks', 'Retail Banks'
+            initLine('#chart1', 'Financial Publications');
+            initLine('#chart2', 'Insurance');
+            initLine('#chart3', 'Investment Banks');
+            initLine('#chart4', 'Retail Banks');
+
+            $('.2-chart').hide();
+
+            $.ajax({
+                url: ActivateProducer,
+                data: {},
+                success: function (output) {
+
+                    engineStarted = $.parseJSON(output).isProducerActive;
+
+                    if (engineStarted) {
+
+                        // $('#run-toggle').bootstrapToggle('disable')
+                        $('#run-toggle').bootstrapToggle('on');
+                        run();
+
+                    } else {
+
+                        // $('#run-toggle').bootstrapToggle('enable');
+                    };
+
+                },
+                error: function (error) {
+
+                    console.log(error);
+                }
+            });
+        });
+
+        function run() {
+
+            $('.counter').counter('play');
+
+            $.ajax({
+                url: ServiceServlet,
+                data: {
+                    "param": ""
+                },
+                success: function (output) {
+
+                    if ((output != undefined) && (output.length > 0) && (output != null)) {
+
+                        var temp = $.parseJSON(output);
+                        if (temp == null) {
+
+                            return;
+                        };
+
+                        var _modelsResult = temp.ModelsResult[0];
+
+                        var data = _modelsResult;
+
+                        if (firstCounter == parseInt(data.output[11].Value)) {
+
+                            return;
+                        } else {
+
+                            firstCounter = parseInt(data.output[11].Value);
+                        }
+
+                        if (firstCall) {
+
+                            CUMULATIVE_TWEETS_PROCESSED_Base = parseInt(data.output[11].Value);
+                            CUMULATIVE_MATCHED_TWEETS_Base = parseInt(data.output[13].Value);
+                            CUMULATIVE_NUMBER_OF_ALERTS_OVER_THRESHOLD_Base = parseInt(data.output[31].Value);
+
+                            firstCall = false;
+
+                        } else {
+
+
+                            //// data ////
+
+                            var chart = $('#container').highcharts();
+                            var chartSec = $('#containerHeat').highcharts();
+
+                            while (chartSec.series.length > 0) chartSec.series[0].remove(true);
+
+
+                            frfi[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_1_1"
+                            })[0].Value);
+                            frin[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_1_2"
+                            })[0].Value);
+                            frinv[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_1_3"
+                            })[0].Value);
+                            frret[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_1_4"
+                            })[0].Value);
+
+                            invfi[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_2_1"
+                            })[0].Value);
+                            invin[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_2_2"
+                            })[0].Value);
+                            invinv[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_2_3"
+                            })[0].Value);
+                            invret[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_2_4"
+                            })[0].Value);
+
+                            reti[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_3_1"
+                            })[0].Value);
+                            retin[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_3_2"
+                            })[0].Value);
+                            retinv[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_3_3"
+                            })[0].Value);
+                            retret[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_3_4"
+                            })[0].Value);
+
+                            secfi[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_4_1"
+                            })[0].Value);
+                            secin[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_4_2"
+                            })[0].Value);
+                            secinv[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_4_3"
+                            })[0].Value);
+                            secret[tempCounter % res] = parseInt($.grep(_modelsResult.output, function (c) {
+                                return c.Name == "cnt_4_4"
+                            })[0].Value);
+
+                            tempCounter++;
+
+
+
+                            //// bar chart
+
+                            var fraudAggregation = [];
+                            var investmentAggregation = [];
+                            var retirementAggregation = [];
+                            var securityAggregation = [];
+
+                            // Get topic's aggregation 
+                            fraudAggregation.push(parseInt(Math.abs(frfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            fraudAggregation.push(parseInt(Math.abs(frin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            fraudAggregation.push(parseInt(Math.abs(frinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            fraudAggregation.push(parseInt(Math.abs(frret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+
+                            investmentAggregation.push(parseInt(Math.abs(invfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentAggregation.push(parseInt(Math.abs(invin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentAggregation.push(parseInt(Math.abs(invinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentAggregation.push(parseInt(Math.abs(invret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+                            retirementAggregation.push(parseInt(Math.abs(reti.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retirementAggregation.push(parseInt(Math.abs(retin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retirementAggregation.push(parseInt(Math.abs(retinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retirementAggregation.push(parseInt(Math.abs(retret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+                            securityAggregation.push(parseInt(Math.abs(secfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            securityAggregation.push(parseInt(Math.abs(secin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            securityAggregation.push(parseInt(Math.abs(secinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            securityAggregation.push(parseInt(Math.abs(secret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+
+                            chart.series[0].setData(fraudAggregation);
+                            chart.series[1].setData(investmentAggregation);
+                            chart.series[2].setData(retirementAggregation);
+                            chart.series[3].setData(securityAggregation);
+
+
+
+                            //// heat chart
+
+                            chartSec.addSeries({
+                                name: '',
+                                borderWidth: 0.3,
+                                data: [
+                                [0, 0, parseInt(Math.abs(frfi.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [0, 1, parseInt(Math.abs(frin.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [0, 2, parseInt(Math.abs(frinv.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [0, 3, parseInt(Math.abs(frret.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+
+
+                                [1, 0, parseInt(Math.abs(invfi.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [1, 1, parseInt(Math.abs(invin.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [1, 2, parseInt(Math.abs(invinv.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [1, 3, parseInt(Math.abs(invret.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+
+
+                                [2, 0, parseInt(Math.abs(reti.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [2, 1, parseInt(Math.abs(retin.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [2, 2, parseInt(Math.abs(retinv.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [2, 3, parseInt(Math.abs(retret.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+
+
+                                [3, 0, parseInt(Math.abs(secfi.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [3, 1, parseInt(Math.abs(secin.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [3, 2, parseInt(Math.abs(secinv.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                                [3, 3, parseInt(Math.abs(secret.reduce(function (pv, cv) {
+                                        return pv + cv;
+                                    }, 0) / res))],
+                            ],
+                                dataLabels: {
+                                    enabled: true,
+                                    color: 'black',
+                                    style: {
+                                        //                                        textShadow: 'none',
+                                        HcTextStroke: null,
+                                        fontSize: '18px',
+                                        fontFamily: 'Jura'
+                                    }
+                                }
+                            });
+
+
+                            //// lines charts
+
+                            // 'Financial Publications', 'Insurance', 'Investment Banks', 'Retail Banks'
+                            // Fraud, Investment, Retirement, Security
+                            
+                            var financialPubsTopics = [];
+                            var insuranceTopics = [];
+                            var investmentBanksTopics = [];
+                            var retailBanksTopics = [];
+
+                            // Get topic's aggregation 
+                            financialPubsTopics.push(parseInt(Math.abs(frfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            financialPubsTopics.push(parseInt(Math.abs(invfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            financialPubsTopics.push(parseInt(Math.abs(reti.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+                            financialPubsTopics.push(parseInt(Math.abs(secfi.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)));
+
+                            insuranceTopics.push(parseInt(Math.abs(frin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            insuranceTopics.push(parseInt(Math.abs(invin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            insuranceTopics.push(parseInt(Math.abs(retin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            insuranceTopics.push(parseInt(Math.abs(secin.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+                            investmentBanksTopics.push(parseInt(Math.abs(frinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentBanksTopics.push(parseInt(Math.abs(invinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentBanksTopics.push(parseInt(Math.abs(retinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            investmentBanksTopics.push(parseInt(Math.abs(secinv.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+                            retailBanksTopics.push(parseInt(Math.abs(frret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retailBanksTopics.push(parseInt(Math.abs(invret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retailBanksTopics.push(parseInt(Math.abs(retret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+                            retailBanksTopics.push(parseInt(Math.abs(secret.reduce(function (pv, cv) {
+                                return pv + cv;
+                            }, 0) / res)))
+
+                            var chart1 = $('#chart1').highcharts();
+
+                            chart1.series[0].addPoint(financialPubsTopics[0]);
+                            chart1.series[1].addPoint(financialPubsTopics[1]);
+                            chart1.series[2].addPoint(financialPubsTopics[2]);
+                            chart1.series[3].addPoint(financialPubsTopics[3]);
+
+                            //
+                            var chart2 = $('#chart2').highcharts();
+
+                            chart2.series[0].addPoint(insuranceTopics[0]);
+                            chart2.series[1].addPoint(insuranceTopics[1]);
+                            chart2.series[2].addPoint(insuranceTopics[2]);
+                            chart2.series[3].addPoint(insuranceTopics[3]);
+
+                            //
+                            var chart3 = $('#chart3').highcharts();
+
+                            chart3.series[0].addPoint(investmentBanksTopics[0]);
+                            chart3.series[1].addPoint(investmentBanksTopics[1]);
+                            chart3.series[2].addPoint(investmentBanksTopics[2]);
+                            chart3.series[3].addPoint(investmentBanksTopics[3]);
+
+                            //
+                            var chart4 = $('#chart4').highcharts();
+
+                            chart4.series[0].addPoint(retailBanksTopics[0]);
+                            chart4.series[1].addPoint(retailBanksTopics[1]);
+                            chart4.series[2].addPoint(retailBanksTopics[2]);
+                            chart4.series[3].addPoint(retailBanksTopics[3]);
+
+
+
+
+                            //// Alerts table ////
+
+                            if ($('#alertsTable tr').length > 100) {
+
+                                $("#alertsTable").find("tr:gt(50)").remove();
+                            }
+
+                            var newRow = false;
+                            for (var x = 1; x < 5; x++) {
+
+
+
+                                var fraudAlert = $.grep(_modelsResult.output, function (c) {
+                                    return c.Name == "alertText_1_" + x
+                                })[0].Value;
+
+                                if (fraudAlert.length > 0) {
+
+                                    $('#alertsRow').tmpl({
+                                            'type': 'fraud',
+                                            'alert': fraudAlert.substring(3, fraudAlert.length - 10) + moment().format('mm:ss')
+                                        }).prependTo('#alertsTable') //.fadeOut("").fadeIn("slow");
+                                    
+                                    sendNotification('fraud', getCategory(fraudAlert));
+
+                                    newRow = true;
+                                    numberOfAlerts++;
+                                }
+
+
+
+                                var investmentAlert = $.grep(_modelsResult.output, function (c) {
+                                    return c.Name == "alertText_2_" + x
+                                })[0].Value;
+
+                                if (investmentAlert.length > 0) {
+
+                                    $('#alertsRow').tmpl({
+                                            'type': 'investment',
+                                            'alert': investmentAlert.substring(3, investmentAlert.length - 10) + moment().format('hh:mm:ss')
+                                        }).prependTo('#alertsTable') //.fadeOut("").fadeIn("slow");
+
+                                    sendNotification('investment', getCategory(investmentAlert));
+
+                                    newRow = true;
+                                    numberOfAlerts++;
+                                }
+
+
+
+                                var retirementAlert = $.grep(_modelsResult.output, function (c) {
+                                    return c.Name == "alertText_3_" + x
+                                })[0].Value;
+
+                                if (retirementAlert.length > 0) {
+
+                                    $('#alertsRow').tmpl({
+                                            'type': 'retirement',
+                                            'alert': retirementAlert.substring(3, retirementAlert.length - 10) + moment().format('hh:mm:ss')
+                                        }).prependTo('#alertsTable') //.fadeOut("").fadeIn("slow");
+
+                                    sendNotification('retirement', getCategory(retirementAlert));
+
+                                    newRow = true;
+                                    numberOfAlerts++;
+                                }
+
+
+
+                                var securityAlert = $.grep(_modelsResult.output, function (c) {
+                                    return c.Name == "alertText_4_" + x
+                                })[0].Value;
+
+                                if (securityAlert.length > 0) {
+
+                                    $('#alertsRow').tmpl({
+                                            'type': 'security',
+                                            'alert': securityAlert.substring(3, securityAlert.length - 10) + moment().format('hh:mm:ss')
+                                        }).prependTo('#alertsTable') //.fadeOut("").fadeIn("slow");
+
+                                    sendNotification('security', getCategory(securityAlert));
+
+                                    newRow = true;
+                                    numberOfAlerts++;
+                                }
+                            }
+
+                            if (newRow) {
+
+                                $("#alertsTable").find("tr:first").fadeOut("").fadeIn("slow");
+                                $('.count-threshold').text(numberOfAlerts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                            }
+                        }
+
+                        //// Counters setting ////
+
+                        var Temp_CUMULATIVE_TWEETS_PROCESSED = parseInt(data.output[11].Value) - CUMULATIVE_TWEETS_PROCESSED_Base;
+                        var Temp_CUMULATIVE_MATCHED_TWEETS = parseInt(data.output[13].Value) - CUMULATIVE_MATCHED_TWEETS_Base;
+                        var Temp_CUMULATIVE_NUMBER_OF_ALERTS_OVER_THRESHOLD = parseInt(data.output[31].Value) - CUMULATIVE_NUMBER_OF_ALERTS_OVER_THRESHOLD_Base;
+
+                        $('.count-total').text(Temp_CUMULATIVE_TWEETS_PROCESSED.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                        $('.count-cumulative').text(Temp_CUMULATIVE_MATCHED_TWEETS.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")); // TWM_RECORD_CNT  ~2
+                        // $('.count-threshold').text(Temp_CUMULATIVE_NUMBER_OF_ALERTS_OVER_THRESHOLD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")); // cumAlerts  ~5                    
+                    }
+
+                },
+                error: function (error) {
+
+                    console.log(error);
+                }
+            });
+
+            // setTimeout(arguments.callee, Page_refresh_rate * 1000);
+            setTimeout(arguments.callee, 3 * 1000);
+        }
+
+        function initGraph() {
+
+            //Create SVG element
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+
+            $('#container').highcharts({
+                chart: {
+                    type: 'column',
+                    //                options3d: {
+                    //                    enabled: true,
+                    //                    alpha: 15,
+                    //                    beta: 15,
+                    //                    viewDistance: 25,
+                    //                    depth: 40
+                    //                },
+                    //                marginTop: 40,
+                    //                marginRight: 40
+                },
+                reflow: true,
+                title: {
+                    text: ''
+                },
+                legend: {
+                    itemStyle: {
+                        fontSize: '12px',
+                        fontFamily: 'Jura'
+                    }
+
+                },
+                subtitle: {
+                    text: null
+                },
+                xAxis: {
+                    categories: ['Financial Publications', 'Insurance', 'Investment Banks', 'Retail Banks'],
+                    labels: {
+                        style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura'
+                        },
+                        //                                formatter: function () {
+                        //                                    return this.value;
+                        //                                }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: null
+                    },
+                    // max : 55,
+                    min: 0,
+                    labels: {
+                        style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura'
+                        },
+                        //                                formatter: function () {
+                        //                                    return this.value;
+                        //                                }
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+
+                plotOptions: {
+                    column: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Fraud',
+                        color: '#F25F51',
+                        data: []
+                }, {
+                        name: 'Investment',
+                        color: '#8dbf41',
+                        data: []
+                }, {
+                        name: 'Retirement',
+                        color: '#88C1F2',
+                        data: []
+                },
+                    {
+                        name: 'Security',
+                        color: '#F2E416',
+                        data: []
+                }]
+            });
+
+        }
+
+
+        function InitGraphHeat() {
+
+            $('#containerHeat').highcharts({
+
+                chart: {
+                    type: 'heatmap',
+                    //                marginTop: 40,
+                    //                marginBottom: 80
+                },
+                reflow: true,
+                exporting: {
+                    enabled: false
+                },
+                legend: {
+                    fontSize: '12px',
+                    fontFamily: 'Jura'
+                },
+                yAxis: {
+                    categories: ['Financial Publications', 'Insurance', 'Investment Banks', 'Retail Banks'],
+                    title: null,
+                    labels: {
+                        style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura',
+                            align: 'left'
+                        },
+                        //                                formatter: function () {
+                        //                                    return this.value;
+                        //                                }
+                    }
+                },
+
+                xAxis: {
+                    categories: ['Fraud', 'Investment', 'Retirement', 'Security'],
+
+                    title: null,
+                    labels: {
+                        style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura'
+                        },
+                        //                                formatter: function () {
+                        //                                    return this.value;
+                        //                                }
+                    }
+                },
+                colorAxis: {
+                    min: 0,
+                    minColor: '#FFFFFF',
+                    maxColor: '#337ab7' //Highcharts.getOptions().colors[0]
+                },
+
+                legend: {
+                    //                align: 'right',
+                    //                layout: 'vertical',
+                    margin: 0,
+                    //                verticalAlign: 'top',
+                    //                y: 25,
+                    //                symbolHeight: 280
+                },
+
+                tooltip: {
+                    formatter: function () {
+                        return this.series.yAxis.categories[this.point.y] + ' / ' + this.series.xAxis.categories[this.point.x];
+                    }
+                },
+
+                title: {
+                    text: ''
+                },
+                subtitle: {
+                    text: null
+                        //                text: 'Track subjects of bank tweets'
+                },
+
+                series: []
+
+            });
+        }
+
+        function initLine(id, name) {
+
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+
+            $(id).highcharts({
+                chart: {
+                    type: 'column',
+                    animation: Highcharts.svg, // don't animate in old IE
+                    // marginRight: 10,
+                    events: {
+                        load: function () {}
+                    }
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    type: 'datetime',
+                    lineWidth: 0,
+                    minorGridLineWidth: 0,
+                    lineColor: 'transparent',
+                    labels: {
+                        enabled: false
+                    },
+                    minorTickLength: 0,
+                    tickLength: 0
+
+                },
+                yAxis: {
+                    title: {
+                        text: null
+                    },
+                    // max: 100,
+                    min: 0,
+                    // plotLines: [{
+                    //     value: 0,
+                    //     width: 1,
+                    //     color: '#808080'
+                    // }]
+                    labels: {
+                        style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura'
+                        },
+                        //                                formatter: function () {
+                        //                                    return this.value;
+                        //                                }
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.point.y;
+                    }
+                },
+                legend: {
+                    itemStyle: {
+                        fontSize: '12px',
+                        fontFamily: 'Jura'
+                    }
+
+                },
+                plotOptions: {
+                    area: {
+                        // stacking: 'normal'                        
+                    },
+                    series: {
+                        marker: {
+                            enabled: false,
+                            states: {
+                                hover: {
+                                    enabled: true,
+                                    // radius: 3
+                                }
+                            }
+                        }
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                subtitle: {
+                    text: name,
+                    style: {
+                            //                                        textShadow: 'none',
+                            HcTextStroke: null,
+                            fontSize: '13px',
+                            fontFamily: 'Jura'
+                        },
+                    // x: -20
+                },
+                // xAxis: {
+                //     type: 'datetime',
+                //     tickInterval: 3600 * 1000,
+                //     min: Date.UTC(2013,4,22),
+                //     max: Date.UTC(2013,4,23),
+                // },
+
+                series: [{
+                    name: 'Fraud',
+                    data: [],
+                    color: '#F25F51'
+            }, {
+                    name: 'Investment',
+                    data: [],
+                    color: '#8dbf41'
+            }, {
+                    name: 'Retirement',
+                    data: [],
+                    color: '#88C1F2',
+            },{
+                    name: 'Security',
+                    data: [],
+                    color: '#F2E416'
+            }]
+            });
+        }
+
+        function sendNotification(topic, category) {
+
+            $.ajax({
+                url: 'http://fatafat-prod.ligadata.com/twitterfeeds/SendNotification',
+                data: {
+                    'room-id': $('#radio-list option:selected').data('id'),
+                    'msg-body': 'Fatafat has detected the count for ' + topic + ' and ' + category + ' match to have exceeded your set threshold. Please take action'
+                },
+                type: "post",
+                success: function (output) {
+
+                    console.log(output);
+                },
+                error: function (error) {
+
+                    console.log(error);
+                }
+            });
+        }
+
+        function getCategory(text){
+
+            // 'Financial Publications', 'Insurance', 'Investment Banks', 'Retail Banks'            
+
+            if(text.indexOf("financial publications") > -1){
+
+                return "financial publications";
+
+            }else if(text.indexOf("insurance") > -1){
+
+                return "insurance";
+
+            }else if(text.indexOf("investment banks") > -1){
+
+                return "investment banks";
+
+            }else {
+
+                return "retail banks";
+            }
+        }
+
+        $(function () {
+
+            $('#chart-toggle').change(function () {
+
+                if ($(this).prop('checked')) {
+
+                    $('.2-chart').fadeOut('slow', function () {
+                        $('.1-chart').fadeIn('fast', function () {
+
+                            console.log('done');
+
+                            // responsivefy(svg);
+                        });
+                    });
+
+                } else {
+
+                    $('.1-chart').fadeOut('slow', function () {
+                        $('.2-chart').fadeIn('fast');
+
+                        var chart = $('#containerHeat').highcharts();
+                        // chart.isDirty = true;
+                        chart.reflow();
+                    });
+                }
+            });
+
+            $('#run-toggle').change(function () {
+
+                if ($(this).prop('checked')) {
+
+                    $.ajax({
+                        url: ActivateProducer,
+                        type: "post",
+                        data: {
+                            'activateProducerParam': true
+                        },
+                        success: function (output) {
+
+                            // $('#run-toggle').attr('disabled',true);   
+                            run();
+
+                        },
+                        error: function (error) {
+
+                            console.log(error);
+                        }
+                    });
+
+                } else {
+
+                    $.ajax({
+                        url: ActivateProducer,
+                        type: "post",
+                        data: {
+                            'activateProducerParam': false
+                        },
+                        success: function (output) {
+
+                            JSON.stringify(output);
+
+                        },
+                        error: function (error) {
+
+                            console.log(error);
+                        }
+                    });
+                }
+            })
+        });
+    </script>
+
+    <script id="alertsRow" type="text/x-jQuery-tmpl">
+
+        <tr class="${type}">
+            <td>${alert}</td>
+        </tr>
+
+    </script>
+
+    <script id="roomsRadio" type="text/x-jQuery-tmpl">
+
+        //
+        <label class="radio-inline">
+            <input type="radio" name="optradio" data-id='${id}'>${name}</label>
+
+        <option data-id='${id}'>${name}</option>
+
+    </script>
+
+</body>
+
+</html>
