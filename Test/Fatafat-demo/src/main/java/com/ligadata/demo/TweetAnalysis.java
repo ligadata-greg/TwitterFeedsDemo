@@ -43,14 +43,14 @@ public class TweetAnalysis {
 		HashMap<String, HashMap<String, Integer>> tempSubDataSets = null;
 		HashMap<String, HashMap<String, Integer>> tempIndDataSets = null;
 		
-		debug("static initializer started >>");
+		debug("fetching datasets started >>");
 		DataSetsWrapper wrap;
 		DatasetsDao dao = new DatasetsDao();
 		Connection con = dao.getConnection();
 		wrap = getDataSetsInMap(dao.selectAll(con));
 		tempSubDataSets = (HashMap<String, HashMap<String, Integer>>) wrap.getSubjects();
 		tempIndDataSets = (HashMap<String, HashMap<String, Integer>>) wrap.getIndustries();
-		debug("static initializer finished >>");
+		debug("fetching datasets finished >>");
 		
 		Boolean subTemp;
 		Boolean indTemp;
