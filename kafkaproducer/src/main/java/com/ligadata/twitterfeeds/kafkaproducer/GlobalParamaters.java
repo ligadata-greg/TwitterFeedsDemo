@@ -2,7 +2,7 @@ package com.ligadata.twitterfeeds.kafkaproducer;
 
 public class GlobalParamaters {
 
-	private static boolean producerActive = false;
+	private static boolean producerActive = true;
 	private static String folderPath = "/data/tweets";
 
 	public static String getFolderPath() {

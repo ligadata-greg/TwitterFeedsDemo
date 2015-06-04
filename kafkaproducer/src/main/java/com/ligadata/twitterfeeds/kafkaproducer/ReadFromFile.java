@@ -35,8 +35,8 @@ public class ReadFromFile implements Runnable {
 //					}else{
 //						sb.append(line);
 //					}
-					producer.send(sb.toString().trim());
 					line = br.readLine();
+					producer.send(line);
 //					System.out.println(line);
 //					counter ++;
 //					if(counter > 10000){
