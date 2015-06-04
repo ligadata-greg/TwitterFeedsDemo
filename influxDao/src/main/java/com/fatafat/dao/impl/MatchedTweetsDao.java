@@ -12,16 +12,16 @@ import org.influxdb.dto.Serie;
 
 import com.fatafat.dao.objs.GenericObj;
 import com.fatafat.dao.objs.MatchedTweetObj;
-import com.fatafat.dao.objs.Operator;
 
 public class MatchedTweetsDao extends GenericDao {
 
-	public List<GenericObj> selectAllByEntryTime(Operator op, InfluxDB connection) {
+	public List<GenericObj> selectAllStoredRecsInLastSecond(InfluxDB connection) {
+		// TODO Auto-generated method stub
 
 		MatchedTweetObj mtObj = null;
 		List<GenericObj> result = new ArrayList<GenericObj>();
 		List<Serie> series = connection.query("demo",
-				"SELECT * from matchedTweet where time < now()", TimeUnit.MILLISECONDS);
+				"SELECT * from matchedTweet where time > now() - 1s", TimeUnit.MILLISECONDS);
 
 		for (Serie serie : series) {
 
@@ -39,6 +39,7 @@ public class MatchedTweetsDao extends GenericDao {
 				mtObj.setFollowersCount(row.get("followerscount").toString());
 				mtObj.setTweetDateTime((String)row.get("tweet_date_time"));
 				mtObj.setRetweetCount(Integer.parseInt(row.get("retweetcount").toString()));
+				mtObj.setFavoriteCount(Integer.parseInt(row.get("favoritecount").toString()));
 				mtObj.setUsername(row.get("username").toString());
 				mtObj.setCitiBank(Integer.parseInt(row.get("is_citibank").toString()));
 				mtObj.setPositive(Integer.parseInt(row.get("is_positive").toString()));

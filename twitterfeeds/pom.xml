@@ -11,6 +11,12 @@
 	<dependencies>
 		<!-- JSTL -->
 		<dependency>
+			<groupId>com.ligadata.fatafat</groupId>
+			<artifactId>influxDao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.1.2</version>

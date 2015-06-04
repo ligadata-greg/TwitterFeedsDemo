@@ -4,7 +4,13 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="influxDao-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/influxDao/influxDao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="DaoLayer-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DaoLayer/DaoLayer">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="kafkaproducer-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kafkaproducer/kafkaproducer">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/twitterfeeds/target/classes"/>
