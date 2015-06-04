@@ -29,15 +29,15 @@ public class ReadFromFile implements Runnable {
 //	    while (true) {
 			if (line != null) {
 				try {
-					if(line.startsWith("System.twittermsg")){
-						sb = new StringBuilder();
-						sb.append(line);
-					}else{
-						sb.append(line);
-					}
+//					if(line.startsWith("System.twittermsg")){
+//						sb = new StringBuilder();
+//						sb.append(line);
+//					}else{
+//						sb.append(line);
+//					}
 					producer.send(sb.toString().trim());
-//					System.out.println(sb.toString());
 					line = br.readLine();
+//					System.out.println(line);
 //					counter ++;
 //					if(counter > 10000){
 //						counter =0;
